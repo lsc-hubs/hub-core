@@ -11,7 +11,7 @@
     "href": "index.html#data",
     "title": "Land Soil Crop Hub",
     "section": "Data",
-    "text": "Data\nThe LSC hub offers a diverse range of datasets, maps and documents, including observational data from field studies (e.g., soil and water samples, crop yields), aerial and space observations, administrative boundaries, economic data (price development), predictive model outputs (soil, weather, yields), and population statistics.\n\nDatasets\nSearch datasets or browse by category.\n\n\n\n\n\nSearch\n\n\n\n\n\n\nLand\n\nSoil\n\nCrop\n\nClimate\n\nWater\n\n\n\n\n\n\n\nMaps\nAnnual cropland extent map for Central Africa produced by Digital Earth.\n\n\n\n\nDocuments\nRead more about the various API’s which are available for this service."
+    "text": "Data\nThe LSC hub offers a diverse range of datasets, maps and documents, including observational data from field studies (e.g., soil and water samples, crop yields), aerial and space observations, administrative boundaries, economic data (price development), predictive model outputs (soil, weather, yields), and population statistics.\n\nDatasets\nSearch datasets or browse by category.\n\n\n\n\n\nSearch\n\n\n\n\n\n\n Land\n\n Soil\n\n Crop\n\n Climate\n\n Water\n\n\n\n\n\n\nMaps\nAnnual cropland extent map for Central Africa produced by Digital Earth.\n\n\n\n\nDocuments\nRead more about the various API’s which are available for this service."
   },
   {
     "objectID": "index.html#information-services",
@@ -263,7 +263,7 @@
     "href": "docs/developer/quarto.html",
     "title": "quarto",
     "section": "",
-    "text": "Quarto is a content management framework. Content is typically maintained as markdown files on a git repository. With every push to the git repository a new set of html pages is build and published to an online environment, for example github.io.\nread more about quarto at Quarto\n\n\n\n\nLSC Hubs 2023"
+    "text": "Quarto is a content management framework. Content is typically maintained as markdown files on a git repository. With every push to the git repository a new set of html pages is build and published to an online environment, for example github.io.\nread more about quarto at Quarto"
   },
   {
     "objectID": "docs/developer/index.html",
@@ -305,14 +305,14 @@
     "href": "docs/developer/pycsw.html",
     "title": "pycsw",
     "section": "",
-    "text": "pycsw is an effective catalogue implementation in python, supporting a range of record exchange standards for optimal interoperability.\n\n\n\n\nLSC Hubs 2023"
+    "text": "pycsw is an effective catalogue implementation in python, supporting a range of record exchange standards for optimal interoperability."
   },
   {
     "objectID": "docs/developer/terria.html",
     "href": "docs/developer/terria.html",
     "title": "terria js",
     "section": "",
-    "text": "TerriaJS is a web based vizualisation tool. This document describes how terriajs has been customised and deployed to fit the needs of LSC Hubs.\nTerriaMap is a ready-made web environment for the the terriaJS library.\nA docker container definition for TerriaMap is available at github.\nOn the container a number of files need to be overridden with tailored changes (to update titles, logo’s colors).\n\nwwwroot/about.html contains the text of the about page\nwwwroot/config.json contains the config of the main application\ninit/simple.json and other map files in this folder can be used as predefined maps\n\nYou can either override these files as part of the container build process or add the files st container deployment.\n\n\n\n\nLSC Hubs 2023"
+    "text": "TerriaJS is a web based vizualisation tool. This document describes how terriajs has been customised and deployed to fit the needs of LSC Hubs.\nTerriaMap is a ready-made web environment for the the terriaJS library.\nA docker container definition for TerriaMap is available at github.\nOn the container a number of files need to be overridden with tailored changes (to update titles, logo’s colors).\n\nwwwroot/about.html contains the text of the about page\nwwwroot/config.json contains the config of the main application\ninit/simple.json and other map files in this folder can be used as predefined maps\n\nYou can either override these files as part of the container build process or add the files st container deployment."
   },
   {
     "objectID": "docs/developer/tutorial-data-management/2-describing-resources.html",
@@ -445,7 +445,7 @@
     "href": "docs/developer/tutorial-data-management/index.html",
     "title": "Workshop on effective spatial data flows",
     "section": "",
-    "text": "Introduction\nThis document presents a workshop on effective (spatial) data flows. This workshop is most applicable to organisations which maintain (spatial) datasets as files on a network storage, are familiar with python development, and use GIT as an environment for software development, documentation and/or contiuous integration & deployment. However aspects are also relevant in alternate scenario’s.\nThe workshop focusses on evaluating existing mechanisms to discover and assess data resources in an organisation. And extend these mechanisms to increase findability and usability of these resources within and outside the organisation.\nYou can also access the slides of the workshop.\n\n\n\n\n\nLSC Hubs 2023"
+    "text": "Introduction\nThis document presents a workshop on effective (spatial) data flows. This workshop is most applicable to organisations which maintain (spatial) datasets as files on a network storage, are familiar with python development, and use GIT as an environment for software development, documentation and/or contiuous integration & deployment. However aspects are also relevant in alternate scenario’s.\nThe workshop focusses on evaluating existing mechanisms to discover and assess data resources in an organisation. And extend these mechanisms to increase findability and usability of these resources within and outside the organisation.\nYou can also access the slides of the workshop."
   },
   {
     "objectID": "docs/user/index.html",

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LSC Hub - core - Land Soil Crop Hub</title>
+<title>LSC Hub - Land Soil Crop Hub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,11 +40,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -63,169 +63,47 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      LSC Hub - core
-      </li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">LSC Hub</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.qmd" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#data" rel="" target="">
+ <span class="menu-text">Catalogue</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#community" rel="" target="">
+ <span class="menu-text">Community</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">LSC Hub - core</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./docs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">LSC Hubs documentation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/admin/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Administration documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/user/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">User Guideline LSC Hubs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./docs/developer/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Developer documentation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/pycsw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">pycsw</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/quarto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">quarto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/terria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">terria js</span></a>
-  </div>
-</li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./docs/developer/tutorial-data-management/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Workshop on effective spatial data flows</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Existing resources</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/2-describing-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Describing resources</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Catalog publication</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bulk import</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/5-git-cicd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GIT and CI/CD</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/6-data-publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data publication</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing conveniance API’s</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/8-measure-quality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quality of Service</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extension options</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="https://lsc-hubs.org/images/logo-lsc-hubs.svg" class="img-fluid"></p>
-</div></div>
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -257,8 +135,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./img/Kenya land soil crop data 1.svg" class="img-fluid"></p>
 </div>
 </div>
-<hr>
-<section id="data" class="level2">
+<section id="data" class="level2 special-section">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The LSC hub offers a diverse range of datasets, maps and documents, including observational data from field studies (e.g., soil and water samples, crop yields), aerial and space observations, administrative boundaries, economic data (price development), predictive model outputs (soil, weather, yields), and population statistics.</p>
 <section id="datasets" class="level3">
@@ -276,35 +153,33 @@ Search
 </form>
 <div class="columns pt-2">
 <div class="column" style="width:20%;">
-<p><a href="#">Land</a></p>
+<p><img src="./img/icon/land.svg" class="img-fluid"> <a href="#">Land</a></p>
 </div><div class="column" style="width:20%;">
-<p><a href="#">Soil</a></p>
+<p><img src="./img/icon/soil.svg" class="img-fluid"> <a href="#">Soil</a></p>
 </div><div class="column" style="width:20%;">
-<p><a href="#">Crop</a></p>
+<p><img src="./img/icon/crop.svg" class="img-fluid"> <a href="#">Crop</a></p>
 </div><div class="column" style="width:20%;">
-<p><a href="#">Climate</a></p>
+<p><img src="./img/icon/climate.svg" class="img-fluid"> <a href="#">Climate</a></p>
 </div><div class="column" style="width:20%;">
-<p><a href="#">Water</a></p>
+<p><img src="./img/icon/water.svg" class="img-fluid"> <a href="#">Water</a></p>
 </div>
 </div>
-<hr>
 </section>
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="maps" class="level3">
 <h3 class="anchored" data-anchor-id="maps">Maps</h3>
 <p>Annual cropland extent map for Central Africa produced by Digital Earth.</p>
-<p><input type="submit" value="Search"></p>
+<p><input type="submit" class="btn btn-success rounded-pill" value="Search"></p>
 </section>
 </div><div class="column" style="width:50%;">
 <section id="documents" class="level3">
 <h3 class="anchored" data-anchor-id="documents">Documents</h3>
 <p>Read more about the various API’s which are available for this service.</p>
-<p><input type="submit" value="Search"></p>
+<p><input type="submit" value="Search" class="btn btn-success rounded-pill"></p>
 </section>
 </div>
 </div>
-<hr>
 </section>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -312,7 +187,7 @@ Search
 <h2 class="anchored" data-anchor-id="information-services">Information services</h2>
 <p>Information services provide dedicated information derived from relevant data to a targeted audience.</p>
 <p>Processing raw data in many cases requires expert knowledge. To bring the value of the data to a wider audience, it is of interest to set up information services derived from that data to targeted audiences.</p>
-<p><input type="submit" value="Browse services"> <input type="submit" value="Read more"></p>
+<p><input type="submit" value="Browse services" class="btn btn-warning rounded-pill"> <input type="submit" value="Read more" class="btn btn-success rounded-pill"></p>
 </section>
 </div><div class="column" style="width:50%;">
 <p><img src="./img/Land soil crop information services 1mobile.svg" class="img-fluid"></p>
@@ -335,15 +210,15 @@ Search
 <p>Here you will find data relating to the Inter-Sectoral Impact Model Intercomparison Project (ISIMIP).</p>
 </div>
 </div>
-<p><input type="submit" value="View all popular services"></p>
-<hr>
+<p><input type="submit" value="View all popular services" class="btn btn-success rounded-pill"></p>
 </section>
+<div class="special-section">
 <div class="columns">
 <div class="column" style="width:50%;">
 <section id="predictive-modeling" class="level2">
 <h2 class="anchored" data-anchor-id="predictive-modeling">Predictive modeling</h2>
 <p>Predictive modeling in the LSC hub focuses on Soil Fertility and Soil Water Conservation and is a data-driven analytical approach that involves the use of statistical or machine learning techniques to create models that can make predictions about future events or outcomes based on historical data.</p>
-<p><input type="submit" value="Browse models"> <input type="submit" value="Read more"></p>
+<p><input type="submit" value="Browse models" class="btn btn-warning rounded-pill"> <input type="submit" value="Read more" class="btn btn-success rounded-pill"></p>
 </section>
 </div><div class="column" style="width:50%;">
 <p><img src="./img/undraw_detailed_examination_re_ieui 1modelling.svg" class="img-fluid"></p>
@@ -352,40 +227,40 @@ Search
 <section id="popular-models" class="level3">
 <h3 class="anchored" data-anchor-id="popular-models">Popular Models</h3>
 <div class="columns">
-<div class="column" style="width:25%;">
+<div class="column p-2 bg-white rounded border" style="width:23%;">
 <p>AGRICA – Climate risk analyses for adaptation planning in sub-Saharan Africa</p>
 <p>AGRICA project provides climate risk analyses for the agricultural sector in sub-Saharan Africa.</p>
-</div><div class="column" style="width:25%;">
+</div><div class="column p-2 bg-white mx-2 rounded border" style="width:23%;">
 <p>Tiger initiative; Looking after water in Africa</p>
 <p>To develop EO services in collaboration with African stakeholders and transfer them to mandated national and trans-boundary water authorities.</p>
-</div><div class="column" style="width:25%;">
+</div><div class="column p-2 bg-white rounded border" style="width:23%;">
 <p>ISDA field-level soil map for Africa</p>
 <p>Field-level soil map for Africa, with 20+ soil properties predicted at 30m resolution for the entire continent.</p>
-</div><div class="column" style="width:25%;">
+</div><div class="column p-2 bg-white mx-2 rounded border" style="width:23%;">
 <p>The Inter-Sectoral Impact Model Intercomparison Project</p>
 <p>Here you will find data relating to the Inter-Sectoral Impact Model Intercomparison Project (ISIMIP).</p>
 </div>
 </div>
-<p><input type="submit" value="View all popular models"></p>
-<hr>
+<p><input type="submit" value="View all popular models" class="btn btn-success rounded-pill"></p>
 </section>
+</div>
 <section id="user-stories" class="level2">
 <h2 class="anchored" data-anchor-id="user-stories">User stories</h2>
 <p>The two cases below are descriptions of key applications for which the LSC hub can be used, including the main stakeholders, the main issues and the models through which ‘LSC data’ is converted into information services that support informed decision making.</p>
 <div class="columns">
 <div class="column m-2 rounded text-light bg-dark" style="width:46%;">
 <p><img src="./img/adams-korir-5gzZo_nQBIM-unsplash 1.jpg" class="img-fluid"></p>
-<section id="soil-fertility-management" class="level3 {p-2}">
+<section id="soil-fertility-management" class="level3 p-2">
 <h3 class="anchored" data-anchor-id="soil-fertility-management">Soil Fertility Management</h3>
 <p>Current fertilizer and soil recommendations lack local context, leading to soil health decline and lower productivity. Integrated Soil Fertility Management can improve practices, boost yields, and provide climate benefits. This case aims to deliver better agronomic advice to farmers via agricultural extension services or directly, using existing data and tools.</p>
-<p><input type="submit" value="Explore this use case"></p>
+<p><input type="submit" class="btn btn-success rounded-pill" value="Explore this use case"></p>
 </section>
 </div><div class="column m-2 rounded text-light bg-dark" style="width:46%;">
 <p><img src="./img/martin-yegon-Q8PAVNd36cQ-unsplash 1.jpg" class="img-fluid"></p>
-<section id="soil-water-conservation" class="level3 {p-2}">
+<section id="soil-water-conservation" class="level3 p-2">
 <h3 class="anchored" data-anchor-id="soil-water-conservation">Soil Water Conservation</h3>
 <p>Soil erosion threatens sustainability, climate, and food security in hilly regions of Ethiopia, Kenya, and Rwanda. Current land practices neglect local factors and erosion risks. The goal is to inform stakeholders and promote sustainable land practices for LDN, providing catchment managers and farmers with relevant information through the LSC-hub.</p>
-<p><input type="submit" value="Explore this use case"></p>
+<p><input type="submit" class="btn btn-success rounded-pill" value="Explore this use case"></p>
 </section>
 </div>
 </div>
@@ -397,31 +272,31 @@ Search
 <h2 class="anchored" data-anchor-id="hub-community">Hub community</h2>
 <p>The heart of the knowledge hub. Here, you’ll find like-minded participants who share a passion for learning and knowledge exchange.</p>
 <p>Join our diverse community of learners, experts, and enthusiasts to engage in discussions, share insights, and collaborate on soil fertility and soil water conservation topics. Explore, connect, contribute and make the hub grow.</p>
-<p><input type="submit" value="Visit community"></p>
+<p><input type="submit" class="btn btn-success rounded-pill" value="Visit community"></p>
 </section>
 </div><div class="column" style="width:50%;">
 <p><img src="./img/land soil crop hub community 1.svg" class="img-fluid"></p>
 </div>
 </div>
+<div class="special-section">
 <div class="text-light bg-dark">
 <div class="columns">
 <div class="column p-2" style="width:50%;">
 <section id="join-our-newsletter" class="level2">
 <h2 class="anchored" data-anchor-id="join-our-newsletter">Join our newsletter</h2>
 <p>Subscribe to our newsletter and be the first to receive the latest data updates and community news about the Kenya Land Soil and Crop hub.</p>
-<p><input type="submit" value="Subscribe now"></p>
+<p><input type="submit" class="btn btn-success rounded-pill" value="Subscribe now"></p>
 </section>
 </div><div class="column p-2" style="width:50%;">
 <p><img src="./img/undraw_content_creator_re_pt5b 1.svg" class="img-fluid"></p>
 </div>
 </div>
 </div>
+</div>
 
 
 
-<footer class="bs-footer mt-5">
-<a href="https://lsc-hubs.org">LSC Hubs 2023</a>
-</footer></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -656,6 +531,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.lsc-hubs.org">LSC Hubs 2023</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
