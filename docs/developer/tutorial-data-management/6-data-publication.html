@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Paul van Genuchten">
-<meta name="dcterms.date" content="2023-05-09">
+<meta name="dcterms.date" content="2023-09-23">
 
-<title>LSC Hub - core - Bulk import</title>
+<title>LSC Hub - core - Data publication</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../docs/index.html">LSC Hubs</a></li><li class="breadcrumb-item"><a href="../../../../docs/docs/index.html">LSC Hubs documentation</a></li><li class="breadcrumb-item"><a href="../../../../docs/docs/developer/index.html">Developer documentation</a></li><li class="breadcrumb-item"><a href="../../../../docs/docs/developer/tutorial-data-management/index.html">Workshop on effective spatial data flows</a></li><li class="breadcrumb-item"><a href="../../../../docs/docs/developer/tutorial-data-management/4-bulk-import.html">Bulk import</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/index.html">LSC Hubs documentation</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer documentation</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop on effective spatial data flows</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/6-data-publication.html">Data publication</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../../">LSC Hub - core</a> 
+      <a href="../../../">LSC Hub - core</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -101,17 +101,29 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../docs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">LSC Hubs</span></a>
+            <a href="../../../docs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LSC Hubs documentation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/admin/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Administration documentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/user/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User Guideline LSC Hubs</span></a>
+  </div>
+</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../docs/docs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">LSC Hubs documentation</span></a>
+            <a href="../../../docs/developer/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Developer documentation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -119,20 +131,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/admin/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Administration documentation</span></a>
+  <a href="../../../docs/developer/pycsw.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">pycsw</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/user/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">User Guideline LSC Hubs</span></a>
+  <a href="../../../docs/developer/quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/developer/terria.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">terria js</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../docs/docs/developer/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Developer documentation</span></a>
+            <a href="../../../docs/developer/tutorial-data-management/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop on effective spatial data flows</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -140,87 +158,58 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/pycsw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">pycsw</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/quarto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">quarto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/terria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">terria js</span></a>
-  </div>
-</li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../../docs/docs/developer/tutorial-data-management/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Workshop on effective spatial data flows</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth4 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Existing resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/2-describing-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/2-describing-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Catalog publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bulk import</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/5-git-cicd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/5-git-cicd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GIT and CI/CD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/6-data-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/6-data-publication.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Providing conveniance API’s</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/8-measure-quality.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/8-measure-quality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quality of Service</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extension options</span></a>
   </div>
 </li>
-      </ul>
-  </li>
       </ul>
   </li>
       </ul>
@@ -242,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bulk import</h1>
+<h1 class="title">Data publication</h1>
 </div>
 
 
@@ -259,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 9, 2023</p>
+      <p class="date">September 23, 2023</p>
     </div>
   </div>
   
@@ -269,41 +258,30 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This paragraph describes approaches to import metadata from existing repositories. Including an option to import metadata from a spreadsheet.</p>
+<section id="place-in-a-shared-environment" class="level2">
+<h2 class="anchored" data-anchor-id="place-in-a-shared-environment">Place in a shared environment</h2>
+<p>In order to share a dataset with colleagues, partners or the wider public. The file should be published in a shared environment. Various technologies are available to share a file on a network. To select a relevant location mainly depends on which type of users are going to access the dataset.</p>
+<p>The following options exist:</p>
+<ul>
+<li>A shared folder on a central server on the local intranet. Notice that this location is usually not available by remote partners. Make sure a backup is made of the network folder, in case of incidents.</li>
+<li>A cloud service such as Google Drive, Mirosoft Sharepoint, Dropbox, Amazon Webservices. Such a service can also be setup locally. A minimal solution would be to set up a Webdav service.</li>
+<li>A data repository such as Zenodo, Dataverse, Open Science Foundation. With this option metadata of the resource is automatically collected and made searchable. Some catalogue software, such as CKAN, GeoNode, GeoNetwork offers the capability to publish data files as part of the metadata registration.</li>
+</ul>
 </section>
-<section id="bulk-import-from-spreadsheet" class="level2">
-<h2 class="anchored" data-anchor-id="bulk-import-from-spreadsheet">Bulk import from spreadsheet</h2>
-<p>Many metadata initiatives tend to start from a spreadsheet. Each of the columns representa a metadata property and the rows are the individual records describing a resource. Spreadsheets have proven to be an effective medium to populate a catalogue with records. To facilitate this use case the GeoDataCrawler software provides an import spreadsheet method. The spreadsheet is parsed and a <a href="../../../../docs/docs/developer/tutorial-data-management/2-describing-resources.html">MCF</a> document is generated for every row.</p>
-<p>Since every metadata initiative tends to have dedicated columns. A templating approach is used to convert from row to MCF. A default template is available, matching a default spreadsheet layout. If your spreadsheet layout is different, you need to adjust the template accordingly.</p>
-<ul>
-<li>For this exercise we’ll use the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/blob/kenya/portals/KE/LSC/data.csv">LSC-hubs spreadsheet</a> in combination with the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/blob/kenya/portals/KE/LSC/data.j2">LSC-hubs template</a>. Notice that the template share the filename, but with extension <code>.j2</code>. Download both files to a new folder, called <code>csv</code>, in your working directory.</li>
-<li>From your shell environment run this command:</li>
-</ul>
-<pre><code>crawl-metadata --mode=import-csv --dir="./csv"</code></pre>
-<ul>
-<li>If there are errors, check the paths and consider to open the CSV in Google Sheets and export it again or open it in a text editor to look for special cases. A known issue with this approach is that the crawler tool can not manage <code>newline</code> characters in text fields.</li>
-<li>Open one of the generated MCF files to evaluate its content.</li>
-<li>A common spreadsheet tool is <a href="https://www.microsoft.com/en-gb/microsoft-365/excel">Microsoft Excel</a>. If you open and export a spreadsheet from Excel, the CSV will use the ‘;’ character as column separator. Use the –sep=‘;’ parameter to indicate GeoDataCrawler to use this separator.</li>
-</ul>
-<pre><code>crawl-metadata --mode=import-csv --dir="./csv" --sep=';'</code></pre>
+<section id="persistent-identification" class="level2">
+<h2 class="anchored" data-anchor-id="persistent-identification">Persistent identification</h2>
+<p>Select the location carefully, prevent to regularly move a file to a new location. Because with every move, users need to be notified of the new location and documentation needs to be updated. When moving is relevant, consider to set up a <a href="https://en.wikipedia.org/forward-rule">forward-rule</a> on the server which redirects users to the new location.</p>
+<p>An interesting aspect of persistent identification is the choice of a domain and path name. A domain should represent enough credibility/authority (is this a trusted resource), and should be persistent for a longer period. A project name, for example, is not a good choice for a domain to publish a resource.</p>
+<p>A mechanism exists which facilitates file moves, without breaking their identification. Identifier providers such as <a href="https://doi.org">DOI</a> and <a href="https://w3id.org">W3ID</a> enable to create a identifier for any resource. In documentation use the provided identifier, in case the location of the resource changes, you can update the link behind the identifier. Some organisations install a identification service themselves, so they have full ownership on the domain and the contents of the service. An example of such a service is the <a href="">identification service of the German Federal Government</a>.</p>
 </section>
-<section id="bulk-import-from-an-online-location" class="level2">
-<h2 class="anchored" data-anchor-id="bulk-import-from-an-online-location">Bulk import from an online location</h2>
-<p>Many resources are already described elsewhere which may be of interest to add to our catalogue. For this use case some options exist to import remote metadata. In many cases you want to import a selected subset of a remote catalogue. In this scenario we prepare a csv with the identifiers of the records to be imported. These identifiers are used to create a very minimal MCF file. GeoDataCrawler subsequently extends the local record with remote content. Currently supported are metadata from CSW, WMS and DOI.</p>
-<ul>
-<li>For this exercise download a <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/raw/kenya/portals/Global/data.isric.org/datasets.csv?inline=false">spreadsheet with a subset of the isric.org data repository</a> and the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/raw/kenya/portals/Global/data.isric.org/datasets.j2?inline=false">relevant template</a> to a folder <code>isric</code>.</li>
-<li>Import the CSV</li>
-</ul>
-<pre><code>crawl-metadata --mode=import-csv --dir="./isric" --sep=';'</code></pre>
-<ul>
-<li>The synchronisation with remote content is implemented in GeoDataCrawler as part of the update metadata method. The update process will evaluate the dataseturi-property. If the uri refers to remote content in a supported format, the MCF will be updated against that content (remote takes preference).</li>
-</ul>
-<pre><code>crawl-metadata --mode=update --dir="./isric"</code></pre>
-<ul>
-<li>Notice the changes before and after running the script. If needed, you can remove all the MCF files and run import-csv again to restore the originals.</li>
-</ul>
+<section id="include-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="include-metadata">Include metadata</h2>
+<p>For optimal discoverability, it is important to combine data publication with metadata. Either via embedded metadata in the file, else with a separate metadata file. In case of a shared folder or cloud service, embed or place the metadata along the data files, so people browsing through the system can easily find it.</p>
+<p>The embedded or sidecar metadata should be duplicated into catalogue software, to make it searchable by the targeted audience. This proces is further described at <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">catalogue publication</a>.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Various technologies exist to share data on a network. When selecting a mechanism, evaluate if you can facilitate identifier persistence and share metadata along with the files. In the next section we’ll setup <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html">conveniance API’s</a> on data to facilitate reuse of the data.</p>
 
 
 </section>

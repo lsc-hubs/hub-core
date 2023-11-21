@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Paul van Genuchten">
-<meta name="dcterms.date" content="2023-05-09">
+<meta name="dcterms.date" content="2023-11-13">
 
-<title>LSC Hub - core - Workshop on effective spatial data flows</title>
+<title>LSC Hub - core - terria js</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<script src="../../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../docs/index.html">LSC Hubs</a></li><li class="breadcrumb-item"><a href="../../../../docs/docs/index.html">LSC Hubs documentation</a></li><li class="breadcrumb-item"><a href="../../../../docs/docs/developer/index.html">Developer documentation</a></li><li class="breadcrumb-item"><a href="../../../../docs/docs/developer/tutorial-data-management/index.html">Workshop on effective spatial data flows</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/index.html">LSC Hubs documentation</a></li><li class="breadcrumb-item"><a href="../../docs/developer/index.html">Developer documentation</a></li><li class="breadcrumb-item"><a href="../../docs/developer/terria.html">terria js</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../../">LSC Hub - core</a> 
+      <a href="../../">LSC Hub - core</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -101,17 +101,29 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../docs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">LSC Hubs</span></a>
+            <a href="../../docs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LSC Hubs documentation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/admin/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Administration documentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/user/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">User Guideline LSC Hubs</span></a>
+  </div>
+</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../docs/docs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">LSC Hubs documentation</span></a>
+            <a href="../../docs/developer/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Developer documentation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -119,108 +131,85 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/admin/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Administration documentation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/user/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">User Guideline LSC Hubs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../../docs/docs/developer/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Developer documentation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/pycsw.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/pycsw.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">pycsw</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">quarto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/terria.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/terria.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">terria js</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../../docs/docs/developer/tutorial-data-management/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../docs/developer/tutorial-data-management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workshop on effective spatial data flows</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth4 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Existing resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/2-describing-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/2-describing-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Describing resources</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Catalog publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bulk import</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/5-git-cicd.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/5-git-cicd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GIT and CI/CD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/6-data-publication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/6-data-publication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Providing conveniance API’s</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/8-measure-quality.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/8-measure-quality.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quality of Service</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../docs/docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extension options</span></a>
   </div>
 </li>
-      </ul>
-  </li>
       </ul>
   </li>
       </ul>
@@ -242,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workshop on effective spatial data flows</h1>
+<h1 class="title">terria js</h1>
 </div>
 
 
@@ -259,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 9, 2023</p>
+      <p class="date">November 13, 2023</p>
     </div>
   </div>
   
@@ -269,14 +258,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>This document presents a workshop on effective (spatial) data flows. This workshop is most applicable to organisations which maintain (spatial) datasets as files on a network storage, are familiar with python development, and use <a href="https://en.wikipedia.org/wiki/Git">GIT</a> as an environment for software development, documentation and/or <a href="https://en.wikipedia.org/wiki/CI/CD">contiuous integration &amp; deployment</a>. However aspects are also relevant in alternate scenario’s.</p>
-<p>The workshop focusses on evaluating existing mechanisms to discover and assess data resources in an organisation. And extend these mechanisms to increase findability and usability of these resources within and outside the organisation.</p>
-<p>You can also access the <a href="./slides/">slides</a> of the workshop.</p>
+<p><a href="https://terria.io">TerriaJS</a> is a web based vizualisation tool. This document describes how terriajs has been customised and deployed to fit the needs of LSC Hubs.</p>
+<p>TerriaMap is a ready-made web environment for the the terriaJS library.</p>
+<p>A docker container definition for TerriaMap is available at <a href="https://github.com/TerriaJS/TerriaMap/blob/main/Dockerfile">github</a>.</p>
+<p>On the container a number of files need to be overridden with tailored changes (to update titles, logo’s colors).</p>
+<ul>
+<li><a href="https://github.com/TerriaJS/TerriaMap/blob/main/wwwroot/about.html">wwwroot/about.html</a> contains the text of the about page</li>
+<li><a href="https://github.com/TerriaJS/TerriaMap/blob/main/wwwroot/config.json">wwwroot/config.json</a> contains the config of the main application</li>
+<li><a href="https://github.com/TerriaJS/TerriaMap/blob/main/wwwroot/init/simple.json">init/simple.json</a> and other map files in this folder can be used as predefined maps</li>
+</ul>
+<p>You can either override these files as part of the container build process or add the files st container deployment.</p>
 
 
-</section>
 
 <footer class="bs-footer mt-5">
 <a href="https://lsc-hubs.org">LSC Hubs 2023</a>
