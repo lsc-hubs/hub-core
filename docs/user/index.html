@@ -220,7 +220,6 @@ ul.task-list li input[type="checkbox"] {
 <li><p><code>Share/Print</code> generates a link to your created map, which you can share with colleagues. Anything that you have added to the map viewer will be shown in the shareable link. You can also use this button to download your created map as an image.<br>
 <img src="./img/mapviewer_share.PNG" class="img-fluid" alt="mapviewer share"></p></li>
 </ol>
-<p><strong>Step 4:</strong> Explore the basic settings of the mapviewer. Change the map settings, take the tour at the help button and download your current map.</p>
 <p><strong>The vertical toolbar on the top right</strong> <img src="./img/mapviewer_rightbar.png" class="img-fluid" alt="mapviewer rightbar"></p>
 <ol type="1">
 <li><p>Zoom in and out, and back to a full world zoom</p></li>
@@ -229,12 +228,28 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Measure the distance on the map between two locations. <img src="./img/mapviewer_measure.png" class="img-fluid" alt="mapviewer measure"></p></li>
 <li><p>Provide feedback on the map viewer. Feedback is essential to improve the map viewer and to ensure that the map viewer fits the user’s needs. If you have any feedback on the map viewer, you can give it by this button. <img src="./img/mapviewer_feedback.png" class="img-fluid" alt="mapviewer feedback"></p></li>
 </ol>
-<p><strong>The Sidebar</strong></p>
+<p><strong>Step 4:</strong> Explore the basic settings of the mapviewer. Change the map settings, take the tour at the help button, download your current map, measure distances and go to your location.</p>
+<p><strong>The Sidebar</strong> The sidebar is the main location for adding maps to the map viewer and visualising your own data or any other web data.</p>
 <ul>
-<li>Search for locations</li>
-<li><code>Explore map data</code> shows a listing of datasets that can be added to the map via a catalogue search or directly from a configured map service. If the panel is empty, select an alternative map from <code>related maps</code>.</li>
-<li><code>Upload</code> provides the option to open a dataset from the local computer. Note that this data is not uploaded to a server, so this data is not shared with colleagues. You can also reference <code>web data</code> from this panel.</li>
-<li>As soon as layers are loaded on the map, you can set the order of the layers, view a legend of the layer, zoom to its extent, set its opacity and view the metadata of the data.</li>
+<li><p><code>Search for locations</code> allows you to search for a specific location and go to your area of interest. <img src="./img/mapviewer_location.png" class="img-fluid" alt="mapviewer location"></p></li>
+<li><p><code>Explore map data</code> shows a listing of datasets that can be added to the map via a catalogue search or directly from available maps. If the panel is empty, select an alternative map from <code>related maps</code>. <img src="./img/mapviewer_explore.png" class="img-fluid" alt="mapviewer explore"></p>
+<p>Under the available maps, you can click on a property map to which you would like to add the viewer. It shows, for example, for the property pH, 4 maps: the 5% prediction value, the 95% prediction value, the median of predictions and the pH map. The values are given for pH*10 for better visualisation. Under the data preview, the metadata of the map is given. You can add the map to the map viewer by clicking on <code>Add to the map</code>.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/mapviewer_add.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">mapviewer add</figcaption>
+</figure>
+</div>
+<p>You can add as many maps to the Mapviewer as you want. For example, you add another map of Organic Carbon. <img src="./img/mapviewer_add2.png" class="img-fluid" alt="mapviewer add2"></p>
+<p>If you now click on the <code>compare</code> button as described in the previous section, and put one layer to the left and the other to the right, you can compare the layers side-by-side. <img src="./img/mapviewer_acompare2.png" class="img-fluid" alt="mapviewer compare2"></p>
+<p><code>About data</code> brings you back to the Explore map Data, and shows you the metadata describing the map. The description gives in addition which datasets are used to generate the maps.</p>
+<ul>
+<li><p><code>Upload</code> provides the option to open a dataset from the local computer. Note that this data is not uploaded to a server, so this data is not shared with anyone else. You can also add <code>web data</code> from this panel to the map viewer. <img src="./img/mapviewer_localweb.png" class="img-fluid" alt="mapviewer localweb"></p>
+<p>For local files, you first need to select a file type. The file should have a spatial component and/or coordinates in order to add it to the map viewer. In step 2, you browse your file on your local computer. <img src="./img/mapviewer_local.PNG" class="img-fluid" alt="mapviewer local"></p>
+<p>For web data, you first need to select the file or web service type. In step 2, you will add the URL in order to add the web data. For example, you can add the ESA land cover map as a WMS layer. The URL is: https://worldcover2020.esa.int/geoserver/gwc/service/wms?SERVICE=WMS&amp;VERSION=1.1.1</p>
+<p>You can compare these maps with other added maps, through the compare button. <img src="./img/mapviewer_web.PNG" class="img-fluid" alt="mapviewer web"></p></li>
+<li><p>As soon as layers are loaded on the map, you can set the order of the layers, view a legend of the layer, zoom to its extent, set its opacity and view the metadata of the data.</p></li>
 </ul>
 </section>
 <section id="feedback-to-lsc-hub" class="level2">
