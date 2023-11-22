@@ -59,6 +59,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="text/javascript" src="./js/index.js"></script>
 
 
 </head>
@@ -141,27 +142,25 @@ ul.task-list li input[type="checkbox"] {
 <section id="datasets" class="level3">
 <h3 class="anchored" data-anchor-id="datasets">Datasets</h3>
 <p>Search datasets or browse by category.</p>
-<form class="pb-2">
+<form class="pb-2" action="https://kenya.lsc-hubs.org/collections/metadata:main/items" method="get">
 <div class="input-group mb-3">
-<input type="text" class="form-control">
+<input type="text" name="q" class="form-control">
 <div>
-<button class="btn btn-success" type="button">
-Search
-</button>
+<input type="submit" class="btn btn-success" value="Search">
 </div>
 </div>
 </form>
 <div class="columns pt-2">
 <div class="column" style="width:20%;">
-<p><img src="./img/icon/land.svg" class="img-fluid"> <a href="#">Land</a></p>
+<p><img src="./img/icon/land.svg" class="img-fluid"> <a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;keywords=Land">Land</a></p>
 </div><div class="column" style="width:20%;">
-<p><img src="./img/icon/soil.svg" class="img-fluid"> <a href="#">Soil</a></p>
+<p><img src="./img/icon/soil.svg" class="img-fluid"> <a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;keywords=Soil">Soil</a></p>
 </div><div class="column" style="width:20%;">
-<p><img src="./img/icon/crop.svg" class="img-fluid"> <a href="#">Crop</a></p>
+<p><img src="./img/icon/crop.svg" class="img-fluid"> <a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;keywords=Crop">Crop</a></p>
 </div><div class="column" style="width:20%;">
-<p><img src="./img/icon/climate.svg" class="img-fluid"> <a href="#">Climate</a></p>
+<p><img src="./img/icon/climate.svg" class="img-fluid"> <a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;keywords=Climate">Climate</a></p>
 </div><div class="column" style="width:20%;">
-<p><img src="./img/icon/water.svg" class="img-fluid"> <a href="#">Water</a></p>
+<p><img src="./img/icon/water.svg" class="img-fluid"> <a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;keywords=Water">Water</a></p>
 </div>
 </div>
 </section>
@@ -177,7 +176,7 @@ Search
 <p><img src="./img/undraw_connected_world_wuay 1.svg" class="my-3 img-fluid"></p>
 </div>
 </div>
-<div class="text-center">
+<div class="text-center pt-2">
 <p><a href="https://maps.lsc-hubs.org" class="btn btn-warning rounded-pill">Open mapviewer</a></p>
 </div>
 </div><div class="column rounded bg-white border mx-3 p-2" style="width:47%;">
@@ -191,7 +190,7 @@ Search
 <p><img src="./img/Group 856.svg" class="my-3 img-fluid"></p>
 </div>
 </div>
-<div class="text-center">
+<div class="text-center pt-2">
 <p><a href="docs" class="btn btn-warning rounded-pill">View documents</a></p>
 </div>
 </div>
@@ -213,20 +212,12 @@ Search
 <h3 class="anchored" data-anchor-id="popular-services">Popular services</h3>
 <div class="columns">
 <div class="column p-2 m-2 rounded text-light bg-dark" style="width:20%;">
-<p>AGRICA – Climate risk analyses for adaptation planning in sub-Saharan Africa</p>
-<p>AGRICA project provides climate risk analyses for the agricultural sector in sub-Saharan Africa.</p>
-</div><div class="column p-2 m-2 rounded text-light bg-dark" style="width:20%;">
-<p>Tiger initiative; Looking after water in Africa</p>
-<p>To develop EO services in collaboration with African stakeholders and transfer them to mandated national and trans-boundary water authorities.</p>
-</div><div class="column p-2 m-2 rounded text-light bg-dark" style="width:20%;">
-<p>ISDA field-level soil map for Africa</p>
-<p>Field-level soil map for Africa, with 20+ soil properties predicted at 30m resolution for the entire continent.</p>
-</div><div class="column p-2 m-2 rounded text-light bg-dark" style="width:20%;">
-<p>The Inter-Sectoral Impact Model Intercomparison Project</p>
-<p>Here you will find data relating to the Inter-Sectoral Impact Model Intercomparison Project (ISIMIP).</p>
+<p>Loading…</p>
 </div>
 </div>
+<div class="text-center pt-2">
 <p><input type="submit" value="View all popular services" class="btn btn-success rounded-pill"></p>
+</div>
 </section>
 <div class="special-section">
 <div class="columns">
@@ -244,20 +235,12 @@ Search
 <h3 class="anchored" data-anchor-id="popular-models">Popular Models</h3>
 <div class="columns">
 <div class="column p-2 bg-white rounded border" style="width:23%;">
-<p>AGRICA – Climate risk analyses for adaptation planning in sub-Saharan Africa</p>
-<p>AGRICA project provides climate risk analyses for the agricultural sector in sub-Saharan Africa.</p>
-</div><div class="column p-2 bg-white mx-2 rounded border" style="width:23%;">
-<p>Tiger initiative; Looking after water in Africa</p>
-<p>To develop EO services in collaboration with African stakeholders and transfer them to mandated national and trans-boundary water authorities.</p>
-</div><div class="column p-2 bg-white rounded border" style="width:23%;">
-<p>ISDA field-level soil map for Africa</p>
-<p>Field-level soil map for Africa, with 20+ soil properties predicted at 30m resolution for the entire continent.</p>
-</div><div class="column p-2 bg-white mx-2 rounded border" style="width:23%;">
-<p>The Inter-Sectoral Impact Model Intercomparison Project</p>
-<p>Here you will find data relating to the Inter-Sectoral Impact Model Intercomparison Project (ISIMIP).</p>
+<p>Loading…</p>
 </div>
 </div>
+<div class="text-center pt-2">
 <p><input type="submit" value="View all popular models" class="btn btn-success rounded-pill"></p>
+</div>
 </section>
 </div>
 <section id="user-stories" class="level2">
@@ -269,14 +252,18 @@ Search
 <section id="soil-fertility-management" class="level3 p-2">
 <h3 class="anchored" data-anchor-id="soil-fertility-management">Soil Fertility Management</h3>
 <p>Current fertilizer and soil recommendations lack local context, leading to soil health decline and lower productivity. Integrated Soil Fertility Management can improve practices, boost yields, and provide climate benefits. This case aims to deliver better agronomic advice to farmers via agricultural extension services or directly, using existing data and tools.</p>
+<div class="text-center pt-2">
 <p><input type="submit" class="btn btn-success rounded-pill" value="Explore this use case"></p>
+</div>
 </section>
 </div><div class="column m-2 rounded text-light bg-dark" style="width:46%;">
 <p><img src="./img/martin-yegon-Q8PAVNd36cQ-unsplash 1.jpg" class="img-fluid"></p>
 <section id="soil-water-conservation" class="level3 p-2">
 <h3 class="anchored" data-anchor-id="soil-water-conservation">Soil Water Conservation</h3>
 <p>Soil erosion threatens sustainability, climate, and food security in hilly regions of Ethiopia, Kenya, and Rwanda. Current land practices neglect local factors and erosion risks. The goal is to inform stakeholders and promote sustainable land practices for LDN, providing catchment managers and farmers with relevant information through the LSC-hub.</p>
+<div class="text-center pt-2">
 <p><input type="submit" class="btn btn-success rounded-pill" value="Explore this use case"></p>
+</div>
 </section>
 </div>
 </div>
@@ -288,20 +275,24 @@ Search
 <h2 class="anchored" data-anchor-id="hub-community">Hub community</h2>
 <p>The heart of the knowledge hub. Here, you’ll find like-minded participants who share a passion for learning and knowledge exchange.</p>
 <p>Join our diverse community of learners, experts, and enthusiasts to engage in discussions, share insights, and collaborate on soil fertility and soil water conservation topics. Explore, connect, contribute and make the hub grow.</p>
+<div class="text-center pt-2">
 <p><input type="submit" class="btn btn-success rounded-pill" value="Visit community"></p>
+</div>
 </section>
 </div><div class="column" style="width:50%;">
 <p><img src="./img/land soil crop hub community 1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="special-section">
-<div class="text-light bg-dark">
+<div class="text-light bg-dark px-3">
 <div class="columns">
 <div class="column p-2" style="width:50%;">
 <section id="join-our-newsletter" class="level2 text-light">
 <h2 class="text-light anchored" data-anchor-id="join-our-newsletter">Join our newsletter</h2>
 <p>Subscribe to our newsletter and be the first to receive the latest data updates and community news about the Kenya Land Soil and Crop hub.</p>
+<div class="text-center pt-2">
 <p><input type="submit" class="btn btn-success rounded-pill" value="Subscribe now"></p>
+</div>
 </section>
 </div><div class="column p-2" style="width:50%;">
 <p><img src="./img/undraw_content_creator_re_pt5b 1.svg" class="img-fluid"></p>
