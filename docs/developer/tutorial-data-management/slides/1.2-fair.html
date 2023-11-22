@@ -10,7 +10,9 @@
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>Land Soil Crop Hub - 1.6 Approach</title>
+  <meta name="author" content="Paul van Genuchten">
+  <meta name="dcterms.date" content="2023-09-15">
+  <title>Land Soil Crop Hub - 1.2 Findable</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,20 +326,183 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">1.6 Approach</h1>
-  <p class="subtitle">How to make data findable</p>
+  <h1 class="title">1.2 Findable</h1>
+  <p class="subtitle">Workshop on spatial data flows</p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Paul van Genuchten 
+</div>
+</div>
 </div>
 
+  <p class="date">2023-09-15</p>
 </section>
-<section class="slide level2">
+<section>
+<section id="findable" class="title-slide slide level1 center">
+<h1>Findable</h1>
+<ul>
+<li class="fragment">The first step in (re)using data is to find them.</li>
+<li class="fragment">Metadata and data should be easy to find for both humans and computers.</li>
+<li class="fragment">Machine-readable metadata are essential for automatic discovery of datasets and services</li>
+</ul>
+</section>
+<section id="persistent-identification" class="slide level2">
+<h2>Persistent identification</h2>
+<p>Persistent identification, for continued findability</p>
+<ul>
+<li class="fragment">Consider that a proper id can outlive a project (or organisation)</li>
+<li class="fragment">Choice of domain and path (owned, authoritative, neutral, prevent names)</li>
+<li class="fragment">Set up an identification proxy (doi.org/w3id.org)</li>
+</ul>
+</section>
+<section id="metadata" class="slide level2">
+<h2>Metadata</h2>
+<ul>
+<li class="fragment">Metadata describes title, abstract, author of a resource</li>
+<li class="fragment">Facilitate findability and understand if a resource is relevant</li>
+<li class="fragment">Can organize resources in groups by tagging</li>
+</ul>
+</section>
+<section id="standards-for-metadata-exchange" class="slide level2">
+<h2>Standards for metadata exchange</h2>
+<ul>
+<li class="fragment">Facilitate the exchange of resources between communities</li>
+<li class="fragment">Protocols to exchange metadata:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Community</th>
+<th>Standard</th>
+<th>Protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Open data/Sematic web</td>
+<td>DCAT</td>
+<td>SPARQL</td>
+</tr>
+<tr class="even">
+<td>Science</td>
+<td>Datacite</td>
+<td>OAI-PMH</td>
+</tr>
+<tr class="odd">
+<td>Geospatial</td>
+<td>iso19115</td>
+<td>CSW</td>
+</tr>
+<tr class="even">
+<td>Search engines</td>
+<td>Schema.org</td>
+<td>json-ld/microdata</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="catalogue" class="slide level2">
+<h2>Catalogue</h2>
+<ul>
+<li class="fragment">Records are brought into a catalogue, where they can be searched and assessed</li>
+<li class="fragment">Catalogues can exchange records to increase discoverability</li>
+<li class="fragment">Catalogues can cross borders between communities by transforming metadata to relevant community standards and protocols</li>
+</ul>
+</section>
+<section id="search-engines" class="slide level2">
+<h2>Search engines</h2>
+<ul>
+<li class="fragment">Search engines crawl the content of catalogues</li>
+<li class="fragment">If a catalogue supports schema.org annotations, the content can also be extracted in a structured way</li>
+<li class="fragment">Example</li>
+</ul>
+</section></section>
+<section>
+<section id="accessibility" class="title-slide slide level1 center">
+<h1>Accessibility</h1>
+
+</section>
+<section id="persistence" class="slide level2">
+<h2>Persistence</h2>
+<ul>
+<li class="fragment">Move the resource to a shared environment (backup)</li>
+<li class="fragment">Consider a URL strategy</li>
+<li class="fragment">Use a facade identifier (DOI)</li>
+</ul>
+</section>
+<section id="data-lifecycle" class="slide level2">
+<h2>Data lifecycle</h2>
+<ul>
+<li class="fragment">Consider upfront when to remove a resource (10 yrs?)</li>
+<li class="fragment">What happens to the URI of a resource which is archived?</li>
+<li class="fragment">Metadata should stay available, even if the data are no longer</li>
+</ul>
+</section></section>
+<section>
+<section id="tools" class="title-slide slide level1 center">
+<h1>Tools</h1>
+
+</section>
+<section id="repository-software" class="slide level2">
+<h2>Repository software</h2>
+<ul>
+<li class="fragment">Webdav (or webserver software)</li>
+<li class="fragment">Zenodo, Dataverse</li>
+<li class="fragment">Document Management Systems (DMS)</li>
+<li class="fragment">Cloud storage (google drive, dropbox, Amazon, Sharepoint)</li>
+</ul>
+</section>
+<section id="testing-tools" class="slide level2">
+<h2>testing tools</h2>
+<ul>
+<li class="fragment">Automated link checking</li>
+<li class="fragment">Usage logs filter on status 404 &amp; referer</li>
+<li class="fragment">Google Search Console notifies broken links</li>
+</ul>
+</section>
+<section id="universal-formats" class="slide level2">
+<h2>Universal formats</h2>
+<p>Facilitates accessing a resource with commonly available tooling, or be refactored if a software is abandoned</p>
+<ul>
+<li class="fragment">Proprietary vs Open (eg. ecw vs tiff)</li>
+<li class="fragment">De facto vs Formalised (eg. YAML vs XML)</li>
+<li class="fragment">Binary vs text based (eg. shapefile vs GeoJSON)</li>
+<li class="fragment">Cloud optimised vs Cloud native vs traditional (eg. COG vs GeoZarr vs GeoTiff)</li>
+<li class="fragment">Embedded metadata</li>
+</ul>
+</section>
+<section id="adopt-common-vocabularies" class="slide level2">
+<h2>Adopt common vocabularies</h2>
+<p>Adopting a standardised model enables aggregation of data.</p>
+<ul>
+<li class="fragment">Relational models</li>
+<li class="fragment">UML/GML models</li>
+<li class="fragment">Semantic web ontologies</li>
+</ul>
+</section>
+<section id="relevant-vocabularies" class="slide level2">
+<h2>Relevant vocabularies</h2>
+<ul>
+<li class="fragment">ISO28258 / INSPIRE / GLOSIS Web Ontology</li>
+<li class="fragment">Agrovoc</li>
+<li class="fragment">WRB / FAO Soil Classification Guidelines</li>
+</ul>
+</section></section>
+<section>
+<section id="reusable" class="title-slide slide level1 center">
+<h1>Reusable</h1>
+
+</section>
+<section id="aspect-1" class="slide level2">
+<h2>aspect 1</h2>
 
 
-<div class="footer footer-default">
-
+<img src="https://lsc-hubs.org/images/logo-lsc-hubs.svg" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>Workshop on spatial data flows</p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

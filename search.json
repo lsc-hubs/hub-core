@@ -2,65 +2,100 @@
   {
     "objectID": "docs/developer/tutorial-data-management/slides/index.html",
     "href": "docs/developer/tutorial-data-management/slides/index.html",
-    "title": "Slides training on data management",
+    "title": "Slides training on spatial data flows",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 15, 2023\n\n\n1.1 Training Overview\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.2 Findable\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.3 Accessible\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.4 Interoperable\n\n\nPaul van Genuchten\n\n\n\n\nundefined\n\n\n1.5 Reusable\n\n\n\n\n\n\n\nundefined\n\n\n1.6 Approach\n\n\n\n\n\n\n\nundefined\n\n\n1.7 Tools\n\n\n\n\n\n\n\nundefined\n\n\n2.1 Collect and Publish metadata\n\n\n\n\n\n\n\nundefined\n\n\n3.1 OGC data services\n\n\n\n\n\n\n\nundefined\n\n\n3.2 Service Quality\n\n\n\n\n\n\n\nundefined\n\n\n4.1 Soil Profile Datamanagement\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 15, 2023\n\n\n1.1 Training Overview\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.2 Findable\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n1.3 Tools\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n2.1 Collect and Publish metadata\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n3.1 OGC data services\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n3.2 Service Quality\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n4.1 Soil Profile Datamanagement\n\n\nPaul van Genuchten\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#universal-formats",
-    "href": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#universal-formats",
-    "title": "1.4 Interoperable",
-    "section": "Universal formats",
-    "text": "Universal formats\nFacilitates accessing a resource with commonly available tooling, or be refactored if a software is abandoned\n\nProprietary vs Open (eg. ecw vs tiff)\nDe facto vs Formalised (eg. YAML vs XML)\nBinary vs text based (eg. shapefile vs GeoJSON)\nCloud optimised vs Cloud native vs traditional (eg. COG vs GeoZarr vs GeoTiff)\nEmbedded metadata"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#adopt-common-vocabularies",
-    "href": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#adopt-common-vocabularies",
-    "title": "1.4 Interoperable",
-    "section": "Adopt common vocabularies",
-    "text": "Adopt common vocabularies\nAdopting a standardised model enables aggregation of data.\n\nRelational models\nUML/GML models\nSemantic web ontologies"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#relevant-vocabularies",
-    "href": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#relevant-vocabularies",
-    "title": "1.4 Interoperable",
-    "section": "Relevant vocabularies",
-    "text": "Relevant vocabularies\n\nISO28258 / INSPIRE / GLOSIS Web Ontology\nAgrovoc\nWRB / FAO Soil Classification Guidelines"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#persistent-identification",
-    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#persistent-identification",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#persistent-identification",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#persistent-identification",
     "title": "1.2 Findable",
     "section": "Persistent identification",
     "text": "Persistent identification\nPersistent identification, for continued findability\n\nConsider that a proper id can outlive a project (or organisation)\nChoice of domain and path (owned, authoritative, neutral, prevent names)\nSet up an identification proxy (doi.org/w3id.org)"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#metadata",
-    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#metadata",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#metadata",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#metadata",
     "title": "1.2 Findable",
     "section": "Metadata",
     "text": "Metadata\n\nMetadata describes title, abstract, author of a resource\nFacilitate findability and understand if a resource is relevant\nCan organize resources in groups by tagging"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#standards-for-metadata-exchange",
-    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#standards-for-metadata-exchange",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#standards-for-metadata-exchange",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#standards-for-metadata-exchange",
     "title": "1.2 Findable",
     "section": "Standards for metadata exchange",
     "text": "Standards for metadata exchange\n\nFacilitate the exchange of resources between communities\nProtocols to exchange metadata:\n\n\n\n\nCommunity\nStandard\nProtocol\n\n\n\n\nOpen data/Sematic web\nDCAT\nSPARQL\n\n\nScience\nDatacite\nOAI-PMH\n\n\nGeospatial\niso19115\nCSW\n\n\nSearch engines\nSchema.org\njson-ld/microdata"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#catalogue",
-    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#catalogue",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#catalogue",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#catalogue",
     "title": "1.2 Findable",
     "section": "Catalogue",
     "text": "Catalogue\n\nRecords are brought into a catalogue, where they can be searched and assessed\nCatalogues can exchange records to increase discoverability\nCatalogues can cross borders between communities by transforming metadata to relevant community standards and protocols"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#search-engines",
-    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#search-engines",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#search-engines",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#search-engines",
     "title": "1.2 Findable",
     "section": "Search engines",
     "text": "Search engines\n\nSearch engines crawl the content of catalogues\nIf a catalogue supports schema.org annotations, the content can also be extracted in a structured way\nExample"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#persistence",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#persistence",
+    "title": "1.2 Findable",
+    "section": "Persistence",
+    "text": "Persistence\n\nMove the resource to a shared environment (backup)\nConsider a URL strategy\nUse a facade identifier (DOI)"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#data-lifecycle",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#data-lifecycle",
+    "title": "1.2 Findable",
+    "section": "Data lifecycle",
+    "text": "Data lifecycle\n\nConsider upfront when to remove a resource (10 yrs?)\nWhat happens to the URI of a resource which is archived?\nMetadata should stay available, even if the data are no longer"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#repository-software",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#repository-software",
+    "title": "1.2 Findable",
+    "section": "Repository software",
+    "text": "Repository software\n\nWebdav (or webserver software)\nZenodo, Dataverse\nDocument Management Systems (DMS)\nCloud storage (google drive, dropbox, Amazon, Sharepoint)"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#testing-tools",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#testing-tools",
+    "title": "1.2 Findable",
+    "section": "testing tools",
+    "text": "testing tools\n\nAutomated link checking\nUsage logs filter on status 404 & referer\nGoogle Search Console notifies broken links"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#universal-formats",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#universal-formats",
+    "title": "1.2 Findable",
+    "section": "Universal formats",
+    "text": "Universal formats\nFacilitates accessing a resource with commonly available tooling, or be refactored if a software is abandoned\n\nProprietary vs Open (eg. ecw vs tiff)\nDe facto vs Formalised (eg. YAML vs XML)\nBinary vs text based (eg. shapefile vs GeoJSON)\nCloud optimised vs Cloud native vs traditional (eg. COG vs GeoZarr vs GeoTiff)\nEmbedded metadata"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#adopt-common-vocabularies",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#adopt-common-vocabularies",
+    "title": "1.2 Findable",
+    "section": "Adopt common vocabularies",
+    "text": "Adopt common vocabularies\nAdopting a standardised model enables aggregation of data.\n\nRelational models\nUML/GML models\nSemantic web ontologies"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#relevant-vocabularies",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#relevant-vocabularies",
+    "title": "1.2 Findable",
+    "section": "Relevant vocabularies",
+    "text": "Relevant vocabularies\n\nISO28258 / INSPIRE / GLOSIS Web Ontology\nAgrovoc\nWRB / FAO Soil Classification Guidelines"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#aspect-1",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#aspect-1",
+    "title": "1.2 Findable",
+    "section": "aspect 1",
+    "text": "aspect 1\n\n\n\nWorkshop on spatial data flows"
   },
   {
     "objectID": "index.html",
@@ -116,7 +151,7 @@
     "href": "docs/index.html",
     "title": "LSC Hubs documentation",
     "section": "",
-    "text": "User documentation\nAdministrator documentation\nDeveloper documentation"
+    "text": "Documentation of this hub has been split up in 3 groups, for users, for administrators and for developers.\n\n\n\nUser documentation\nAdministrator documentation\nDeveloper documentation"
   },
   {
     "objectID": "docs/index.html#contents",
@@ -816,84 +851,56 @@
     "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#preparing-data-for-digital-soil-mapping",
     "title": "1.1 Training Overview",
     "section": "Preparing data for Digital Soil Mapping",
-    "text": "Preparing data for Digital Soil Mapping"
+    "text": "Preparing data for Digital Soil Mapping\n\n\n\nWorkshop on spatial data flows"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#persistence",
-    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#persistence",
-    "title": "1.3 Accessible",
-    "section": "Persistence",
-    "text": "Persistence\n\nMove the resource to a shared environment (backup)\nConsider a URL strategy\nUse a facade identifier (DOI)"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#data-lifecycle",
-    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#data-lifecycle",
-    "title": "1.3 Accessible",
-    "section": "Data lifecycle",
-    "text": "Data lifecycle\n\nConsider upfront when to remove a resource (10 yrs?)\nWhat happens to the URI of a resource which is archived?\nMetadata should stay available, even if the data are no longer"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#repository-software",
-    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#repository-software",
-    "title": "1.3 Accessible",
-    "section": "Repository software",
-    "text": "Repository software\n\nWebdav (or webserver software)\nZenodo, Dataverse\nDocument Management Systems (DMS)\nCloud storage (google drive, dropbox, Amazon, Sharepoint)"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#testing-tools",
-    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#testing-tools",
-    "title": "1.3 Accessible",
-    "section": "testing tools",
-    "text": "testing tools\n\nAutomated link checking\nUsage logs filter on status 404 & referer\nGoogle Search Console notifies broken links"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#github",
-    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#github",
-    "title": "1.7 Tools",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#github",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#github",
+    "title": "1.3 Tools",
     "section": "Github",
     "text": "Github\nService to facilitate co-creation\n\nversion history of contributions\nauthentication\nissue management\nrelease management\nContinuous integration\n\nRelated software; Git, Gitlab, Bitbucket, Codeberg"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#quarto",
-    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#quarto",
-    "title": "1.7 Tools",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#quarto",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#quarto",
+    "title": "1.3 Tools",
     "section": "Quarto",
     "text": "Quarto\nA content management system to create websites, documentation, slides, etc.\nRelated software; Hugo, mkdocs, Jekyll, Wordpress, Drupal"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#pycsw",
-    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#pycsw",
-    "title": "1.7 Tools",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#pycsw",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#pycsw",
+    "title": "1.3 Tools",
     "section": "pycsw",
     "text": "pycsw\nA catalogue server application providing support for multiple metadata schemes and metadata exchange standards\nRelated products; GeoNetwork, CKAN, Dataverse"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#mapserver",
-    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#mapserver",
-    "title": "1.7 Tools",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#mapserver",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#mapserver",
+    "title": "1.3 Tools",
     "section": "Mapserver",
     "text": "Mapserver\nA server application providing OGC services (WMS, WFS, WCS) on various data formats\nRelated products; Geoserver, ArcGIS server, deegree, pygeoapi, QGIS server"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#leaflet",
-    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#leaflet",
-    "title": "1.7 Tools",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#leaflet",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#leaflet",
+    "title": "1.3 Tools",
     "section": "Leaflet",
     "text": "Leaflet\nA javascript library to load interactive maps on a webpage.\n\nL = require('leaflet@1.9.4')\nhtml`&lt;link href='${resolve('leaflet@1.9.4/dist/leaflet.css')}' rel='stylesheet' /&gt;`\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmap = {\n  let container = DOM.element('div', { style: `width:${width}px;height:${width/1.6}px` });\n  yield container;\n  let map = L.map(container).setView([-1.940278,29.873888], 13);\n  let osmLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {\n      attribution: '&copy; &lt;a href=\"http://osm.org/copyright\"&gt;OpenStreetMap&lt;/a&gt; contributors'\n  }).addTo(map);\n  let nexrad = L.tileLayer.wms(\"https://maps.lsc-hubs.org/ows/clay\", {\n    layers: 'Clay_mean_0-20cm',\n    format: 'image/png',\n    opacity: 0.5,\n    transparent: 'true'\n}).addTo(map);;\n}\n\n\n\n\n\n\n\n\nRelated products; Openlayers, Cesium, Google Maps API, MapLibre"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#terriajs",
-    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#terriajs",
-    "title": "1.7 Tools",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#terriajs",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#terriajs",
+    "title": "1.3 Tools",
     "section": "TerriaJS",
     "text": "TerriaJS\nA WebGIS application including Leaflet library\ndemo\nRelated products; GeoNode, GeoMoose, MapBender, Oskari, GisQuick"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#hale-desktop",
-    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#hale-desktop",
-    "title": "1.7 Tools",
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#hale-desktop",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#hale-desktop",
+    "title": "1.3 Tools",
     "section": "Hale Desktop",
-    "text": "Hale Desktop\nSoftware to run Extract Transform and Load (ETL)\nRelated Software; FME, GDAL, Apache Hive,"
+    "text": "Hale Desktop\nSoftware to run Extract Transform and Load (ETL)\nRelated Software; FME, GDAL, Apache Hive,\n\n\n\nWorkshop on spatial data flows"
   },
   {
     "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#what-is-ogc",
@@ -907,7 +914,7 @@
     "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#ows-vs-ogc-api",
     "title": "3.1 OGC data services",
     "section": "OWS vs OGC API",
-    "text": "OWS vs OGC API\n\nThe GML and OWS standards are defined on 20**\nSince then the internet moved away from xml\nin 2017 started spatial data on the web experiment with W3C, leading to OGC API\nCurrently under development\nBasic support in new and existing products\nThe browser as a tool to browse spatial data"
+    "text": "OWS vs OGC API\n\nThe GML and OWS standards are defined on 20**\nSince then the internet moved away from xml\nin 2017 started spatial data on the web experiment with W3C, leading to OGC API\nCurrently under development\nBasic support in new and existing products\nThe browser as a tool to browse spatial data\n\n\n\n\nWorkshop on spatial data flows"
   },
   {
     "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#history",
@@ -935,6 +942,6 @@
     "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#iso28258-1",
     "title": "4.1 Soil Profile Datamanagement",
     "section": "ISO28258",
-    "text": "ISO28258\n\nA relational model is available according to ISO28258\nEither as PostGreSQL or geopackage (sqlite)\nRead more at https://iso28258.isric.org"
+    "text": "ISO28258\n\nA relational model is available according to ISO28258\nEither as PostGreSQL or geopackage (sqlite)\nRead more at https://iso28258.isric.org\n\n\n\n\nWorkshop on spatial data flows"
   }
 ]
