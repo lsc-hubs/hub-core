@@ -1,5 +1,68 @@
 [
   {
+    "objectID": "docs/developer/tutorial-data-management/slides/index.html",
+    "href": "docs/developer/tutorial-data-management/slides/index.html",
+    "title": "Slides training on data management",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 15, 2023\n\n\n1.1 Training Overview\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.2 Findable\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.3 Accessible\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.4 Interoperable\n\n\nPaul van Genuchten\n\n\n\n\nundefined\n\n\n1.5 Reusable\n\n\n\n\n\n\n\nundefined\n\n\n1.6 Approach\n\n\n\n\n\n\n\nundefined\n\n\n1.7 Tools\n\n\n\n\n\n\n\nundefined\n\n\n2.1 Collect and Publish metadata\n\n\n\n\n\n\n\nundefined\n\n\n3.1 OGC data services\n\n\n\n\n\n\n\nundefined\n\n\n3.2 Service Quality\n\n\n\n\n\n\n\nundefined\n\n\n4.1 Soil Profile Datamanagement\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#universal-formats",
+    "href": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#universal-formats",
+    "title": "1.4 Interoperable",
+    "section": "Universal formats",
+    "text": "Universal formats\nFacilitates accessing a resource with commonly available tooling, or be refactored if a software is abandoned\n\nProprietary vs Open (eg. ecw vs tiff)\nDe facto vs Formalised (eg. YAML vs XML)\nBinary vs text based (eg. shapefile vs GeoJSON)\nCloud optimised vs Cloud native vs traditional (eg. COG vs GeoZarr vs GeoTiff)\nEmbedded metadata"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#adopt-common-vocabularies",
+    "href": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#adopt-common-vocabularies",
+    "title": "1.4 Interoperable",
+    "section": "Adopt common vocabularies",
+    "text": "Adopt common vocabularies\nAdopting a standardised model enables aggregation of data.\n\nRelational models\nUML/GML models\nSemantic web ontologies"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#relevant-vocabularies",
+    "href": "docs/developer/tutorial-data-management/slides/1.4-interoperable.html#relevant-vocabularies",
+    "title": "1.4 Interoperable",
+    "section": "Relevant vocabularies",
+    "text": "Relevant vocabularies\n\nISO28258 / INSPIRE / GLOSIS Web Ontology\nAgrovoc\nWRB / FAO Soil Classification Guidelines"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#persistent-identification",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#persistent-identification",
+    "title": "1.2 Findable",
+    "section": "Persistent identification",
+    "text": "Persistent identification\nPersistent identification, for continued findability\n\nConsider that a proper id can outlive a project (or organisation)\nChoice of domain and path (owned, authoritative, neutral, prevent names)\nSet up an identification proxy (doi.org/w3id.org)"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#metadata",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#metadata",
+    "title": "1.2 Findable",
+    "section": "Metadata",
+    "text": "Metadata\n\nMetadata describes title, abstract, author of a resource\nFacilitate findability and understand if a resource is relevant\nCan organize resources in groups by tagging"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#standards-for-metadata-exchange",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#standards-for-metadata-exchange",
+    "title": "1.2 Findable",
+    "section": "Standards for metadata exchange",
+    "text": "Standards for metadata exchange\n\nFacilitate the exchange of resources between communities\nProtocols to exchange metadata:\n\n\n\n\nCommunity\nStandard\nProtocol\n\n\n\n\nOpen data/Sematic web\nDCAT\nSPARQL\n\n\nScience\nDatacite\nOAI-PMH\n\n\nGeospatial\niso19115\nCSW\n\n\nSearch engines\nSchema.org\njson-ld/microdata"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#catalogue",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#catalogue",
+    "title": "1.2 Findable",
+    "section": "Catalogue",
+    "text": "Catalogue\n\nRecords are brought into a catalogue, where they can be searched and assessed\nCatalogues can exchange records to increase discoverability\nCatalogues can cross borders between communities by transforming metadata to relevant community standards and protocols"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.2-findable.html#search-engines",
+    "href": "docs/developer/tutorial-data-management/slides/1.2-findable.html#search-engines",
+    "title": "1.2 Findable",
+    "section": "Search engines",
+    "text": "Search engines\n\nSearch engines crawl the content of catalogues\nIf a catalogue supports schema.org annotations, the content can also be extracted in a structured way\nExample"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Land Soil Crop Hub",
@@ -18,35 +81,35 @@
     "href": "index.html#information-services",
     "title": "Land Soil Crop Hub",
     "section": "Information services",
-    "text": "Information services\nInformation services provide dedicated information derived from relevant data to a targeted audience.\nProcessing raw data in many cases requires expert knowledge. To bring the value of the data to a wider audience, it is of interest to set up information services derived from that data to targeted audiences."
+    "text": "Information services\nInformation services provide dedicated information derived from relevant data to a targeted audience.\nProcessing raw data in many cases requires expert knowledge. To bring the value of the data to a wider audience, it is of interest to set up information services derived from that data to targeted audiences.\nBrowse services Read more"
   },
   {
     "objectID": "index.html#predictive-modeling",
     "href": "index.html#predictive-modeling",
     "title": "Land Soil Crop Hub",
     "section": "Predictive modeling",
-    "text": "Predictive modeling\nPredictive modeling in the LSC hub focuses on Soil Fertility and Soil Water Conservation and is a data-driven analytical approach that involves the use of statistical or machine learning techniques to create models that can make predictions about future events or outcomes based on historical data."
+    "text": "Predictive modeling\nPredictive modeling in the LSC hub focuses on Soil Fertility and Soil Water Conservation and is a data-driven analytical approach that involves the use of statistical or machine learning techniques to create models that can make predictions about future events or outcomes based on historical data.\nBrowse models Read more"
   },
   {
     "objectID": "index.html#user-stories",
     "href": "index.html#user-stories",
     "title": "Land Soil Crop Hub",
     "section": "User stories",
-    "text": "User stories\nThe two cases below are descriptions of key applications for which the LSC hub can be used, including the main stakeholders, the main issues and the models through which ‘LSC data’ is converted into information services that support informed decision making.\n\n\n\n\nSoil Fertility Management\nCurrent fertilizer and soil recommendations lack local context, leading to soil health decline and lower productivity. Integrated Soil Fertility Management can improve practices, boost yields, and provide climate benefits. This case aims to deliver better agronomic advice to farmers via agricultural extension services or directly, using existing data and tools.\n\n\n\n\n\n\n\nSoil Water Conservation\nSoil erosion threatens sustainability, climate, and food security in hilly regions of Ethiopia, Kenya, and Rwanda. Current land practices neglect local factors and erosion risks. The goal is to inform stakeholders and promote sustainable land practices for LDN, providing catchment managers and farmers with relevant information through the LSC-hub."
+    "text": "User stories\nThe two cases below are descriptions of key applications for which the LSC hub can be used, including the main stakeholders, the main issues and the models through which ‘LSC data’ is converted into information services that support informed decision making.\n\n\n\n\nSoil Fertility Management\nCurrent fertilizer and soil recommendations lack local context, leading to soil health decline and lower productivity. Integrated Soil Fertility Management can improve practices, boost yields, and provide climate benefits. This case aims to deliver better agronomic advice to farmers via agricultural extension services or directly, using existing data and tools.\n\nExplore this use case\n\n\n\n\n\nSoil Water Conservation\nSoil erosion threatens sustainability, climate, and food security in hilly regions of Ethiopia, Kenya, and Rwanda. Current land practices neglect local factors and erosion risks. The goal is to inform stakeholders and promote sustainable land practices for LDN, providing catchment managers and farmers with relevant information through the LSC-hub.\n\nExplore this use case"
   },
   {
     "objectID": "index.html#hub-community",
     "href": "index.html#hub-community",
     "title": "Land Soil Crop Hub",
     "section": "Hub community",
-    "text": "Hub community\nThe heart of the knowledge hub. Here, you’ll find like-minded participants who share a passion for learning and knowledge exchange.\nJoin our diverse community of learners, experts, and enthusiasts to engage in discussions, share insights, and collaborate on soil fertility and soil water conservation topics. Explore, connect, contribute and make the hub grow."
+    "text": "Hub community\nThe heart of the knowledge hub. Here, you’ll find like-minded participants who share a passion for learning and knowledge exchange.\nJoin our diverse community of learners, experts, and enthusiasts to engage in discussions, share insights, and collaborate on soil fertility and soil water conservation topics. Explore, connect, contribute and make the hub grow.\n\nVisit community"
   },
   {
     "objectID": "index.html#join-our-newsletter",
     "href": "index.html#join-our-newsletter",
     "title": "Land Soil Crop Hub",
     "section": "Join our newsletter",
-    "text": "Join our newsletter\nSubscribe to our newsletter and be the first to receive the latest data updates and community news about the Kenya Land Soil and Crop hub."
+    "text": "Join our newsletter\nSubscribe to our newsletter and be the first to receive the latest data updates and community news about the Kenya Land Soil and Crop hub.\n\nSubscribe now"
   },
   {
     "objectID": "docs/index.html",
@@ -287,6 +350,146 @@
     "text": "Alternative relevant content\n\nEJP Soil Date Assimilaton Cookbook\nTutorial data management"
   },
   {
+    "objectID": "cases/swc.html",
+    "href": "cases/swc.html",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "Soil erosion is a major threat to sustainability and productivity with knock-on effects on the climate crisis and food security. It decreases soil fertility negatively affecting crop yields on fields, while eroded sediments from upstream clog downstream, dams, rivers and canals causing sedimentation and flooding. This is particularly true for hilly areas in Ethiopia, Kenya and Rwanda with high erosion risk. Soil erosion can be prevented and arrested through soil and water conservation (SWC) or sustainable land management (SLM) practices. Current land use and land management practices including crop cultivation as well as grazing do not sufficiently consider local potential, limitations and climate and soil erosion risks. While general information on improved land management may exist, context-based information on land resources, and climate and information on feasible SLM alternatives is not widely available or applied by land managers. ​ ​\n\n\n\nStakeholders informed of status of soil erosion risks and motivated to apply and promote more sustainable land use and land management practices through improved policies, plans and agricultural extension services, including contributions to Land Degradation Neutrality (LDN) monitoring and reporting.​ ​\n\n\n\nCatchment managers, authorities and farmer organisations can use the system to obtain information on the suitability of various sustainable land uses and land management practices for agricultural production and land restoration. These is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and GIS based land suitability and soil erosion models, accessible in the LSC-hub.​\n\n\n\nLSC-IS hub, land suitability applications, Soil erosion and AEZ models and data used in national LDN monitoring and plans for County development, catchment management and farm management.​\n\n\n\n\nNational\nsub-national, landscape or catchment\nlocal level​ ​ ## Primary actors\nNational: national and regional agriculture and forestry/natural resource management authorities, planners and project managers, UNCCD focal points.​\nLocal: catchment management, agricultural extension staff, farmer’s and other community-based organisations and authorities.​\n\n\n\n\nHub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​\n\n\n\nFarmers and communities.​\n\n\n\nThe intermediary actor accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor converts this information into land use and land management recommendations and advise to ultimate end users, in particular farmers.​"
+  },
+  {
+    "objectID": "cases/swc.html#setting",
+    "href": "cases/swc.html#setting",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "Soil erosion is a major threat to sustainability and productivity with knock-on effects on the climate crisis and food security. It decreases soil fertility negatively affecting crop yields on fields, while eroded sediments from upstream clog downstream, dams, rivers and canals causing sedimentation and flooding. This is particularly true for hilly areas in Ethiopia, Kenya and Rwanda with high erosion risk. Soil erosion can be prevented and arrested through soil and water conservation (SWC) or sustainable land management (SLM) practices. Current land use and land management practices including crop cultivation as well as grazing do not sufficiently consider local potential, limitations and climate and soil erosion risks. While general information on improved land management may exist, context-based information on land resources, and climate and information on feasible SLM alternatives is not widely available or applied by land managers. ​ ​"
+  },
+  {
+    "objectID": "cases/swc.html#goal",
+    "href": "cases/swc.html#goal",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "Stakeholders informed of status of soil erosion risks and motivated to apply and promote more sustainable land use and land management practices through improved policies, plans and agricultural extension services, including contributions to Land Degradation Neutrality (LDN) monitoring and reporting.​ ​"
+  },
+  {
+    "objectID": "cases/swc.html#scope",
+    "href": "cases/swc.html#scope",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "Catchment managers, authorities and farmer organisations can use the system to obtain information on the suitability of various sustainable land uses and land management practices for agricultural production and land restoration. These is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and GIS based land suitability and soil erosion models, accessible in the LSC-hub.​"
+  },
+  {
+    "objectID": "cases/swc.html#system",
+    "href": "cases/swc.html#system",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "LSC-IS hub, land suitability applications, Soil erosion and AEZ models and data used in national LDN monitoring and plans for County development, catchment management and farm management.​"
+  },
+  {
+    "objectID": "cases/swc.html#scale",
+    "href": "cases/swc.html#scale",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "National\nsub-national, landscape or catchment\nlocal level​ ​ ## Primary actors\nNational: national and regional agriculture and forestry/natural resource management authorities, planners and project managers, UNCCD focal points.​\nLocal: catchment management, agricultural extension staff, farmer’s and other community-based organisations and authorities.​"
+  },
+  {
+    "objectID": "cases/swc.html#secondary-actors",
+    "href": "cases/swc.html#secondary-actors",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "Hub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​"
+  },
+  {
+    "objectID": "cases/swc.html#beneficiary",
+    "href": "cases/swc.html#beneficiary",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "Farmers and communities.​"
+  },
+  {
+    "objectID": "cases/swc.html#scenario",
+    "href": "cases/swc.html#scenario",
+    "title": "Kenya Soil Water Conservation",
+    "section": "",
+    "text": "The intermediary actor accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor converts this information into land use and land management recommendations and advise to ultimate end users, in particular farmers.​"
+  },
+  {
+    "objectID": "cases/models.html",
+    "href": "cases/models.html",
+    "title": "models",
+    "section": "",
+    "text": "Models"
+  },
+  {
+    "objectID": "cases/isfm.html",
+    "href": "cases/isfm.html",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks. Integrated Soil Fertility Management (ISFM) has the potential to improve effectivity and efficiency of agronomic practices including both fertilizer recommendations and organic matter management and thereby boost crop production and farm income. Also, ISFM has the potential to deliver multiple co-benefits including climate adaptation (through improved water holding capacity and soil cover) as well as climate mitigation (through carbon sequestration).​\n\n\n\nImproved agronomic management advisories including crop type and soil fertility management to farmers via agricultural extension staff or directly.​\n\n\n\nLand users and their intermediaries can use the system to obtain information on the soil fertility and alternatives to improve soil fertility. It is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and models (WOFOST, DSSAT etc) accessible in the LSC-hub. These will include risk assessment of weather and other external factors.​\n\n\n\n\nField/farm,\nSub-national (county/district/woreda)\nNational levels​\n\n\n\n\n\nnational: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer.​\n​\n\n\n\n\n\nHub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​\n\n\n\n\n\nFarmers.​\n\n\n\n\nThe intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent/ lead farmer/ agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​\n​"
+  },
+  {
+    "objectID": "cases/isfm.html#setting",
+    "href": "cases/isfm.html#setting",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks. Integrated Soil Fertility Management (ISFM) has the potential to improve effectivity and efficiency of agronomic practices including both fertilizer recommendations and organic matter management and thereby boost crop production and farm income. Also, ISFM has the potential to deliver multiple co-benefits including climate adaptation (through improved water holding capacity and soil cover) as well as climate mitigation (through carbon sequestration).​"
+  },
+  {
+    "objectID": "cases/isfm.html#goal",
+    "href": "cases/isfm.html#goal",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Improved agronomic management advisories including crop type and soil fertility management to farmers via agricultural extension staff or directly.​"
+  },
+  {
+    "objectID": "cases/isfm.html#scope",
+    "href": "cases/isfm.html#scope",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Land users and their intermediaries can use the system to obtain information on the soil fertility and alternatives to improve soil fertility. It is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and models (WOFOST, DSSAT etc) accessible in the LSC-hub. These will include risk assessment of weather and other external factors.​"
+  },
+  {
+    "objectID": "cases/isfm.html#scale",
+    "href": "cases/isfm.html#scale",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Field/farm,\nSub-national (county/district/woreda)\nNational levels​"
+  },
+  {
+    "objectID": "cases/isfm.html#primary-actors",
+    "href": "cases/isfm.html#primary-actors",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "national: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer.​\n​"
+  },
+  {
+    "objectID": "cases/isfm.html#secondary-actors",
+    "href": "cases/isfm.html#secondary-actors",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Hub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​"
+  },
+  {
+    "objectID": "cases/isfm.html#beneficiary",
+    "href": "cases/isfm.html#beneficiary",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Farmers.​"
+  },
+  {
+    "objectID": "cases/isfm.html#scenario",
+    "href": "cases/isfm.html#scenario",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "The intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent/ lead farmer/ agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​\n​"
+  },
+  {
+    "objectID": "cases/services.html",
+    "href": "cases/services.html",
+    "title": "Services",
+    "section": "",
+    "text": "Services"
+  },
+  {
     "objectID": "docs/admin/index.html",
     "href": "docs/admin/index.html",
     "title": "Administration documentation",
@@ -488,5 +691,250 @@
     "title": "User Guideline LSC Hubs",
     "section": "Additional information",
     "text": "Additional information\nThe stakeholders keep ownership in the LSC hub. The catalogue can be linked to various information sources, without that the data is stored on the LSC hub. Therefore, if you know existing information sources that are missing and should be added, there is a way to add the information by using an ODK form.\nAn Open Data Kit (ODK) form is a form that provides a structured way to collect and provide information. Typically forms are used by data collectors via an online link. The LSC-hub ODK form can accessed by: ODK form LSC-IS"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#agenda",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#agenda",
+    "title": "1.1 Training Overview",
+    "section": "Agenda",
+    "text": "Agenda\n\n\n\nDay\nTopic\n\n\n\n\nDay 1\nFAIR principlesMetadata management\n\n\nDay 2\nMetadata publication\n\n\nDay 3\nData publicationQuality of Service\n\n\nDay 4\nCases"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#findable",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#findable",
+    "title": "1.1 Training Overview",
+    "section": "Findable",
+    "text": "Findable\n\n(Meta)data are assigned a globally unique and persistent identifier\nData are described with rich metadata\nMetadata clearly and explicitly include the identifier of the data they describe\n(Meta)data are registered or indexed in a searchable resource"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#accessible",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#accessible",
+    "title": "1.1 Training Overview",
+    "section": "Accessible",
+    "text": "Accessible\n\n(Meta)data are retrievable by their identifier using a standardised communications protocol\nMetadata are accessible, even when the data are no longer available"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#interoperable",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#interoperable",
+    "title": "1.1 Training Overview",
+    "section": "Interoperable",
+    "text": "Interoperable\n\n(Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.\n(Meta)data use vocabularies that follow FAIR principles\n(Meta)data include qualified references to other (meta)data"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#reusable",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#reusable",
+    "title": "1.1 Training Overview",
+    "section": "Reusable",
+    "text": "Reusable\n\n(Meta)data are richly described with a plurality of accurate and relevant attributes\n(Meta)data are released with a clear and accessible data usage license\n(Meta)data are associated with detailed provenance\n(Meta)data meet domain-relevant community standards"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#metadata",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#metadata",
+    "title": "1.1 Training Overview",
+    "section": "Metadata",
+    "text": "Metadata"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#services",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#services",
+    "title": "1.1 Training Overview",
+    "section": "Services",
+    "text": "Services"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#data-formats",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#data-formats",
+    "title": "1.1 Training Overview",
+    "section": "Data formats",
+    "text": "Data formats"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#data-models",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#data-models",
+    "title": "1.1 Training Overview",
+    "section": "Data models",
+    "text": "Data models"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#codelists",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#codelists",
+    "title": "1.1 Training Overview",
+    "section": "Codelists",
+    "text": "Codelists\nCommonly defined domains for properties (texture classes, grainsize, soil color)"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#metadata-workflow",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#metadata-workflow",
+    "title": "1.1 Training Overview",
+    "section": "Metadata workflow",
+    "text": "Metadata workflow"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#metadata-1",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#metadata-1",
+    "title": "1.1 Training Overview",
+    "section": "Metadata",
+    "text": "Metadata"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#services-1",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#services-1",
+    "title": "1.1 Training Overview",
+    "section": "Services",
+    "text": "Services"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#data-models-1",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#data-models-1",
+    "title": "1.1 Training Overview",
+    "section": "Data models",
+    "text": "Data models"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#codelists-1",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#codelists-1",
+    "title": "1.1 Training Overview",
+    "section": "Codelists",
+    "text": "Codelists"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#setting-up-a-database",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#setting-up-a-database",
+    "title": "1.1 Training Overview",
+    "section": "Setting up a database",
+    "text": "Setting up a database"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#loading-legacy-data",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#loading-legacy-data",
+    "title": "1.1 Training Overview",
+    "section": "Loading legacy data",
+    "text": "Loading legacy data"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#preparing-data-for-digital-soil-mapping",
+    "href": "docs/developer/tutorial-data-management/slides/1.1-overview.html#preparing-data-for-digital-soil-mapping",
+    "title": "1.1 Training Overview",
+    "section": "Preparing data for Digital Soil Mapping",
+    "text": "Preparing data for Digital Soil Mapping"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#persistence",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#persistence",
+    "title": "1.3 Accessible",
+    "section": "Persistence",
+    "text": "Persistence\n\nMove the resource to a shared environment (backup)\nConsider a URL strategy\nUse a facade identifier (DOI)"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#data-lifecycle",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#data-lifecycle",
+    "title": "1.3 Accessible",
+    "section": "Data lifecycle",
+    "text": "Data lifecycle\n\nConsider upfront when to remove a resource (10 yrs?)\nWhat happens to the URI of a resource which is archived?\nMetadata should stay available, even if the data are no longer"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#repository-software",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#repository-software",
+    "title": "1.3 Accessible",
+    "section": "Repository software",
+    "text": "Repository software\n\nWebdav (or webserver software)\nZenodo, Dataverse\nDocument Management Systems (DMS)\nCloud storage (google drive, dropbox, Amazon, Sharepoint)"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#testing-tools",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-accessible.html#testing-tools",
+    "title": "1.3 Accessible",
+    "section": "testing tools",
+    "text": "testing tools\n\nAutomated link checking\nUsage logs filter on status 404 & referer\nGoogle Search Console notifies broken links"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#github",
+    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#github",
+    "title": "1.7 Tools",
+    "section": "Github",
+    "text": "Github\nService to facilitate co-creation\n\nversion history of contributions\nauthentication\nissue management\nrelease management\nContinuous integration\n\nRelated software; Git, Gitlab, Bitbucket, Codeberg"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#quarto",
+    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#quarto",
+    "title": "1.7 Tools",
+    "section": "Quarto",
+    "text": "Quarto\nA content management system to create websites, documentation, slides, etc.\nRelated software; Hugo, mkdocs, Jekyll, Wordpress, Drupal"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#pycsw",
+    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#pycsw",
+    "title": "1.7 Tools",
+    "section": "pycsw",
+    "text": "pycsw\nA catalogue server application providing support for multiple metadata schemes and metadata exchange standards\nRelated products; GeoNetwork, CKAN, Dataverse"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#mapserver",
+    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#mapserver",
+    "title": "1.7 Tools",
+    "section": "Mapserver",
+    "text": "Mapserver\nA server application providing OGC services (WMS, WFS, WCS) on various data formats\nRelated products; Geoserver, ArcGIS server, deegree, pygeoapi, QGIS server"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#leaflet",
+    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#leaflet",
+    "title": "1.7 Tools",
+    "section": "Leaflet",
+    "text": "Leaflet\nA javascript library to load interactive maps on a webpage.\n\nL = require('leaflet@1.9.4')\nhtml`&lt;link href='${resolve('leaflet@1.9.4/dist/leaflet.css')}' rel='stylesheet' /&gt;`\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmap = {\n  let container = DOM.element('div', { style: `width:${width}px;height:${width/1.6}px` });\n  yield container;\n  let map = L.map(container).setView([-1.940278,29.873888], 13);\n  let osmLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {\n      attribution: '&copy; &lt;a href=\"http://osm.org/copyright\"&gt;OpenStreetMap&lt;/a&gt; contributors'\n  }).addTo(map);\n  let nexrad = L.tileLayer.wms(\"https://maps.lsc-hubs.org/ows/clay\", {\n    layers: 'Clay_mean_0-20cm',\n    format: 'image/png',\n    opacity: 0.5,\n    transparent: 'true'\n}).addTo(map);;\n}\n\n\n\n\n\n\n\n\nRelated products; Openlayers, Cesium, Google Maps API, MapLibre"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#terriajs",
+    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#terriajs",
+    "title": "1.7 Tools",
+    "section": "TerriaJS",
+    "text": "TerriaJS\nA WebGIS application including Leaflet library\ndemo\nRelated products; GeoNode, GeoMoose, MapBender, Oskari, GisQuick"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.7-tools.html#hale-desktop",
+    "href": "docs/developer/tutorial-data-management/slides/1.7-tools.html#hale-desktop",
+    "title": "1.7 Tools",
+    "section": "Hale Desktop",
+    "text": "Hale Desktop\nSoftware to run Extract Transform and Load (ETL)\nRelated Software; FME, GDAL, Apache Hive,"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#what-is-ogc",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#what-is-ogc",
+    "title": "3.1 OGC data services",
+    "section": "What is OGC",
+    "text": "What is OGC\n\nOpen Geospatial Consortium defines standards for the geospatial industry\nMembers are software companies, universities and govenment\nSuch as WMS, GML, OGCAPI, EPSG, GeoSPARQL\nRead more at https://opengeospatial.org"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#ows-vs-ogc-api",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#ows-vs-ogc-api",
+    "title": "3.1 OGC data services",
+    "section": "OWS vs OGC API",
+    "text": "OWS vs OGC API\n\nThe GML and OWS standards are defined on 20**\nSince then the internet moved away from xml\nin 2017 started spatial data on the web experiment with W3C, leading to OGC API\nCurrently under development\nBasic support in new and existing products\nThe browser as a tool to browse spatial data"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#history",
+    "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#history",
+    "title": "4.1 Soil Profile Datamanagement",
+    "section": "History",
+    "text": "History\nVarious efforts have been made to harmonise Soil Profile data\n\neSOTER\nGlobalSoilMap\nISO28258\nOGC Interoperability experiment\nGLOSIS Web ontology\nAnzSoil"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#iso28258",
+    "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#iso28258",
+    "title": "4.1 Soil Profile Datamanagement",
+    "section": "ISO28258",
+    "text": "ISO28258\n\n\n\nISO28258 is based on Observations and measurements\nevery field observation and laboratory analysis as a sensor observation\n\n\n\n\n\nO&M model"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#glosis-web-ontology",
+    "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#glosis-web-ontology",
+    "title": "4.1 Soil Profile Datamanagement",
+    "section": "GLOSIS Web Ontology",
+    "text": "GLOSIS Web Ontology\n\nISO28258 expressed using common web ontologys (SOSA, VCARD)\nIncludes codelists for soil properties and procedures"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#iso28258-1",
+    "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#iso28258-1",
+    "title": "4.1 Soil Profile Datamanagement",
+    "section": "ISO28258",
+    "text": "ISO28258\n\nA relational model is available according to ISO28258\nEither as PostGreSQL or geopackage (sqlite)\nRead more at https://iso28258.isric.org"
   }
 ]
