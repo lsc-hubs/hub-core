@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Paul van Genuchten">
-<meta name="dcterms.date" content="2023-05-09">
+<meta name="dcterms.date" content="2023-11-23">
 
-<title>Land Soil Crop Hub - Bulk import</title>
+<title>Land Soil Crop Hub - FAIR data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/4-bulk-import.html">Bulk import</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/fair-data.html">FAIR data</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -200,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bulk import</span></a>
   </div>
 </li>
@@ -236,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/fair-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/fair-data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">FAIR data</span></a>
   </div>
 </li>
@@ -255,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bulk import</h1>
+<h1 class="title">FAIR data</h1>
 </div>
 
 
@@ -272,7 +272,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 9, 2023</p>
+      <p class="date">November 23, 2023</p>
     </div>
   </div>
   
@@ -282,43 +282,122 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This paragraph describes approaches to import metadata from existing repositories. Including an option to import metadata from a spreadsheet.</p>
+<p>The <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> are considered a good practice on data sharing in academic communities and beyond. Similar initiatives exist which may be more relevant for dedicated communities or scenarios:</p>
+<ul>
+<li><a href="https://www.w3.org/TR/dwbp/">W3C Data on the web best practices</a></li>
+<li><a href="https://public.resource.org/8_principles.html">Open government data principles</a></li>
+<li><a href="https://inspire.ec.europa.eu/inspire-directive/2">European INSPIRE Directive</a></li>
+</ul>
+<p>In this paragraph we present a number of exercises around the FAIR principles. FAIR Data is:</p>
+<ul>
+<li><a href="#findable">Findable</a></li>
+<li><a href="#accessible">Accessible</a></li>
+<li><a href="#interoperable">Interoperable</a></li>
+<li><a href="#reusable">Reusable</a></li>
+</ul>
+<section id="findable" class="level2">
+<h2 class="anchored" data-anchor-id="findable">Findable</h2>
+<p>Metadata and data should be easy to find for both humans and computers, by:</p>
+<section id="data-and-metadata-have-a-unique-persistent-identifier" class="level3">
+<h3 class="anchored" data-anchor-id="data-and-metadata-have-a-unique-persistent-identifier">Data and metadata have a unique persistent identifier</h3>
+<ul>
+<li>A local identifier is usually combined with a namespace, to create a globally unique identifier (URI).</li>
+<li>Do not use product names, project names, group names in uri’s, it is difficult to maintain persistence.</li>
+<li>Frameworks such as <a href="https://doi.org">DOI</a> and <a href="https://w3id.org/">W3ID</a> offer a persistent identification layer for online resources.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the following datasets, review the uniqueness and persistence of their identifier as well as of their metadata</p>
+<ul>
+<li>Locate some datasets on your local machine or organisation network</li>
+<li>Locate some datasets on the web</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="bulk-import-from-spreadsheet" class="level2">
-<h2 class="anchored" data-anchor-id="bulk-import-from-spreadsheet">Bulk import from spreadsheet</h2>
-<p>Many metadata initiatives tend to start from a spreadsheet. Each of the columns representa a metadata property and the rows are the individual records describing a resource. Spreadsheets have proven to be an effective medium to populate a catalogue with records. To facilitate this use case the GeoDataCrawler software provides an import spreadsheet method. The spreadsheet is parsed and a <a href="../../../docs/developer/tutorial-data-management/2-describing-resources.html">MCF</a> document is generated for every row.</p>
-<p>Since every metadata initiative tends to have dedicated columns. A templating approach is used to convert from row to MCF. A default template is available, matching a default spreadsheet layout. If your spreadsheet layout is different, you need to adjust the template accordingly.</p>
-<ul>
-<li>For this exercise we’ll use the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/blob/kenya/portals/KE/LSC/data.csv">LSC-hubs spreadsheet</a> in combination with the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/blob/kenya/portals/KE/LSC/data.j2">LSC-hubs template</a>. Notice that the template share the filename, but with extension <code>.j2</code>. Download both files to a new folder, called <code>csv</code>, in your working directory.</li>
-<li>From your shell environment run this command:</li>
-</ul>
-<pre><code>crawl-metadata --mode=import-csv --dir="./csv"</code></pre>
-<ul>
-<li>If there are errors, check the paths and consider to open the CSV in Google Sheets and export it again or open it in a text editor to look for special cases. A known issue with this approach is that the crawler tool can not manage <code>newline</code> characters in text fields.</li>
-<li>Open one of the generated MCF files to evaluate its content.</li>
-<li>A common spreadsheet tool is <a href="https://www.microsoft.com/en-gb/microsoft-365/excel">Microsoft Excel</a>. If you open and export a spreadsheet from Excel, the CSV will use the ‘;’ character as column separator. Use the –sep=‘;’ parameter to indicate GeoDataCrawler to use this separator.</li>
-</ul>
-<pre><code>crawl-metadata --mode=import-csv --dir="./csv" --sep=';'</code></pre>
+<section id="describe-the-resource-with-rich-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="describe-the-resource-with-rich-metadata">Describe the resource with rich metadata</h3>
+<p>Rich metadata includes aspects such as, title, abstract, keywords, who is the author/owner of the resource, when was the resource created, are there any usage constraints, how does the resource relate to other resources.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To evaluate if a tiff-dataset containing <code>texture-clay</code> is relevant to answer your question on soil water availability, which aspects would you expect a metadata description of that dataset to include?</p>
+</div>
+</div>
 </section>
-<section id="bulk-import-from-an-online-location" class="level2">
-<h2 class="anchored" data-anchor-id="bulk-import-from-an-online-location">Bulk import from an online location</h2>
-<p>Many resources are already described elsewhere which may be of interest to add to our catalogue. For this use case some options exist to import remote metadata. In many cases you want to import a selected subset of a remote catalogue. In this scenario we prepare a csv with the identifiers of the records to be imported. These identifiers are used to create a very minimal MCF file. GeoDataCrawler subsequently extends the local record with remote content. Currently supported are metadata from CSW, WMS and DOI.</p>
-<ul>
-<li>For this exercise download a <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/raw/kenya/portals/Global/data.isric.org/datasets.csv?inline=false">spreadsheet with a subset of the isric.org data repository</a> and the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/raw/kenya/portals/Global/data.isric.org/datasets.j2?inline=false">relevant template</a> to a folder <code>isric</code>.</li>
-<li>Import the CSV</li>
-</ul>
-<pre><code>crawl-metadata --mode=import-csv --dir="./isric" --sep=';'</code></pre>
-<ul>
-<li>The synchronisation with remote content is implemented in GeoDataCrawler as part of the update metadata method. The update process will evaluate the dataseturi-property. If the uri refers to remote content in a supported format, the MCF will be updated against that content (remote takes preference).</li>
-</ul>
-<pre><code>crawl-metadata --mode=update --dir="./isric"</code></pre>
-<ul>
-<li>Notice the changes before and after running the script. If needed, you can remove all the MCF files and run import-csv again to restore the originals.</li>
-</ul>
+<section id="metadata-are-searchable-in-a-catalogue" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-are-searchable-in-a-catalogue">Metadata are searchable in a catalogue</h3>
+<p>In order to find metadata efficiently, metadata records should be listed in a intuitive search interface</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Navigate to <a href="https://www.geoportal.org/" class="uri">https://www.geoportal.org/</a> and search for a dataset on texture in your area. Note down which aspects you would like to see improved to locate a dataset, or know when to stop searching, because you assume you have located the best match in the catalogue.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="accessible" class="level2">
+<h2 class="anchored" data-anchor-id="accessible">Accessible</h2>
+<section id="metadata-are-retrievable-by-their-identifier-using-a-standardised-communications-protocol" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-are-retrievable-by-their-identifier-using-a-standardised-communications-protocol">(Meta)data are retrievable by their identifier using a standardised communications protocol</h3>
+</section>
+<section id="the-protocol-allows-for-an-authentication-and-authorisation-procedure-where-necessary" class="level3">
+<h3 class="anchored" data-anchor-id="the-protocol-allows-for-an-authentication-and-authorisation-procedure-where-necessary">The protocol allows for an authentication and authorisation procedure, where necessary</h3>
+</section>
+<section id="metadata-are-accessible-even-when-the-data-are-no-longer-available" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-are-accessible-even-when-the-data-are-no-longer-available">Metadata are accessible, even when the data are no longer available</h3>
+</section>
+</section>
+<section id="interoperable" class="level2">
+<h2 class="anchored" data-anchor-id="interoperable">Interoperable</h2>
+<section id="metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation." class="level3">
+<h3 class="anchored" data-anchor-id="metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation.">(Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</h3>
+</section>
+<section id="metadata-use-vocabularies-that-follow-fair-principles" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-use-vocabularies-that-follow-fair-principles">(Meta)data use vocabularies that follow FAIR principles</h3>
+</section>
+<section id="metadata-include-qualified-references-to-other-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-include-qualified-references-to-other-metadata">(Meta)data include qualified references to other (meta)data</h3>
+</section>
+</section>
+<section id="reusable" class="level2">
+<h2 class="anchored" data-anchor-id="reusable">Reusable</h2>
+<section id="metadata-are-richly-described-with-a-plurality-of-accurate-and-relevant-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-are-richly-described-with-a-plurality-of-accurate-and-relevant-attributes">(Meta)data are richly described with a plurality of accurate and relevant attributes</h3>
+</section>
+<section id="metadata-are-released-with-a-clear-and-accessible-data-usage-license" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-are-released-with-a-clear-and-accessible-data-usage-license">(Meta)data are released with a clear and accessible data usage license</h3>
+</section>
+<section id="metadata-are-associated-with-detailed-provenance" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-are-associated-with-detailed-provenance">(Meta)data are associated with detailed provenance</h3>
+</section>
+<section id="metadata-meet-domain-relevant-community-standards" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-meet-domain-relevant-community-standards">(Meta)data meet domain-relevant community standards</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -567,7 +646,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lsc-hubs/hub-core/edit/main/docs/developer/tutorial-data-management/4-bulk-import.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lsc-hubs/hub-core/edit/main/docs/developer/tutorial-data-management/fair-data.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
