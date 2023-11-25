@@ -217,13 +217,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/0-fair-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FAIR data</span></a>
+ <span class="menu-text">FAIR principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Existing resources</span></a>
+  <a href="../../../docs/developer/tutorial-data-management/1-metadata at source.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata at the source</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Catalog publication</span></a>
+ <span class="menu-text">Catalogue publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -271,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extension options</span></a>
+ <span class="menu-text">Advanced options</span></a>
   </div>
 </li>
       </ul>
@@ -316,6 +316,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<section id="providing-conveniance-apis" class="level1">
+<h1>Providing conveniance API’s</h1>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>For spatial datasets it is of interest to share them via conveniance API’s, so the datasets can be downloaded in parts or easily be visualised in common tools such as <a href="https://qgis.org">QGIS</a>, <a href="https://openlayers.org">OpenLayers</a> &amp; <a href="https://leaflet.org">Leaflet</a>. The standards of the <a href="https://www.ogc.org/">Open Geospatial Consortium</a> are most relevant. These API’s can give direct access to subsets or map vizualisations of a dataset.</p>
@@ -378,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://mapserver.org">Mapserver</a> is server software which is able to expose datasets through various API’s. Examples of similar software are <a href="https://docs.qgis.org/3.28/en/docs/server_manual/introduction.html">QGIS server</a>, <a href="https://enterprise.arcgis.com/en/server/">ArcGIS Server</a>, <a href="https://geoserver.org">Geoserver</a> and <a href="https://pygeoapi.io">pygeoapi</a>.</p>
 <p>We’ve selected mapserver for this training, because of its robustness and low resource consumption. Mapserver is configured using a configuration file, a <a href="https://www.mapserver.org/mapfile/">mapfile</a>. The mapfile defines metadata for the dataset and how users interact with the dataset, mainly the color scheme (legend) to draw a map of the dataset.</p>
 <p>Various tools exist to write these configuration files, such as <a href="https://mapserverstudio.net/">Mapserver studio</a>, <a href="https://www.osgeo.org/projects/geostyler/">GeoStyler</a>, <a href="https://www.geocat.net/docs/bridge/qgis/latest">QGIS Bridge</a>, up to a <a href="https://marketplace.visualstudio.com/items?itemName=chicoff.mapfile">visual studio plugin to edit mapfiles</a>.</p>
-<p>The <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>, introduced in a <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html#discovering-an-existing-data-repository">previous paragraph</a>, also has an option to generate mapfiles. A big advantage of this approach is the integration with existing metadata. Many publication workflows require to add similar metadata at various locations, a risk for disambiguity. GeoDataCrawler will, during mapfile generation, use the existing metaddata, but also update the metadata so it includes a link to the mapserver service endpoint. This step enables a typical workflow of:</p>
+<p>The <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>, introduced in a <a href="./1-existing-resources.md#discovering-an-existing-data-repository">previous paragraph</a>, also has an option to generate mapfiles. A big advantage of this approach is the integration with existing metadata. Many publication workflows require to add similar metadata at various locations, a risk for disambiguity. GeoDataCrawler will, during mapfile generation, use the existing metaddata, but also update the metadata so it includes a link to the mapserver service endpoint. This step enables a typical workflow of:</p>
 <ul>
 <li>User finds a dataset in a catalogue</li>
 <li>Then opens the dataset via the linked service</li>
@@ -444,6 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In this paragraph the standards of Open Geospatial Consortium have been introduced and how you can publish your data according to these standards using Mapserver. In the <a href="">next section</a> we’ll look at measuring service quality.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

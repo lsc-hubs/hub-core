@@ -183,13 +183,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/0-fair-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FAIR data</span></a>
+ <span class="menu-text">FAIR principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Existing resources</span></a>
+  <a href="../../../docs/developer/tutorial-data-management/1-metadata at source.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata at the source</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Catalog publication</span></a>
+ <span class="menu-text">Catalogue publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extension options</span></a>
+ <span class="menu-text">Advanced options</span></a>
   </div>
 </li>
       </ul>
@@ -282,26 +282,56 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="describe-resources" class="level1">
+<h1>Describe resources</h1>
 <p>When describing a resource, consider which user groups are expected to read the information. This analyses will likely impact the style of writing in the metadata. The UK Geospatial Commission has published some <a href="https://www.gov.uk/government/publications/search-engine-optimisation-for-publishers-best-practice-guide">practical recommendations</a> on this topic.</p>
-<p>When tagging the dataset with keywords, preferably use keywords from controlled vocabularies like Agrovoc, Wikipedia, etc. Benefit of controlled vocabularies is that the term is not ambigue and it can be made available in multiple languages.</p>
+<div class="border p-2 mb-3 bg-light border-rounded">
+<p>When tagging the dataset with keywords, preferably use keywords from controlled vocabularies like Agrovoc, Wikipedia, etc. The benefit of controlled vocabularies is that the term is not ambigue and it can be made available in multiple languages.</p>
+</div>
 <section id="mcf-editing" class="level2">
 <h2 class="anchored" data-anchor-id="mcf-editing">MCF editing</h2>
 <p>MCF documents can best be written in a text editor like <a href="https://code.visualstudio.com">Visual Studio Code</a>. Consider to install the <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml">YAML plugin</a> for instant YAML validation.</p>
 <p>Another option to create and update mcf files is via <a href="https://github.com/osgeo/mdme">MDME</a>. MDME is a webbased software package providing a dynamic metadata edit form. An operational package is available at <a href="https://osgeo.github.io/mdme">osgeo.github.io</a>. Notice that if you install the package locally, you can customize the metadata schema and initial template to your organisational needs.</p>
-<p>Open mdme and populate the form, now save the MCF file and place it in your sample data repository. Notice that MDME also offers capabilities to export directly as iso19139, it uses a webservice based on pygeometa to facilitate this workflow.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Open <a href="https://github.com/osgeo/mdme">mdme</a> and populate the form, now save the MCF file and place it in your sample data repository. Notice that MDME also offers capabilities to export directly as iso19139, it uses a server side process based on the same components as we use in this workshop.</p>
+</div>
+</div>
 </section>
 <section id="mcf-validation" class="level2">
 <h2 class="anchored" data-anchor-id="mcf-validation">MCF validation</h2>
 <p><a href="https://geopython.github.io/pygeometa/">pygeometa</a> is the library build around the mcf format. pygeometa has options to import from and export to mcf for various metadata schemas. pygeometa also has a validate method to validate if an mcf document is properly structured.</p>
 <p>pygeometa has already been installed, while installing geodatacrawler, else you can install it with <code>pip install pygeometa</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try the validator on one of your mcf files.</p>
 <pre><code>pygeometa validate path/to/file.yml</code></pre>
-<p>Notice that the validator is quite strict, it expects a number of metadata properties to be present. Notice that you can customise this validation at implementation.</p>
+</div>
+</div>
+<p>Notice that the validator is quite strict, it expects a number of metadata properties to be present. We’ll further not use the validator in this workshop.</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>In this paragraph you are introduced to the MDME MCF editor and pygeometa library. In the <a href="">next section</a> we are looking at bulk metadata imports.</p>
+<p>In this paragraph you are introduced to the MDME MCF editor and pygeometa library. In the <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">next section</a> we are looking at catalogue publication.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

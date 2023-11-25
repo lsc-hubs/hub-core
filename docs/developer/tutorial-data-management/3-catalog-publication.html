@@ -9,7 +9,7 @@
 <meta name="author" content="Paul van Genuchten">
 <meta name="dcterms.date" content="2023-05-09">
 
-<title>Land Soil Crop Hub - Catalog publication</title>
+<title>Land Soil Crop Hub - Catalogue publication</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">Catalog publication</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">Catalogue publication</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -217,13 +217,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/0-fair-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FAIR data</span></a>
+ <span class="menu-text">FAIR principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Existing resources</span></a>
+  <a href="../../../docs/developer/tutorial-data-management/1-metadata at source.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata at the source</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Catalog publication</span></a>
+ <span class="menu-text">Catalogue publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -271,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extension options</span></a>
+ <span class="menu-text">Advanced options</span></a>
   </div>
 </li>
       </ul>
@@ -289,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Catalog publication</h1>
+<h1 class="title">Catalogue publication</h1>
 </div>
 
 
@@ -316,16 +316,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="data-discovery-via-a-catalogue" class="level2">
-<h2 class="anchored" data-anchor-id="data-discovery-via-a-catalogue">Data discovery via a catalogue</h2>
+<section id="catalogue-publication" class="level1">
+<h1>Catalogue publication</h1>
 <p>Catalogues facilitate data discovery in 3 ways:</p>
 <ul>
 <li>Users can go to the catalogue website and search for data</li>
 <li>Applications such as QGIS and TerriaJS can let users query the catalogue, evaluate the metadata, and directly add the related data to their project</li>
 <li>Search engines crawl public catalogues and include the records in their search results</li>
 </ul>
-<p>[!NOTE] An important aspect is proper setup of autorisations for general public, partners and co-workers to access metadata as well as the actual data files behind the metadata. A general rule-of-thumb is that metadata can usually be anonimously shared, but data services with sensitive content should be properly protected. In some cases organisations even remove the data url from the public metadata, to prevent abuse of those urls. If a resource is not available to all, this can be indicated in the metadata as ‘access-constraints’.</p>
-</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An important aspect is proper setup of autorisations for general public, partners and co-workers to access metadata as well as the actual data files behind the metadata. A general rule-of-thumb is that metadata can usually be widely shared, but data services with sensitive content should be properly protected. In some cases organisations even remove the data url from the public metadata, to prevent abuse of those urls. If a resource is not available to all, this can be indicated in metadata as ‘access-constraints’.</p>
+</div>
+</div>
 <section id="extract-metadata-from-a-network-location" class="level2">
 <h2 class="anchored" data-anchor-id="extract-metadata-from-a-network-location">Extract metadata from a network location</h2>
 <p>Now that we have a series of datasets with their sidecar metadata file (either in iso19139 or MCF). We can use GeoDataCrawler to extract these files and publish them in a catalogue product.</p>
@@ -334,14 +345,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>First we run a method to convert all .mcf files to iso19139:2007, these files are generated on a temporary folder.</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">crawl-metadata</span> <span class="at">--mode</span><span class="op">=</span>export <span class="at">--dir</span><span class="op">=</span>./data <span class="at">--dir-out</span><span class="op">=</span>./temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>In the next section we run an ingest script to load the iso records into a catalogue.</li>
-</ul>
 </section>
 <section id="catalogue-frontend" class="level2">
 <h2 class="anchored" data-anchor-id="catalogue-frontend">Catalogue frontend</h2>
-<p>Various catalogue frontends exist to facilitate dataset search, such as <a href="https://geonetwork-opensource.org">geonetwork</a>, <a href="https://dataverse.org">dataverse</a>, <a href="https://ckan.org">ckan</a>. Selecting a frontend depends on metadata format, target audiendce, types of data, maintenance aspects, personal preference.</p>
-<p>For this workshop we are going to use <a href="https://pycsw.org">pycsw</a>, catalogue software supporting various standardised query api’s, as well as providing a basic html interface.</p>
+<p>Various catalogue frontends exist to facilitate dataset search, such as <a href="https://geonetwork-opensource.org">geonetwork</a>, <a href="https://dataverse.org">dataverse</a>, <a href="https://ckan.org">ckan</a>. Selecting a frontend depends on metadata format, target audience, types of data, maintenance aspects, personal preference.</p>
+<p>For this workshop we are going to use <a href="https://pycsw.org">pycsw</a>. It is a catalogue software supporting various standardised query api’s, as well as providing a basic easy-to-adjust html web interface.</p>
 <p>For this exersize we assume you have docker-desktop installed on your system and running.</p>
 <p>pycsw is available as docker image, including an embedded SQLite database. In a production situation you would use a dedicated Postgres or MariaDB database for record storage.</p>
 <ul>
@@ -351,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>   <span class="at">-v</span> <span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span>:/etc/data <span class="dt">\</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   geopython/pycsw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Visit http://localhost:8000 to</li>
+<li>Visit http://localhost:8000</li>
 <li>Much of the configuration of pycsw (title, contact details, database connection, url) is managed in <a href="https://github.com/geopython/pycsw/blob/master/docker/pycsw.cfg">a config file</a>. Download the file to the current folder, adjust the title and restart docker with:</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-p</span> 8000:8000 <span class="dt">\</span></span>
@@ -359,26 +367,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">-v</span> <span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span>:/etc/data <span class="dt">\</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>   <span class="at">-v</span> <span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span>/pycsw.cfg:/etc/pycsw/pycsw.cfg <span class="dt">\</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>   geopython/pycsw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>[!NOTE] Notice <code>-d</code> starts the docker in the background, so we can interact with the running container. To see which instances are running (in the background) use <code>docker ps</code>. <code>docker logs pycsw</code> shows the logs of a container and <code>docker stop pycsw</code> stops the container. The <code>-rm</code> option removes the container at stop, so we can easily recreate it with additional options at next runs.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice <code>-d</code> starts the docker in the background, so we can interact with the running container. To see which instances are running (in the background) use <code>docker ps</code>. <code>docker logs pycsw</code> shows the logs of a container and <code>docker stop pycsw</code> stops the container. The <code>-rm</code> option removes the container at stop, so we can easily recreate it with additional options at next runs.</p>
+</div>
+</div>
 <ul>
-<li>For administering the instance we use a utility called pycsw-admin.py. Notice on the calls below a reference to a relevant config file. First clear the existing database.</li>
+<li>For administering the instance we use a utility called <code>pycsw-admin.py</code>. Notice on the calls below a reference to a relevant config file.</li>
+<li>First clear the existing database:</li>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec <span class="at">-it</span> pycsw bash <span class="at">-c</span> <span class="st">"pycsw-admin.py delete-records -c /etc/pycsw/pycsw.cfg"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Notice at http://localhost:8000/collections/metadata:main/items that all records are removed.</li>
-<li>Load our records to the database</li>
+<li>Load our records to the database:</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> exec <span class="at">-it</span> pycsw bash <span class="at">-c</span> <span class="st">"pycsw-admin.py load-records -p /etc/conf/data -c /etc/pycsw/pycsw.cfg -y -r"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Validate at http://localhost:8000/collections/metadata:main/items if our records are loaded, else check logs to identify a problem.</li>
-<li>docker</li>
 </ul>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In this paragraph you noticed how datasets can be published into a catalogue. In the next paragraph, you get introduced to providing mapping api’s on datasets. Or check out the <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html">advanced section</a> on how to customise your pycsw frontend.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this paragraph you learned how datasets can be published into a catalogue. In the next paragraph, you’ll get introduced to providing mapping api’s on datasets. Or check out the <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html">advanced section</a> on how to customise your pycsw frontend.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

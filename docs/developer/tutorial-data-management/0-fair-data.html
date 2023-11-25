@@ -9,7 +9,7 @@
 <meta name="author" content="Paul van Genuchten">
 <meta name="dcterms.date" content="2023-11-23">
 
-<title>Land Soil Crop Hub - FAIR data</title>
+<title>Land Soil Crop Hub - FAIR principles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/0-fair-data.html">FAIR data</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/0-fair-data.html">FAIR principles</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -183,13 +183,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/0-fair-data.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">FAIR data</span></a>
+ <span class="menu-text">FAIR principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Existing resources</span></a>
+  <a href="../../../docs/developer/tutorial-data-management/1-metadata at source.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metadata at the source</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Catalog publication</span></a>
+ <span class="menu-text">Catalogue publication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -237,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extension options</span></a>
+ <span class="menu-text">Advanced options</span></a>
   </div>
 </li>
       </ul>
@@ -255,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">FAIR data</h1>
+<h1 class="title">FAIR principles</h1>
 </div>
 
 
@@ -282,22 +282,28 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> are considered a good practice on data sharing in academic communities and beyond. Similar initiatives exist which may be more relevant for dedicated communities or scenarios:</p>
+<section id="fair-principles" class="level1">
+<h1>FAIR principles</h1>
+<p>The <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> are a good practice on data sharing in academic communities and beyond. A good starting point for our workshop on data management.</p>
+<div class="border p-2 mb-3 bg-light border-rounded">
+<p>Outside academia there have been similar initiatives to improve data management, which may be more relevant for dedicated communities or scenarios:</p>
 <ul>
 <li><a href="https://www.w3.org/TR/dwbp/">W3C Data on the web best practices</a></li>
 <li><a href="https://public.resource.org/8_principles.html">Open government data principles</a></li>
 <li><a href="https://inspire.ec.europa.eu/inspire-directive/2">European INSPIRE Directive</a></li>
 </ul>
-<p>In this paragraph we present a number of exercises around the FAIR principles. FAIR Data is:</p>
+</div>
+<p>In this paragraph we present a number of exercises around the FAIR principles. And we’ll see how the principles work out in the soil domain specifically. FAIR Data is:</p>
 <ul>
 <li><a href="#findable">Findable</a></li>
 <li><a href="#accessible">Accessible</a></li>
 <li><a href="#interoperable">Interoperable</a></li>
 <li><a href="#reusable">Reusable</a></li>
 </ul>
+<hr>
 <section id="findable" class="level2">
 <h2 class="anchored" data-anchor-id="findable">Findable</h2>
-<p>Metadata and data should be easy to find for both humans and computers, by:</p>
+<p>Metadata and data should be easy to find for both humans and computers.</p>
 <section id="data-and-metadata-have-a-unique-persistent-identifier" class="level3">
 <h3 class="anchored" data-anchor-id="data-and-metadata-have-a-unique-persistent-identifier">Data and metadata have a unique persistent identifier</h3>
 <ul>
@@ -315,16 +321,32 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For the following datasets, review the uniqueness and persistence of their identifier as well as of their metadata</p>
+<p>For the following 2 types of datasets, review the uniqueness and persistence of their identifier as well as of their metadata.</p>
 <ul>
-<li>Locate some datasets on your local machine or organisation network</li>
-<li>Locate some datasets on the web</li>
+<li>Locate some datasets on your local machine or organisation network.</li>
+<li>Locate some datasets on the web. If you don’t know where to start your search, consider to read the <a href="#metadata-are-searchable-in-a-catalogue">catalogue</a> section first.</li>
 </ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Identifier</th>
+<th>Your review</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sample</td>
+<td>a432-bcd-4ab55</td>
+<td>No namespace</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
-<section id="describe-the-resource-with-rich-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="describe-the-resource-with-rich-metadata">Describe the resource with rich metadata</h3>
+<section id="describe-the-data-source-with-rich-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="describe-the-data-source-with-rich-metadata">Describe the data source with rich metadata</h3>
 <p>Rich metadata includes aspects such as, title, abstract, keywords, who is the author/owner of the resource, when was the resource created, are there any usage constraints, how does the resource relate to other resources.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -353,50 +375,216 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Navigate to <a href="https://www.geoportal.org/" class="uri">https://www.geoportal.org/</a> and search for a dataset on texture in your area. Note down which aspects you would like to see improved to locate a dataset, or know when to stop searching, because you assume you have located the best match in the catalogue.</p>
+<p>Navigate to the following data portals and search for a dataset on for example <code>soil texture</code> in your area. Note down which aspects you would like to see improved to locate a dataset, or to know when to stop searching, because you assume you have located the best match in the catalogue.</p>
+<ul>
+<li><a href="https://www.geoportal.org">Geoportal.org</a></li>
+<li><a href="https://datasetsearch.research.google.com">Google dataset search</a></li>
+<li><a href="https://data.isric.org">Data.isric.org</a></li>
+<li><a href="https://radiantearth.github.io/stac-browser/#/external/explorer.digitalearth.africa/stac/">Digitalearth.africa</a></li>
+<li><a href="https://data.apps.fao.org/catalog/">FAO catalogue</a></li>
+</ul>
 </div>
 </div>
+<hr>
 </section>
 </section>
 <section id="accessible" class="level2">
 <h2 class="anchored" data-anchor-id="accessible">Accessible</h2>
-<section id="metadata-are-retrievable-by-their-identifier-using-a-standardised-communications-protocol" class="level3">
-<h3 class="anchored" data-anchor-id="metadata-are-retrievable-by-their-identifier-using-a-standardised-communications-protocol">(Meta)data are retrievable by their identifier using a standardised communications protocol</h3>
+<p>Once a user finds the data, it should be clear how they can be accessed.</p>
+<section id="metadata-and-data-are-retrievable-using-a-standardised-communications-protocol" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-and-data-are-retrievable-using-a-standardised-communications-protocol">Metadata and data are retrievable using a standardised communications protocol</h3>
+<p>Various communities adopted a range of standards for metadata exchange:</p>
+<section id="metadata" class="level4">
+<h4 class="anchored" data-anchor-id="metadata">Metadata</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Community</th>
+<th>Standard</th>
+<th>Protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Open data/Sematic web</td>
+<td>DCAT</td>
+<td>SPARQL</td>
+</tr>
+<tr class="even">
+<td>Science</td>
+<td>Datacite</td>
+<td>OAI-PMH</td>
+</tr>
+<tr class="odd">
+<td>Geospatial</td>
+<td>iso19115</td>
+<td>CSW/OGC API - Records</td>
+</tr>
+<tr class="even">
+<td>Earth observation</td>
+<td>STAC</td>
+<td>STAC</td>
+</tr>
+<tr class="odd">
+<td>Search engines</td>
+<td>Schema.org</td>
+<td>json-ld/microdata</td>
+</tr>
+<tr class="even">
+<td>Ecology</td>
+<td>EML</td>
+<td><a href="https://knb.ecoinformatics.org/">KNB</a>/<a href="https://gbif.org">GBIF</a></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A metadata model often is a combination of a schema and a format. Compare the following metadata records, identify which model is used in the record, what differences and communalities do you notice?</p>
+<ul>
+<li><a href="https://api.datacite.org/dois/10.17605/OSF.IO/A69R5">African open soil data</a></li>
+<li><a href="https://data.isric.org/geonetwork/srv/metadata/2f99e10f-183c-11e9-aba8-a0481ca9e724/formatters/xml">Wosis latest</a></li>
+<li><a href="https://explorer.digitalearth.africa/stac/collections/rainfall_chirps_daily/items/d5bb6b02-0979-5112-8dd6-9aef6638fb73">Rainfall Chirps</a></li>
+<li><a href="https://data.europa.eu/api/hub/repo/datasets/dataset-bodem-ontgravingskaart-bovengrond-assen.ttl">Soil excavation Assen</a></li>
+<li><a href="https://demo.pygeoapi.io/master/collections/dutch-metadata/items/ffffffaa-4087-59ec-9ea7-8416f58e99dd?f=jsonld">Keileem Drenthe</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="data" class="level4">
+<h4 class="anchored" data-anchor-id="data">Data</h4>
+</section>
 </section>
 <section id="the-protocol-allows-for-an-authentication-and-authorisation-procedure-where-necessary" class="level3">
 <h3 class="anchored" data-anchor-id="the-protocol-allows-for-an-authentication-and-authorisation-procedure-where-necessary">The protocol allows for an authentication and authorisation procedure, where necessary</h3>
+<p>FAIR endorses open access, however in some cases it is not possible to share some data to the global audiance (privacy, economic, or safety concerns). It is still relevant to publish the data, so those authorised can access it. This requires a proper level of autorisation and authentication being set up.</p>
 </section>
 <section id="metadata-are-accessible-even-when-the-data-are-no-longer-available" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-are-accessible-even-when-the-data-are-no-longer-available">Metadata are accessible, even when the data are no longer available</h3>
+<p>Metadata models usually have a status field, which enables you to indicate that a resource has been archived. The metadata would still be available, so users are aware it once existed.</p>
+<hr>
 </section>
 </section>
 <section id="interoperable" class="level2">
 <h2 class="anchored" data-anchor-id="interoperable">Interoperable</h2>
+<p>Data typically are integrated with other data, as well as interoperate with applications or workflows for analysis, storage, and processing.</p>
 <section id="metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation." class="level3">
 <h3 class="anchored" data-anchor-id="metadata-use-a-formal-accessible-shared-and-broadly-applicable-language-for-knowledge-representation.">(Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</h3>
+<p>The soil community has a long history of interoperability efforts for soil profile data. Such as:</p>
+<ul>
+<li><a href="https://www.isric.org/projects/globalsoilmapnet">Globalsoilmap</a>,</li>
+<li><a href="#e-soter">e-Soter</a>,</li>
+<li><a href="#iso282582013">iso28258:2013</a></li>
+</ul>
+<section id="e-soter" class="level4">
+<h4 class="anchored" data-anchor-id="e-soter">e-Soter</h4>
+<p>The ESoter model has been developed in the <a href="https://esoter.net">e-Soter Research project</a>, based on principles of previous Soil Terrain (SOTER) initiatives. e-Soter is a relational database model, usually implemented as a <a href="https://www.microsoft.com/en-us/microsoft-365/access">Microsoft Access</a> database. Some examples of eSoter implementations:</p>
+<ul>
+<li><a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/60803da0-a15f-4cc5-9cb5-172fa2460af3">Malawi</a></li>
+<li><a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/73e27136-9efe-49e4-af35-fd98b841d467">Kenya</a></li>
+<li><a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/3571c1f3-159d-442c-b324-0af53d03f12e">Southern Africa</a></li>
+<li><a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a6320590-0899-4b60-bf4d-f80282bbb72c">Senegal and Gambia</a></li>
+</ul>
+</section>
+<section id="iso282582013" class="level4">
+<h4 class="anchored" data-anchor-id="iso282582013">iso28258:2013</h4>
+<p>In 2012 various experts in the soil domain grouped around the development of the first formally standardised domain model on soil data, published as <a href="https://www.iso.org/standard/44595.html">ISO28258</a>. ISO28258 adopted the <a href="https://www.ogc.org/standard/om/">Observations &amp; Measurements</a> conventions of OGC. Each observation on a site, profile, horizon or soil sample is considered as an observation. For each observation on a specimen, the measured property and the procedure are captured.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./img/om2.png" class="w-50 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Observations and measurements overview</figcaption>
+</figure>
+</div>
+<p>Various initiatives adopted ISO28258, and serialised and specialised the model for their community:</p>
+<ul>
+<li><a href="https://inspire.ec.europa.eu/Themes/127/2892">INSPIRE Soil</a> (Europe) and <a href="https://github.com/ANZSoilData/ANZSoilML">ANZSoilML</a> (Australia) are implementations of iso28258 serialised as GML.</li>
+<li><a href="https://git.wur.nl/isric/databases/iso28258-public">ISO28258-relational</a> is an implementation of ISO28258 modelled as a relational database.</li>
+<li><a href="https://github.com/glosis-ld/glosis">Glosis Web Ontology</a> is an iso28258 implementation, using common ontologies from the web, such as <a href="https://www.w3.org/TR/vocab-ssn/">semantic sensor network</a>.</li>
+</ul>
+<p>Some examples of iso28258 implementations:</p>
+<ul>
+<li><a href="https://fbinter.stadt-berlin.de/fb/atom/SO/SO_BoKw2015.zip">Soil Berlin</a></li>
+<li><a href="https://www.dov.vlaanderen.be/geoserver-inspire/wfs?typeNames=so:chemicalParameter&amp;service=wfs&amp;version=2.0.1&amp;request=getfeature&amp;count=10">Soil chemistry Flanders</a></li>
+<li><a href="http://mapy.geoportal.gov.pl/wss/service/ATOM/httpauth/download/?fileId=07dc98d25569532b4de0d85b84f52a08&amp;name=pomorskie_5k.zip">Soil Poland</a></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Download a Soil GML file and try to open it in <a href="https://qgis.org">QGIS</a>. QGIS usually is able to display the profile locations. Alternatively you can use the <a href="https://gdal.org/drivers/vector/gmlas.html">GML Appschema format in OGR</a> to generate first a SQLite database of the file, before opening it in QGIS.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="metadata-use-vocabularies-that-follow-fair-principles" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-use-vocabularies-that-follow-fair-principles">(Meta)data use vocabularies that follow FAIR principles</h3>
+<p>A number of common vocabularies are relevant to the soil domain.</p>
+<p>The <a href="https://github.com/iuss-wrb/wrb/releases/download/v4.0-2022/WRB_fourth_edition_2022-12-18.pdf">World Reference Base for soil resources</a> provides a framework of soil vocabularies. These lists are partially published in <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/?clang=nb&amp;uri=c_89f35c33">Agrovoc</a> and partially in the <a href="https://vocab.isric.org/glosis_cl">Glosis web ontology</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Examine the concept <a href="http://aims.fao.org/aos/agrovoc/c_51ec138f">Durisols</a> in agrovoc.</p>
+<ul>
+<li>Notice that the agrovoc page on <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/c_51ec138f?clang=nb">Durisols</a> looks much nicer, still it is important to use the persistent identifier when linking to the concept, why?</li>
+<li>Notice that Agrovoc contains many translations for each concept and linkage to wider and smaller terms. These are some of the benefits of linking to a keyword from a common thesaurus.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="metadata-include-qualified-references-to-other-metadata" class="level3">
-<h3 class="anchored" data-anchor-id="metadata-include-qualified-references-to-other-metadata">(Meta)data include qualified references to other (meta)data</h3>
+<h3 class="anchored" data-anchor-id="metadata-include-qualified-references-to-other-metadata">Metadata include qualified references to other metadata</h3>
+<p>The context of a dataset gets more clear if you link it to datasets which were used as a source, documents in which it is described, tools with which it has been produced or which tool can be used to view/process it, policies for which it has been created, etc. Consider that users also may traverse the link, to find datasets relevant to a certain policy or tool.</p>
+<hr>
 </section>
 </section>
 <section id="reusable" class="level2">
 <h2 class="anchored" data-anchor-id="reusable">Reusable</h2>
-<section id="metadata-are-richly-described-with-a-plurality-of-accurate-and-relevant-attributes" class="level3">
-<h3 class="anchored" data-anchor-id="metadata-are-richly-described-with-a-plurality-of-accurate-and-relevant-attributes">(Meta)data are richly described with a plurality of accurate and relevant attributes</h3>
+<p>Reuse of data is the main goal of FAIR, facilitates by documentation of the data, for different audiences.</p>
+<section id="use-a-clear-and-accessible-data-usage-license" class="level3">
+<h3 class="anchored" data-anchor-id="use-a-clear-and-accessible-data-usage-license">Use a clear and accessible data usage license</h3>
+<p>Users are very interested to know if and how they can use the data. This process is facilitated by adoption of a commonly available license, such as <a href="https://opendatacommons.org/licenses/odbl/">odbl</a> or <a href="https://creativecommons.org/licenses/by/4.0/deed.en">cc-by</a>, so users (and machines) can identify the applicable license without reading a full document.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Does your organisation provide guidance on which license to use on various data sources? Is it clear when, and when <strong>not</strong> to use an open license? Are you aware of any data sources which currently do not yet have an assigned data license?</p>
+</div>
+</div>
 </section>
-<section id="metadata-are-released-with-a-clear-and-accessible-data-usage-license" class="level3">
-<h3 class="anchored" data-anchor-id="metadata-are-released-with-a-clear-and-accessible-data-usage-license">(Meta)data are released with a clear and accessible data usage license</h3>
-</section>
-<section id="metadata-are-associated-with-detailed-provenance" class="level3">
-<h3 class="anchored" data-anchor-id="metadata-are-associated-with-detailed-provenance">(Meta)data are associated with detailed provenance</h3>
-</section>
-<section id="metadata-meet-domain-relevant-community-standards" class="level3">
-<h3 class="anchored" data-anchor-id="metadata-meet-domain-relevant-community-standards">(Meta)data meet domain-relevant community standards</h3>
+<section id="data-are-associated-with-detailed-provenance" class="level3">
+<h3 class="anchored" data-anchor-id="data-are-associated-with-detailed-provenance">Data are associated with detailed provenance</h3>
+<p>Provenance is the process of creation and curation of a data source. Which data sources or procedures were used to create the data source. Which processing steps have been applied to the data. What is the lifecycle of the dataset (when will it be archived).</p>
+<p>This information is very relevant to potential users of the data, because they can understand if the data has been produced according to their expectations.</p>
+<p>In academia provenance is usually described in scientific articles, but note that you can also capture it (with much more detail) in a metadata record of a data source. Some tools (for example ArcGIS and SPSS) create a processing log automatically.</p>
 
 
+</section>
 </section>
 </section>
 
