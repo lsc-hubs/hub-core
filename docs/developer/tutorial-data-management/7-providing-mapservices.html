@@ -318,11 +318,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="providing-conveniance-apis" class="level1">
 <h1>Providing conveniance API’s</h1>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>For spatial datasets it is of interest to share them via conveniance API’s, so the datasets can be downloaded in parts or easily be visualised in common tools such as <a href="https://qgis.org">QGIS</a>, <a href="https://openlayers.org">OpenLayers</a> &amp; <a href="https://leaflet.org">Leaflet</a>. The standards of the <a href="https://www.ogc.org/">Open Geospatial Consortium</a> are most relevant. These API’s can give direct access to subsets or map vizualisations of a dataset.</p>
 <p>In this paragraph you are introduced to various standardised API’s, after which we introduce you to an approach to publish your datasets, which builds on the data management approach introduced in the previous paragraphs.</p>
-</section>
+<hr>
 <section id="standardised-data-apis" class="level2">
 <h2 class="anchored" data-anchor-id="standardised-data-apis">Standardised data API’s</h2>
 <p>Open Geospatial Consortium has a long history of standardisation efforts. Standardised mapping api’s, such as Web Map Service (WMS), Web Feature service (WFS) and Web Coverage Service (WCS), originate from the beginning of this century. In recent years several challenges have been identified around these standards, which led to a series of <a href="https://www.w3.org/TR/sdw-bp/">Spatial data on the web best practices</a>. OGC then initiated a new generation of standards based on these best practices.</p>
@@ -374,6 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>Notice that most of the mapping software supports the standards of both generations. However, due to the recent introduction, expect incidental glitches in the implementations of recent OGC API’s.</p>
+<hr>
 </section>
 <section id="setting-up-an-api" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-an-api">Setting up an API</h2>
@@ -386,6 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Then opens the dataset via the linked service</li>
 </ul>
 <p>As well as vice versa; from a mapping application, access the metadata describing a dataset.</p>
+<hr>
 </section>
 <section id="mapfile-creation-exersize" class="level2">
 <h2 class="anchored" data-anchor-id="mapfile-creation-exersize">Mapfile creation exersize</h2>
@@ -419,6 +419,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge mapserver</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Mapserver includes a <a href="https://mapserver.org/utilities/map2img.html">map2img</a> utility, which enables to render a map image from any mapfile.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">map2img</span> <span class="at">-m</span><span class="op">=</span>./mymap.map <span class="at">-o</span><span class="op">=</span>test.png</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
 </section>
 <section id="setup-mapserver-via-docker-exersize" class="level2">
 <h2 class="anchored" data-anchor-id="setup-mapserver-via-docker-exersize">Setup mapserver via Docker Exersize</h2>
@@ -440,10 +441,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Check http://localhost/data/ogcapi in your browser. If all has been set up fine it should show the OGCAPI homepage of the service. If not, check the container logs to evaluate any errors.</p>
 <p>You can also try the url in QGIS. Add a WMS layer, of service http://localhost/data?request=GetCapabilities&amp;service=WMS. Notice the links to metadata when you open GetCapabilities in a browser.</p>
 <p>[!NOTE] In recent years browsers have become more strict, to prevent abuse. For that reason it is important to carefully consider common connectivity aspects, when setting up a new service. Websites running at https can only embed content from other https services, so using https is relevant. <a href="https://en.wikipedia.org/cors">CORS</a> and <a href="https://en.wikipedia.org/corb">CORB</a> can limit access to embedded resources from remote servers. Using proper CORS headers and Content type identification is relevant to prevent CORS and CORB errors.</p>
+<hr>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In this paragraph the standards of Open Geospatial Consortium have been introduced and how you can publish your data according to these standards using Mapserver. In the <a href="">next section</a> we’ll look at measuring service quality.</p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this paragraph the standards of Open Geospatial Consortium have been introduced and how you can publish your data according to these standards using Mapserver. In the <a href="../../../docs/developer/tutorial-data-management/8-measure-quality.html">next section</a> we’ll look at measuring service quality.</p>
 
 
 </section>

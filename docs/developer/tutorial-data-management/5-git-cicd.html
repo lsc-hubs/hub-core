@@ -318,18 +318,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="git-cicd" class="level1">
 <h1>Git CI/CD</h1>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>This page introduces a number of generic Git functionalities and vendor add ons. Which can support communities in efficient co-creation of content. The page mainly focusses on the Continuous Integration &amp; Deployment functionality, but contains many external links to introduce other aspects of Git. Considering the previous materials, a relevant ci-cd case is a set of tasks to run after a change to some of the mcf documents in a data repository, to validate the mcf’s and convert them to iso19139 and push them to a catalogue.</p>
-</section>
+<hr>
 <section id="git-content-versioning" class="level2">
 <h2 class="anchored" data-anchor-id="git-content-versioning">GIT content versioning</h2>
 <p>In its core <a href="https://git-scm.com/">GIT</a> is a version management system traditionally used for maintaining software codes. In case you never worked with GIT before, have a look at this <a href="https://www.w3schools.com/git/git_intro.asp">Git &amp; Github explanation</a>. Some users interact with Git via the command line (shell). However excellent Graphical User Interfaces exist to work with Git repositories, such as <a href="https://desktop.github.com/">Github Desktop</a>, a <a href="https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022">Git client within Visual Studio</a>, <a href="https://tortoisegit.org/">TortoiseGit</a>, <a href="https://www.syntevo.com/smartgit/">Smartgit</a>, and <a href="https://git-scm.com/downloads/guis">many others</a>.</p>
 <p>These days GIT based coding communities like Github, Gitlab, Bitbucket offer various services on top of Git to facilitate in co-creation of digital assets. Those services include authentication, issue management, release management, forks, pull requests and CI/CD. The types of digital assets maintained via GIT vary from software, deployment scripts, configuration files, documents, website content, metadata records up to actual datasets. Git is most effective with text based formats, which explains the popularity of formats like CSV, YAML, Markdown.</p>
+<hr>
 </section>
 <section id="cicd" class="level2">
 <h2 class="anchored" data-anchor-id="cicd">CI/CD</h2>
 <p><a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> &amp; <a href="https://en.wikipedia.org/wiki/Continuous_deployment">Deployment</a> describes a proces in which changes in software or configuration are automatically tested and deployed to a relevant environment. These processes are commonly facilited by GIT environments. With every commit to the Git repository an action is triggered which runs some tasks.</p>
+<hr>
 </section>
 <section id="github-pages-exersize" class="level2">
 <h2 class="anchored" data-anchor-id="github-pages-exersize">Github Pages Exersize</h2>
@@ -411,6 +411,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The final step triggers a facility of quarto to <a href="https://github.com/quarto-dev/quarto-actions/tree/main/publish">publish</a> its output to a github repository</li>
 </ul>
 <p>The above setup is optimal for co-creating a documentation repository for your community. Users can visit the source code via the <code>edit on github</code> link and suggest improvements via issues of pull requests. Notice that this tutorial is also maintained as markdown in Git.</p>
+<hr>
 </section>
 <section id="update-catalogue-from-git-ci-cd" class="level2">
 <h2 class="anchored" data-anchor-id="update-catalogue-from-git-ci-cd">Update catalogue from GIT CI-CD</h2>
@@ -484,10 +485,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Change or add some records to GIT, and verify if the changes are published (may take some time)</li>
 </ul>
 <p>Normally, one would <strong>not</strong> add a connection string to a database in a config file posted on Github. Instead Github offers <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">secrets</a> to capture this type of information.</p>
+<hr>
 </section>
 <section id="cross-linking-catalogue-and-git" class="level2">
 <h2 class="anchored" data-anchor-id="cross-linking-catalogue-and-git">Cross linking catalogue and GIT</h2>
 <p>While users are browsing the catalogue (or this page), they may find irregularities in the content. They can flag this as an issue in the relevant Git repository. A nice feature is to add a link in the catalogue page which brings them back to the relevant mcf in the git repository. With proper authorisations they can instantly improve the record, or suggest an improvement via an issue or <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a>.</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this section you learned about using actions in Github (CI/CD). In the next section we are diving into OGC Map Services using mapserver. Notice that you can use these CI/CD mechanisms to deploy or evaluate metadata and data services.</p>
 
 
 </section>
