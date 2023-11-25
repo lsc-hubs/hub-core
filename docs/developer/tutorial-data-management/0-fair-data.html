@@ -460,6 +460,40 @@ Tip
 </section>
 <section id="data" class="level4">
 <h4 class="anchored" data-anchor-id="data">Data</h4>
+<p>Most common in data science is to provide a packaged version of a dataset and deploy it on a repository like Zenodo or Dataverse where it can be downloaded. However in the spatial and earth observation domain we tend to work with large files and the use of data api’s which allow to request subsets of the data are very common. The Open Geospatial Consortium has defined a number of standards for these API’s, so the API’s itself are interoperable. The table below shows some of the common API’s. In the first column the older API’s, developed in the 90’s, in the second column their updated representative, recently adopted or still in development.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Service</th>
+<th>OGC API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Web Map Service (<a href="https://www.ogc.org/standard/wms/">WMS</a>)</td>
+<td><a href="https://ogcapi.ogc.org/maps/">Maps</a></td>
+<td>Provides a visualisation of a subset of the data</td>
+</tr>
+<tr class="even">
+<td>Web Feature Service (<a href="https://www.ogc.org/standard/wfs/">WFS</a>)</td>
+<td><a href="https://ogcapi.ogc.org/features/">Features</a></td>
+<td>API to request a subset of the vector features</td>
+</tr>
+<tr class="odd">
+<td>Web Coverage Service (<a href="https://www.ogc.org/standard/wcs/">WCS</a>)</td>
+<td><a href="https://ogcapi.ogc.org/coverages/">Coverages</a></td>
+<td>API to interact with grid sources</td>
+</tr>
+<tr class="even">
+<td>Sensor Observation Service (<a href="https://www.ogc.org/standard/sos">SOS</a>)</td>
+<td><a href="https://www.ogc.org/standard/sensorthings/">Sensorthings</a></td>
+<td>Retrieve subsets of sensor observations</td>
+</tr>
+</tbody>
+</table>
+<p>From the Earth Observation domain, an alternative mechanism is increasingly getting adopted. Complete files are stored on a public file repository, but by creating an index on the file and enabling range requests, users are able to fetch subsets from the file directly.</p>
+<p>This mechanism is enabled by new formats such as <a href="https://www.cogeo.org/">Cloud Optimised GeoTiff</a>, <a href="https://github.com/zarr-developers/geozarr-spec">GeoZarr</a>, and <a href="https://geoparquet.org/">GeoParquet</a>.</p>
 </section>
 </section>
 <section id="the-protocol-allows-for-an-authentication-and-authorisation-procedure-where-necessary" class="level3">
@@ -559,7 +593,7 @@ Tip
 </section>
 <section id="reusable" class="level2">
 <h2 class="anchored" data-anchor-id="reusable">Reusable</h2>
-<p>Reuse of data is the main goal of FAIR, facilitates by documentation of the data, for different audiences.</p>
+<p>Reuse of data is the main goal of FAIR, facilitated by documentation of the data, for different audiences.</p>
 <section id="use-a-clear-and-accessible-data-usage-license" class="level3">
 <h3 class="anchored" data-anchor-id="use-a-clear-and-accessible-data-usage-license">Use a clear and accessible data usage license</h3>
 <p>Users are very interested to know if and how they can use the data. This process is facilitated by adoption of a commonly available license, such as <a href="https://opendatacommons.org/licenses/odbl/">odbl</a> or <a href="https://creativecommons.org/licenses/by/4.0/deed.en">cc-by</a>, so users (and machines) can identify the applicable license without reading a full document.</p>
