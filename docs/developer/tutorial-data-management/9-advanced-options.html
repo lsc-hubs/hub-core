@@ -306,6 +306,14 @@ docker run -p 3001:3001 local/terria</code></pre>
 <p>MCF allows to add any additional properties not listed on the json schema, which is a very easy way to extend the schema. However note that MCF validation may fail.</p>
 <p>GeoDataCrawler internally uses pygeometa to manage mcf, a location of a extended schema is one of the optional parameters to GeoDataCrawler.</p>
 <p>MDME does not use the <a href="https://github.com/geopython/pygeometa/blob/master/pygeometa/schemas/mcf/core.yaml">mcf json schema</a> as-is, because some of the mcf json schema elements are not supported by MDME. In case you extend the MCF schema and aim to use MDME, you need to also extend the MDME schema likewise.</p>
+<hr>
+</section>
+<section id="publishing-extended-vocabularies" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-extended-vocabularies">Publishing (extended) vocabularies</h2>
+<p>In some cases it is relevant as a national or regional coordinator to publish a (extended) codelist which provides concepts which are only relevant within your area. users in your area can then easily link to the concepts in that vocabulary and benefit from the regional interoperability.</p>
+<p>The SKOS ontology is a commonly accepted mechanism to create vocabularies. It allows to link concepts to similar, wider or narrower concepts. When creating a new vocabulary you typically start with a list of concepts in Excel.</p>
+<p>The Glosis web ontology contains <a href="https://github.com/glosis-ld/glosis/tree/master/utils/transformer_tool">a transformer script</a> which convert a csv (exported from Excel) file to a skos document, alternatively you can use a tool such as <a href="https://labs.sparna.fr/skos-play/">skos play</a>. The skos file can best be hosted on a git repository. Anybody can access it, and provide improvement suggestions.</p>
+<p>The python <a href="https://github.com/ternaustralia/vocview">vocview library</a> is able to render a skos file to a nice web layout which is easy to browse and search through by humans. See a live <a href="https://linkeddata.tern.org.au/viewer/tern/">implementation at tern</a>.</p>
 
 
 </section>
