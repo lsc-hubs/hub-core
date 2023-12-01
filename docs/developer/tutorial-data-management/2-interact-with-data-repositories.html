@@ -9,7 +9,7 @@
 <meta name="author" content="Paul van Genuchten">
 <meta name="dcterms.date" content="2023-05-09">
 
-<title>Land Soil Crop Hub - Describing resources</title>
+<title>Land Soil Crop Hub - Interact with data repositories</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -109,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/2-describing-resources.html">Describing resources</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/2-interact-with-data-repositories.html">Interact with data repositories</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -188,14 +222,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/1-metadata at source.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Metadata at the source</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/2-describing-resources.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Describing resources</span></a>
+  <a href="../../../docs/developer/tutorial-data-management/2-interact-with-data-repositories.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Interact with data repositories</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Describing resources</h1>
+<h1 class="title">Interact with data repositories</h1>
 </div>
 
 
@@ -282,56 +316,37 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="describe-resources" class="level1">
-<h1>Describe resources</h1>
-<p>When describing a resource, consider which user groups are expected to read the information. This analyses will likely impact the style of writing in the metadata. The UK Geospatial Commission has published some <a href="https://www.gov.uk/government/publications/search-engine-optimisation-for-publishers-best-practice-guide">practical recommendations</a> on this topic.</p>
-<div class="border p-2 mb-3 bg-light border-rounded">
-<p>When tagging the dataset with keywords, preferably use keywords from controlled vocabularies like Agrovoc, Wikipedia, etc. The benefit of controlled vocabularies is that the term is not ambigue and it can be made available in multiple languages.</p>
-</div>
-<hr>
-<section id="mcf-editing" class="level2">
-<h2 class="anchored" data-anchor-id="mcf-editing">MCF editing</h2>
-<p>MCF documents can best be written in a text editor like <a href="https://code.visualstudio.com">Visual Studio Code</a>. Consider to install the <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml">YAML plugin</a> for instant YAML validation.</p>
-<p>Another option to create and update mcf files is via <a href="https://github.com/osgeo/mdme">MDME</a>. MDME is a webbased software package providing a dynamic metadata edit form. An operational package is available at <a href="https://osgeo.github.io/mdme">osgeo.github.io</a>. Notice that if you install the package locally, you can customize the metadata schema and initial template to your organisational needs.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Open <a href="https://github.com/osgeo/mdme">mdme</a> and populate the form, now save the MCF file and place it in your sample data repository. Notice that MDME also offers capabilities to export directly as iso19139, it uses a server side process based on the same components as we use in this workshop.</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="mcf-validation" class="level2">
-<h2 class="anchored" data-anchor-id="mcf-validation">MCF validation</h2>
-<p><a href="https://geopython.github.io/pygeometa/">pygeometa</a> is the library build around the mcf format. pygeometa has options to import from and export to mcf for various metadata schemas. pygeometa also has a validate method to validate if an mcf document is properly structured.</p>
-<p>pygeometa has already been installed, while installing geodatacrawler, else you can install it with <code>pip install pygeometa</code>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Try the validator on one of your mcf files.</p>
-<pre><code>pygeometa validate path/to/file.yml</code></pre>
-</div>
-</div>
-<p>Notice that the validator is quite strict, it expects a number of metadata properties to be present. We’ll further not use the validator in this workshop.</p>
-<hr>
-</section>
+<section id="interact-with-data-repositories" class="level1">
+<h1>Interact with data repositories</h1>
+<p>In this section a crawler tool is introduced which let’s you interact with the metadata in a file based data repository. For this exersice we’ve prepared a minimal data repository containing a number of Excel-, Shape- and Tiff-files. Unzip the repository to a location on disk.</p>
+<p>Notice a index.yml in the root folder. The tool we use is able to inherit metadata properties from index.yml files through the file hierarchy. Open index.yml and customise the contact details. Later you will notice that these details will be applied to all datasets which themselves do not provide contact details. Consider to add additional index.yml files in other folders to override the values of index.yml at top level.</p>
+<p>The tool we will use is based on python. It has some specific dependencies which are best installed via <a href="https://conda.io">Conda</a>. Conda creates a virtual python environment, so any activity will not interfere with the base python environment of your machine.</p>
+<p>If you don’t have Conda, you can install <a href="https://www.anaconda.com/download">Anaconda</a> or <a href="https://docs.conda.io/en/latest/miniconda.html#installing">Miniconda</a> and consider to read the <a href="https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html">getting started</a>.</p>
+<p>Now start a commandline or powershell with conda enabled (or add conda to your PATH). On windows look for the <code>Anaconda prompt</code> in start menu. First we will navigate to the folder in which we unzipped the sample data repository. Make sure you are not in the <code>data</code> directory but one above.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> {path-where-you-unzipped-zipfile}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We will create a virtual environment <code>pgdc</code> (using Python 3.9) for our project and activate it.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> pgdc python=3.9 </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate pgdc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice that you can deactivate this environment with: <code>conda deactivate</code> and you will return to the main Python environment. The tools we will install below, will not be available in the main environment.</p>
+<p>Install the dependencies for the tool:</p>
+<pre><code>conda install -c conda-forge gdal==3.3.2
+conda install -c conda-forge pysqlite3==0.4.6</code></pre>
+<p>Now install the crawler tool, <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>. The tool is under active development at ISRIC and facilitates many of our data workflows. It is powered by some popular metadata and transformation libraries; <a href="https://github.com/geopython/OWSLib">OWSLib</a>, <a href="https://github.com/geopython/pygeometa">pygeometa</a> and <a href="https://gdal.org">GDAL</a>.</p>
+<pre><code>pip install geodatacrawler</code></pre>
+<p>Verify the different crawling options by typing:</p>
+<pre><code>crawl-metadata --help</code></pre>
+<p>The initial task for the tool is to create for every data file in our repository a sidecar file based on embedded metadata from the resource.</p>
+<pre><code>crawl-metadata --mode=init --dir=data</code></pre>
+<p>Notice that for each resource a {dataset}.yml file has been created. Open a .yml file in a text editor and review its content.</p>
+<p>The <code>update</code> mode is meant to be run at intervals, it will update the mcf files if changes have been made on a resource.</p>
+<pre><code>crawl-metadata --mode=update --dir=data</code></pre>
+<p>In certain cases the update mode will also import metadata from remote url’s. This happens for example if the dataset-uri is a <a href="https://www.doi.org/the-identifier/what-is-a-doi/">DOI</a>. The update mode will ten fetch metadata of the DOI and push it into the MCF.</p>
+<p>Finally we want to export the MCF’s to actual iso19139 metadata to be loaded into a catalogue like pycsw, GeoNetwork, CKAN etc.</p>
+<pre><code>crawl-metadata --mode=export --dir=data --dir-out=export --dir-out-mode=flat</code></pre>
+<p>Open one of the xml files and evaluate if the contact information from step 1 is available.</p>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>In this paragraph you are introduced to the MDME MCF editor and pygeometa library. In the <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">next section</a> we are looking at catalogue publication.</p>
+<p>In this paragraph you are introduced to the MDME MCF editor and pygeometa library. In the <a href="">next section</a> we are looking at bulk metadata imports.</p>
 
 
 </section>
@@ -583,7 +598,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lsc-hubs/hub-core/edit/main/docs/developer/tutorial-data-management/2-describing-resources.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lsc-hubs/hub-core/edit/main/docs/developer/tutorial-data-management/2-interact-with-data-repositories.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
