@@ -318,35 +318,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="interact-with-data-repositories" class="level1">
 <h1>Interact with data repositories</h1>
-<p>In this section a crawler tool is introduced which let’s you interact with the metadata in a file based data repository. For this exersice we’ve prepared a minimal data repository containing a number of Excel-, Shape- and Tiff-files. Unzip the repository to a location on disk.</p>
-<p>Notice a index.yml in the root folder. The tool we use is able to inherit metadata properties from index.yml files through the file hierarchy. Open index.yml and customise the contact details. Later you will notice that these details will be applied to all datasets which themselves do not provide contact details. Consider to add additional index.yml files in other folders to override the values of index.yml at top level.</p>
+<p>In this section a crawler tool is introduced which let’s you interact with the metadata in a file based data repository. For this exercise we’ve prepared a minimal data repository containing a number of Excel-, Shape- and Tiff-files. Unzip the repository to a location on disk.</p>
+<p>In the root folder of the repository already exists a minimal mcf file, <code>index.yml</code>. This file contains some generic metadata properties which are used if a file within the repository does not include them. The tool we use is able to inherit metadata properties from this index.yml file through the file hierarchy.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Open index.yml and customise the contact details. Later you will notice that these details will be applied to all datasets which themselves do not provide contact details.</p>
+</div>
+</div>
+<p>Consider to add additional index.yml files in other folders to override the values of index.yml at top level.</p>
+<section id="setup-environment" class="level3">
+<h3 class="anchored" data-anchor-id="setup-environment">Setup environment</h3>
 <p>The tool we will use is based on python. It has some specific dependencies which are best installed via <a href="https://conda.io">Conda</a>. Conda creates a virtual python environment, so any activity will not interfere with the base python environment of your machine.</p>
 <p>If you don’t have Conda, you can install <a href="https://www.anaconda.com/download">Anaconda</a> or <a href="https://docs.conda.io/en/latest/miniconda.html#installing">Miniconda</a> and consider to read the <a href="https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html">getting started</a>.</p>
 <p>Now start a commandline or powershell with conda enabled (or add conda to your PATH). On windows look for the <code>Anaconda prompt</code> in start menu. First we will navigate to the folder in which we unzipped the sample data repository. Make sure you are not in the <code>data</code> directory but one above.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> {path-where-you-unzipped-zipfile}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We will create a virtual environment <code>pgdc</code> (using Python 3.9) for our project and activate it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> pgdc python=3.9 </span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> pgdc python=3.11 </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate pgdc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notice that you can deactivate this environment with: <code>conda deactivate</code> and you will return to the main Python environment. The tools we will install below, will not be available in the main environment.</p>
 <p>Install the dependencies for the tool:</p>
-<pre><code>conda install -c conda-forge gdal==3.3.2
-conda install -c conda-forge pysqlite3==0.4.6</code></pre>
-<p>Now install the crawler tool, <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>. The tool is under active development at ISRIC and facilitates many of our data workflows. It is powered by some popular metadata and transformation libraries; <a href="https://github.com/geopython/OWSLib">OWSLib</a>, <a href="https://github.com/geopython/pygeometa">pygeometa</a> and <a href="https://gdal.org">GDAL</a>.</p>
+<pre><code>conda install -c conda-forge gdal
+conda install -c conda-forge pysqlite3
+conda install -c conda-forge pandas</code></pre>
+<p>Now we will install the crawler tool, <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>. The tool is under active development at ISRIC and facilitates many of our data workflows. It is powered by some popular metadata and transformation libraries; <a href="https://github.com/geopython/OWSLib">OWSLib</a>, <a href="https://github.com/geopython/pygeometa">pygeometa</a> and <a href="https://gdal.org">GDAL</a>.</p>
 <pre><code>pip install geodatacrawler</code></pre>
 <p>Verify the different crawling options by typing:</p>
 <pre><code>crawl-metadata --help</code></pre>
+</section>
+<section id="initial-mcf-files" class="level3">
+<h3 class="anchored" data-anchor-id="initial-mcf-files">Initial MCF files</h3>
 <p>The initial task for the tool is to create for every data file in our repository a sidecar file based on embedded metadata from the resource.</p>
 <pre><code>crawl-metadata --mode=init --dir=data</code></pre>
-<p>Notice that for each resource a {dataset}.yml file has been created. Open a .yml file in a text editor and review its content.</p>
+<p>Notice that for each resource a {dataset}.yml file has been created. Open a .yml file in a text editor and review the content.</p>
+</section>
+<section id="update-mcf" class="level3">
+<h3 class="anchored" data-anchor-id="update-mcf">Update MCF</h3>
 <p>The <code>update</code> mode is meant to be run at intervals, it will update the mcf files if changes have been made on a resource.</p>
 <pre><code>crawl-metadata --mode=update --dir=data</code></pre>
 <p>In certain cases the update mode will also import metadata from remote url’s. This happens for example if the dataset-uri is a <a href="https://www.doi.org/the-identifier/what-is-a-doi/">DOI</a>. The update mode will ten fetch metadata of the DOI and push it into the MCF.</p>
+</section>
+<section id="export-mcf" class="level3">
+<h3 class="anchored" data-anchor-id="export-mcf">Export MCF</h3>
 <p>Finally we want to export the MCF’s to actual iso19139 metadata to be loaded into a catalogue like pycsw, GeoNetwork, CKAN etc.</p>
 <pre><code>crawl-metadata --mode=export --dir=data --dir-out=export --dir-out-mode=flat</code></pre>
 <p>Open one of the xml files and evaluate if the contact information from step 1 is available.</p>
+</section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>In this paragraph you are introduced to the MDME MCF editor and pygeometa library. In the <a href="">next section</a> we are looking at bulk metadata imports.</p>
+<p>In this paragraph you have been introduced to the geodatacrawler library. In the <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">next section</a> we are looking at catalogue publication.</p>
 
 
 </section>
