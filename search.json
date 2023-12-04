@@ -361,7 +361,7 @@
     "href": "docs/developer/pycsw.html",
     "title": "pycsw",
     "section": "",
-    "text": "pycsw is an effective catalogue implementation in python, supporting a range of record exchange standards for optimal interoperability."
+    "text": "pycsw\npycsw is a catalogue implementation in python, supporting a range of record exchange standards (CSW, oai-pmh, STAC, Opensearch) for optimal interoperability. Backend is PostGres, MariaDB or SQLite.\n\nWebsite: https://pycsw.org\nGithub: https://github.com/geopython/pycsw"
   },
   {
     "objectID": "docs/admin/index.html",
