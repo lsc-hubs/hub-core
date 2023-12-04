@@ -294,6 +294,7 @@ cd TerriaMap
 docker build -t local/terria .
 docker run -p 3001:3001 local/terria</code></pre>
 <p>Visit http://localhost:3001 to see TerriaJS in action.</p>
+<hr>
 </section>
 <section id="tailored-metadata-schema-in-mcf-pygeometa" class="level2">
 <h2 class="anchored" data-anchor-id="tailored-metadata-schema-in-mcf-pygeometa">Tailored metadata schema in mcf / pygeometa</h2>
@@ -309,6 +310,11 @@ docker run -p 3001:3001 local/terria</code></pre>
 <p>The SKOS ontology is a commonly accepted mechanism to create vocabularies. It allows to link concepts to similar, wider or narrower concepts. When creating a new vocabulary you typically start with a list of concepts in Excel.</p>
 <p>The Glosis web ontology contains <a href="https://github.com/glosis-ld/glosis/tree/master/utils/transformer_tool">a transformer script</a> which convert a csv (exported from Excel) file to a skos document, alternatively you can use a tool such as <a href="https://labs.sparna.fr/skos-play/">skos play</a>. The skos file can best be hosted on a git repository. Anybody can access it, and provide improvement suggestions.</p>
 <p>The python <a href="https://github.com/ternaustralia/vocview">vocview library</a> is able to render a skos file to a nice web layout which is easy to browse and search through by humans. See a live <a href="https://linkeddata.tern.org.au/viewer/tern/">implementation at tern</a>.</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>With this topic we conclude our training on data management. We hope you enjoyed the materials. Notice that the training can act as a starting point to a number of other resources. Let us know via <a href="https://github.com/lsc-hubs/hub-core/issues">Git issues</a> if you have improvement suggestions for the materials.</p>
 
 
 </section>
