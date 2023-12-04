@@ -339,8 +339,54 @@ Paul van Genuchten
 
   <p class="date">2023-05-09</p>
 </section>
-<section class="slide level2">
+<section id="organisations-organise-their-data-in-file-repositories-or-databases" class="slide level2">
+<h2>Organisations organise their data in file repositories or databases</h2>
 
+<img data-src="../img/file-hierarchy.jpg" class="r-stretch quarto-figure-center"><p class="caption">File hierarchy</p></section>
+<section id="a-readme-in-each-folder" class="slide level2">
+<h2>A readme in each folder</h2>
+<ul>
+<li class="fragment">Add a readme to describe the resources in a folder</li>
+<li class="fragment">Why not structure the content in the readme, so also machines can read it?</li>
+</ul>
+</section>
+<section id="metadata-control-file" class="slide level2">
+<h2>Metadata Control File</h2>
+<ul>
+<li class="fragment">A convention of the pygeometa community (Meteo Canada)</li>
+<li class="fragment">YAML, easy to read by humans and machines</li>
+<li class="fragment">A subset of the ISO19115 standard for metadata</li>
+</ul>
+
+<img data-src="../img/mcf.jpg" class="r-stretch quarto-figure-center"><p class="caption">MCF</p></section>
+<section id="pygeometa-library" class="slide level2">
+<h2>pygeometa library</h2>
+<ul>
+<li class="fragment">a library to work with MCF</li>
+<li class="fragment">exports MCF to various metadata models (iso, dcat, stac)</li>
+<li class="fragment"><a href="https://github.com/geopython/pygeometa" class="uri">https://github.com/geopython/pygeometa</a></li>
+</ul>
+</section>
+<section id="the-geodatacrawler-tool" class="slide level2">
+<h2>The geodatacrawler tool</h2>
+<ul>
+<li class="fragment">Developed at ISRIC in the last year</li>
+<li class="fragment">On the shoulders of giants; GDAL, pygeometa, pandas</li>
+<li class="fragment">Generates MCF files for a file repository</li>
+<li class="fragment">Imports metadata from external sources</li>
+<li class="fragment">Extracts MCF files from a repository to load it into a catalogue</li>
+<li class="fragment">Creates map services configuration for files in the repository</li>
+</ul>
+</section>
+<section id="pycsw-catalogue" class="slide level2">
+<h2>pycsw catalogue</h2>
+<ul>
+<li class="fragment">A catalogue implementation in python</li>
+<li class="fragment">Limited funtionality, easy maintenance</li>
+<li class="fragment">Wide range of supported catalogue standards, serves many communities</li>
+<li class="fragment">Database backend</li>
+<li class="fragment">Skin customisable with jinja templates</li>
+</ul>
 
 
 <img src="https://lsc-hubs.org/images/logo-lsc-hubs.svg" class="slide-logo r-stretch"><div class="footer footer-default">

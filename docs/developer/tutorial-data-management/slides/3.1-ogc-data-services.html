@@ -340,10 +340,10 @@ Paul van Genuchten
   <p class="date">2023-05-09</p>
 </section>
 <section id="what-is-ogc" class="slide level2">
-<h2>What is OGC</h2>
+<h2>What is OGC?</h2>
 <ul>
 <li class="fragment">Open Geospatial Consortium defines standards for the geospatial industry</li>
-<li class="fragment">Members are software companies, universities and govenment</li>
+<li class="fragment">Members are software companies, universities and government</li>
 <li class="fragment">Such as WMS, GML, OGCAPI, EPSG, GeoSPARQL</li>
 <li class="fragment">Read more at <a href="https://opengeospatial.org" class="uri">https://opengeospatial.org</a></li>
 </ul>
@@ -357,6 +357,51 @@ Paul van Genuchten
 <li class="fragment">Currently under development</li>
 <li class="fragment">Basic support in new and existing products</li>
 <li class="fragment">The browser as a tool to browse spatial data</li>
+</ul>
+</section>
+<section id="ows-vs-ogc-api-1" class="slide level2">
+<h2>OWS vs OGC API</h2>
+<ul>
+<li class="fragment">GML - GeoJSON (json-fg) &amp; HTML</li>
+<li class="fragment">Long querystrings - Rest api (path parameters)</li>
+<li class="fragment">GetCapabilities - Open API Specification</li>
+<li class="fragment">Format=xxx - Content negotiation (accept:text/html)</li>
+<li class="fragment">Full featured - Minimal standard with extensions</li>
+</ul>
+</section>
+<section id="wfs-and-ogc-api---features" class="slide level2">
+<h2>WFS and OGC API - Features</h2>
+<ul>
+<li class="fragment">Provides access to vector features.</li>
+<li class="fragment">Filter, sorting and pagination options</li>
+</ul>
+
+<img data-src="../img/wfs.jpg" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
+<section id="wms-and-ogc-api---maps" class="slide level2">
+<h2>WMS and OGC API - Maps</h2>
+<ul>
+<li class="fragment">Image rendering of subsets of the data using some styling rules</li>
+</ul>
+
+<img data-src="../img/wms.jpg" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
+<section id="wmts-tms-and-ogc-api---tiles" class="slide level2">
+<h2>WMTS, TMS and OGC API - Tiles</h2>
+
+<img data-src="../img/tiles.png" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
+<section id="wcs-and-ogc-api---coverages" class="slide level2">
+<h2>WCS and OGC API - Coverages</h2>
+
+<img data-src="../img/wcs.jpg" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
+<section id="csw-ogc-api---records-and-stac" class="slide level2">
+<h2>CSW, OGC API - Records and STAC</h2>
+</section>
+<section id="mapserver" class="slide level2">
+<h2>Mapserver</h2>
+<ul>
+<li class="fragment">Recent versions of Mapserver support the old and new standards</li>
+<li class="fragment">Features and Maps</li>
+<li class="fragment">No tiles (mapproxy), No coverages yet</li>
+<li class="fragment">No records/stac, by design</li>
 </ul>
 
 

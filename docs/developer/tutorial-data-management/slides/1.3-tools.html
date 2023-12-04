@@ -30,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -385,8 +320,6 @@
       margin-right: 0; 
     }
   </style>
-  <script type="module" src="../../../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-  <link href="../../../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -423,6 +356,16 @@ Paul van Genuchten
 <p>A content management system to create websites, documentation, slides, etc.</p>
 <p>Related software; <a href="gohugo.io">Hugo</a>, mkdocs, Jekyll, Wordpress, Drupal</p>
 </section>
+<section id="pygeometa-geodatacrawler" class="slide level2">
+<h2>pygeometa / geodatacrawler</h2>
+<p>Scripting libraries which support data management of a file repository</p>
+<ul>
+<li class="fragment">Generate metadata from existing data</li>
+<li class="fragment">Import remote metadata</li>
+<li class="fragment">Ingest metadata from a file repository</li>
+<li class="fragment">Create mapservices (API’s) for existing data</li>
+</ul>
+</section>
 <section id="pycsw" class="slide level2">
 <h2>pycsw</h2>
 <p>A catalogue server application providing support for multiple metadata schemes and metadata exchange standards</p>
@@ -433,60 +376,11 @@ Paul van Genuchten
 <p>A server application providing OGC services (WMS, WFS, WCS) on various data formats</p>
 <p>Related products; Geoserver, ArcGIS server, deegree, pygeoapi, QGIS server</p>
 </section>
-<section id="leaflet" class="slide level2">
-<h2>Leaflet</h2>
-<p>A javascript library to load interactive maps on a webpage.</p>
-<div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="48" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 47;"><span id="cb1-48"><a href="#cb1-48"></a>L <span class="op">=</span> <span class="pp">require</span>(<span class="st">'leaflet@1.9.4'</span>)</span>
-<span id="cb1-49"><a href="#cb1-49"></a><span class="fu">html</span><span class="vs">`&lt;link href='</span><span class="sc">${</span><span class="fu">resolve</span>(<span class="st">'leaflet@1.9.4/dist/leaflet.css'</span>)<span class="sc">}</span><span class="vs">' rel='stylesheet' /&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-2" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="50" data-source-offset="-113"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 49;"><span id="cb2-50"><a href="#cb2-50"></a>map <span class="op">=</span> {</span>
-<span id="cb2-51"><a href="#cb2-51"></a>  <span class="kw">let</span> container <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span><span class="op">,</span> { <span class="dt">style</span><span class="op">:</span> <span class="vs">`width:</span><span class="sc">${</span>width<span class="sc">}</span><span class="vs">px;height:</span><span class="sc">${</span>width<span class="op">/</span><span class="fl">1.6</span><span class="sc">}</span><span class="vs">px`</span> })<span class="op">;</span></span>
-<span id="cb2-52"><a href="#cb2-52"></a>  <span class="kw">yield</span> container<span class="op">;</span></span>
-<span id="cb2-53"><a href="#cb2-53"></a>  <span class="kw">let</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(container)<span class="op">.</span><span class="fu">setView</span>([<span class="op">-</span><span class="fl">1.940278</span><span class="op">,</span><span class="fl">29.873888</span>]<span class="op">,</span> <span class="dv">13</span>)<span class="op">;</span></span>
-<span id="cb2-54"><a href="#cb2-54"></a>  <span class="kw">let</span> osmLayer <span class="op">=</span> L<span class="op">.</span><span class="fu">tileLayer</span>(<span class="st">'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png'</span><span class="op">,</span> {</span>
-<span id="cb2-55"><a href="#cb2-55"></a>      <span class="dt">attribution</span><span class="op">:</span> <span class="st">'&amp;copy; &lt;a href="http://osm.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'</span></span>
-<span id="cb2-56"><a href="#cb2-56"></a>  })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
-<span id="cb2-57"><a href="#cb2-57"></a>  <span class="kw">let</span> nexrad <span class="op">=</span> L<span class="op">.</span><span class="at">tileLayer</span><span class="op">.</span><span class="fu">wms</span>(<span class="st">"https://maps.lsc-hubs.org/ows/clay"</span><span class="op">,</span> {</span>
-<span id="cb2-58"><a href="#cb2-58"></a>    <span class="dt">layers</span><span class="op">:</span> <span class="st">'Clay_mean_0-20cm'</span><span class="op">,</span></span>
-<span id="cb2-59"><a href="#cb2-59"></a>    <span class="dt">format</span><span class="op">:</span> <span class="st">'image/png'</span><span class="op">,</span></span>
-<span id="cb2-60"><a href="#cb2-60"></a>    <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
-<span id="cb2-61"><a href="#cb2-61"></a>    <span class="dt">transparent</span><span class="op">:</span> <span class="st">'true'</span></span>
-<span id="cb2-62"><a href="#cb2-62"></a>})<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;;</span></span>
-<span id="cb2-63"><a href="#cb2-63"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-3" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-</div>
-<p>Related products; Openlayers, Cesium, Google Maps API, MapLibre</p>
-</section>
 <section id="terriajs" class="slide level2">
 <h2>TerriaJS</h2>
 <p>A WebGIS application including Leaflet library</p>
 <p><a href="https://maps.lsc-hubs.org/#rwanda">demo</a></p>
 <p>Related products; GeoNode, GeoMoose, MapBender, Oskari, <a href="https://gisquick.org/">GisQuick</a></p>
-</section>
-<section id="hale-desktop" class="slide level2">
-<h2>Hale Desktop</h2>
-<p>Software to run Extract Transform and Load (ETL)</p>
-<p>Related Software; FME, GDAL, Apache Hive,</p>
 
 
 <img src="https://lsc-hubs.org/images/logo-lsc-hubs.svg" class="slide-logo r-stretch"><div class="footer footer-default">
@@ -703,17 +597,6 @@ Paul van Genuchten
           RevealZoom
         ]
       });
-    </script>
-    <script type="ojs-module-contents">
-    {"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"L = require('leaflet@1.9.4')\nhtml`<link href='${resolve('leaflet@1.9.4/dist/leaflet.css')}' rel='stylesheet' />`\nmap = {\n  let container = DOM.element('div', { style: `width:${width}px;height:${width/1.6}px` });\n  yield container;\n  let map = L.map(container).setView([-1.940278,29.873888], 13);\n  let osmLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {\n      attribution: '&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors'\n  }).addTo(map);\n  let nexrad = L.tileLayer.wms(\"https://maps.lsc-hubs.org/ows/clay\", {\n    layers: 'Clay_mean_0-20cm',\n    format: 'image/png',\n    opacity: 0.5,\n    transparent: 'true'\n}).addTo(map);;\n}\n"}]}
-    </script>
-    <script type="module">
-    if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-    window._ojs.paths.runtimeToDoc = "../../docs/developer/tutorial-data-management/slides";
-    window._ojs.paths.runtimeToRoot = "../..";
-    window._ojs.paths.docToRoot = "../../../..";
-    window._ojs.selfContained = false;
-    window._ojs.runtime.interpretFromScriptTags();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {

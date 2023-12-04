@@ -7,6 +7,48 @@
     "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 15, 2023\n\n\n1.1 Training Overview\n\n\nPaul van Genuchten\n\n\n\n\nSep 15, 2023\n\n\n1.2 Findable\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n1.3 Tools\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n2.1 Collect and Publish metadata\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n3.1 OGC data services\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n3.2 Service Quality\n\n\nPaul van Genuchten\n\n\n\n\nMay 9, 2023\n\n\n4.1 Soil Profile Datamanagement\n\n\nPaul van Genuchten\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#organisations-organise-their-data-in-file-repositories-or-databases",
+    "href": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#organisations-organise-their-data-in-file-repositories-or-databases",
+    "title": "2.1 Collect and Publish metadata",
+    "section": "Organisations organise their data in file repositories or databases",
+    "text": "Organisations organise their data in file repositories or databases\n\nFile hierarchy"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#a-readme-in-each-folder",
+    "href": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#a-readme-in-each-folder",
+    "title": "2.1 Collect and Publish metadata",
+    "section": "A readme in each folder",
+    "text": "A readme in each folder\n\nAdd a readme to describe the resources in a folder\nWhy not structure the content in the readme, so also machines can read it?"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#metadata-control-file",
+    "href": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#metadata-control-file",
+    "title": "2.1 Collect and Publish metadata",
+    "section": "Metadata Control File",
+    "text": "Metadata Control File\n\nA convention of the pygeometa community (Meteo Canada)\nYAML, easy to read by humans and machines\nA subset of the ISO19115 standard for metadata\n\n\nMCF"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#pygeometa-library",
+    "href": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#pygeometa-library",
+    "title": "2.1 Collect and Publish metadata",
+    "section": "pygeometa library",
+    "text": "pygeometa library\n\na library to work with MCF\nexports MCF to various metadata models (iso, dcat, stac)\nhttps://github.com/geopython/pygeometa"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#the-geodatacrawler-tool",
+    "href": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#the-geodatacrawler-tool",
+    "title": "2.1 Collect and Publish metadata",
+    "section": "The geodatacrawler tool",
+    "text": "The geodatacrawler tool\n\nDeveloped at ISRIC in the last year\nOn the shoulders of giants; GDAL, pygeometa, pandas\nGenerates MCF files for a file repository\nImports metadata from external sources\nExtracts MCF files from a repository to load it into a catalogue\nCreates map services configuration for files in the repository"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#pycsw-catalogue",
+    "href": "docs/developer/tutorial-data-management/slides/2.1-collect-publish-metadata.html#pycsw-catalogue",
+    "title": "2.1 Collect and Publish metadata",
+    "section": "pycsw catalogue",
+    "text": "pycsw catalogue\n\nA catalogue implementation in python\nLimited funtionality, easy maintenance\nWide range of supported catalogue standards, serves many communities\nDatabase backend\nSkin customisable with jinja templates\n\n\n\n\nWorkshop on spatial data flows"
+  },
+  {
     "objectID": "docs/developer/tutorial-data-management/slides/1.2-fair.html#findable",
     "href": "docs/developer/tutorial-data-management/slides/1.2-fair.html#findable",
     "title": "1.2 Findable",
@@ -361,14 +403,14 @@
     "href": "docs/developer/terria.html",
     "title": "terria js",
     "section": "",
-    "text": "TerriaJS is a web based map vizualisation tool. It can connect to a variety of file formats and online resources. You can share maps and map stories with partners and compare map views. For time enabled services you can create diagrams.\n\nWebsite: https://terria.io\nGithub: https://github.com/terriaJS/terriajs/\n\n\n\nThis document describes how terriajs has been customised and deployed to fit the needs of LSC Hubs.\nTerriaMap is a ready-made web environment for the the terriaJS library.\nA docker container definition for TerriaMap is available at github.\nOn the container a number of files need to be overridden with tailored changes (to update titles, logo’s colors).\n\nwwwroot/about.html contains the text of the about page\nwwwroot/config.json contains the config of the main application\ninit/simple.json and other map files in this folder can be used as predefined maps\n\nYou can either override these files as part of the container build process or add the files st container deployment."
+    "text": "TerriaJS is a web based map vizualisation tool. It can connect to a variety of file formats and online resources. You can share maps and map stories with partners and compare map views. For time enabled services you can create diagrams.\n\nWebsite: https://terria.io\nGithub: https://github.com/terriaJS/terriajs/\n\n\n\nThis document describes how terriajs has been customised and deployed to fit the needs of LSC Hubs.\nTerriaMap is a ready-made web environment for the the terriaJS library.\nA docker container definition for TerriaMap is available at github.\nOn the container a number of files need to be overridden with tailored changes (to update titles, logo’s colors).\n\nwwwroot/about.html contains the text of the about page\nwwwroot/index.html adds a relevant title and some css updates\nwwwroot/config.json contains the config of the main application\ninit/simple.json and other map files in this folder can be used as predefined maps\n\nYou can either override these files as part of the container build process or add the files during container deployment."
   },
   {
     "objectID": "docs/developer/terria.html#terriajs-in-lsc-hubs",
     "href": "docs/developer/terria.html#terriajs-in-lsc-hubs",
     "title": "terria js",
     "section": "",
-    "text": "This document describes how terriajs has been customised and deployed to fit the needs of LSC Hubs.\nTerriaMap is a ready-made web environment for the the terriaJS library.\nA docker container definition for TerriaMap is available at github.\nOn the container a number of files need to be overridden with tailored changes (to update titles, logo’s colors).\n\nwwwroot/about.html contains the text of the about page\nwwwroot/config.json contains the config of the main application\ninit/simple.json and other map files in this folder can be used as predefined maps\n\nYou can either override these files as part of the container build process or add the files st container deployment."
+    "text": "This document describes how terriajs has been customised and deployed to fit the needs of LSC Hubs.\nTerriaMap is a ready-made web environment for the the terriaJS library.\nA docker container definition for TerriaMap is available at github.\nOn the container a number of files need to be overridden with tailored changes (to update titles, logo’s colors).\n\nwwwroot/about.html contains the text of the about page\nwwwroot/index.html adds a relevant title and some css updates\nwwwroot/config.json contains the config of the main application\ninit/simple.json and other map files in this folder can be used as predefined maps\n\nYou can either override these files as part of the container build process or add the files during container deployment."
   },
   {
     "objectID": "docs/developer/pycsw.html",
@@ -385,123 +427,25 @@
     "text": "pycsw has been set up with a PostGres backend. Every time records are updated on the git repository a CI/CD action updates the records in the database. The skin is based on a tailored skin, available on github."
   },
   {
-    "objectID": "docs/admin/index.html",
-    "href": "docs/admin/index.html",
-    "title": "Administration",
+    "objectID": "docs/developer/index.html",
+    "href": "docs/developer/index.html",
+    "title": "Developer documentation",
     "section": "",
-    "text": "The current hub is published via Github. Github is a commercial service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers could be considered, such as gitlab, bitbucket. Notice that it is also possible to install gitlab on premise.\nAs an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate you on the use of Git, such as Github desktop, smartgit and git kraken. Some prefer the Github plugin of Visual Studio.\n\n\n\nA number of content pages is made available to guide the user within the hub. These pages are maintained in github as markdown. Notice the edit link in the footer of each page. The pages are rendered to html using the quarto tool. Editing of quarto documents is facilitated by a quarto plugin in visual studio.\nThe quarto tool is configured as a ci-cd action in github. You can follow the progress of an action in the actions tab. In some cases an action may fail and human interaction is needed to fix the problem and/or restart the action.\n\n\n\nDiscussions are managed within github. A widget is added to every resource page, so users can provide feedback or ask questions about the resource. These questions are stored as github discussion. Discussions can be answered from the resource page (a github login is required) or from github discussions. Users should be invited to the github project to be able to administer github discussions.\n\n\n\nThe TerriaJS framework enables users to share maps and map stories with stakeholders (share button top-right). Notice that you can also use this functionality to link from a description of a resource to a map, which displays some data in a certain context.\n[A nice map](https://maps.lsc-hubs.org/#start=%7B%22version%22%...)\nAnother option is to store the map definition (urldecoded) on a folder of TerriaJS. The map is then available by its filename. You can now add a link to this map for example in the related maps section of TerriaJS (config.json).\n\n\n\nThe catalogue can be linked to various information sources, without the data being stored on the LSC hub. Therefore, if you know existing information sources that are missing and should be added. Proving metadata is essential for findability and to avoid ambiguity.\nSource of catalogue records is maintained at github. Records are organised in Global, Continental, and country. Within country they are organised by portal/initiative.\nMetadata records are stored in the mcf format, a subset of iso19115 in a conveniant yaml encoding. But you can also add them as iso19115 xml format.\nA number of mechanisms is available to load records into the catalogue.\n\nImport records from external sources, such as data portals (zenodo, dataverse, CSW, STAC, OSF)\nMcf records can be created using mdme\nA Excel template is available, on which resources can be described. A single resource per record.\nAn ODK form is available on which users can describe resources\n\n\n\n\nODK"
+    "text": "Content management with Quarto\npycsw catalogue\nmapserver\nterriajs\n\n\n\n\n\nTutorial data management"
   },
   {
-    "objectID": "docs/admin/index.html#github",
-    "href": "docs/admin/index.html#github",
-    "title": "Administration",
+    "objectID": "docs/developer/index.html#contents",
+    "href": "docs/developer/index.html#contents",
+    "title": "Developer documentation",
     "section": "",
-    "text": "The current hub is published via Github. Github is a commercial service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers could be considered, such as gitlab, bitbucket. Notice that it is also possible to install gitlab on premise.\nAs an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate you on the use of Git, such as Github desktop, smartgit and git kraken. Some prefer the Github plugin of Visual Studio."
+    "text": "Content management with Quarto\npycsw catalogue\nmapserver\nterriajs"
   },
   {
-    "objectID": "docs/admin/index.html#lsc-hub",
-    "href": "docs/admin/index.html#lsc-hub",
-    "title": "Administration",
+    "objectID": "docs/developer/index.html#tutorials",
+    "href": "docs/developer/index.html#tutorials",
+    "title": "Developer documentation",
     "section": "",
-    "text": "A number of content pages is made available to guide the user within the hub. These pages are maintained in github as markdown. Notice the edit link in the footer of each page. The pages are rendered to html using the quarto tool. Editing of quarto documents is facilitated by a quarto plugin in visual studio.\nThe quarto tool is configured as a ci-cd action in github. You can follow the progress of an action in the actions tab. In some cases an action may fail and human interaction is needed to fix the problem and/or restart the action."
-  },
-  {
-    "objectID": "docs/admin/index.html#discussions",
-    "href": "docs/admin/index.html#discussions",
-    "title": "Administration",
-    "section": "",
-    "text": "Discussions are managed within github. A widget is added to every resource page, so users can provide feedback or ask questions about the resource. These questions are stored as github discussion. Discussions can be answered from the resource page (a github login is required) or from github discussions. Users should be invited to the github project to be able to administer github discussions."
-  },
-  {
-    "objectID": "docs/admin/index.html#maps",
-    "href": "docs/admin/index.html#maps",
-    "title": "Administration",
-    "section": "",
-    "text": "The TerriaJS framework enables users to share maps and map stories with stakeholders (share button top-right). Notice that you can also use this functionality to link from a description of a resource to a map, which displays some data in a certain context.\n[A nice map](https://maps.lsc-hubs.org/#start=%7B%22version%22%...)\nAnother option is to store the map definition (urldecoded) on a folder of TerriaJS. The map is then available by its filename. You can now add a link to this map for example in the related maps section of TerriaJS (config.json)."
-  },
-  {
-    "objectID": "docs/admin/index.html#catalogue",
-    "href": "docs/admin/index.html#catalogue",
-    "title": "Administration",
-    "section": "",
-    "text": "The catalogue can be linked to various information sources, without the data being stored on the LSC hub. Therefore, if you know existing information sources that are missing and should be added. Proving metadata is essential for findability and to avoid ambiguity.\nSource of catalogue records is maintained at github. Records are organised in Global, Continental, and country. Within country they are organised by portal/initiative.\nMetadata records are stored in the mcf format, a subset of iso19115 in a conveniant yaml encoding. But you can also add them as iso19115 xml format.\nA number of mechanisms is available to load records into the catalogue.\n\nImport records from external sources, such as data portals (zenodo, dataverse, CSW, STAC, OSF)\nMcf records can be created using mdme\nA Excel template is available, on which resources can be described. A single resource per record.\nAn ODK form is available on which users can describe resources\n\n\n\n\nODK"
-  },
-  {
-    "objectID": "cases/services.html",
-    "href": "cases/services.html",
-    "title": "Services",
-    "section": "",
-    "text": "Services"
-  },
-  {
-    "objectID": "cases/isfm.html",
-    "href": "cases/isfm.html",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks. Integrated Soil Fertility Management (ISFM) has the potential to improve effectivity and efficiency of agronomic practices including both fertilizer recommendations and organic matter management and thereby boost crop production and farm income. Also, ISFM has the potential to deliver multiple co-benefits including climate adaptation (through improved water holding capacity and soil cover) as well as climate mitigation (through carbon sequestration).​\n\n\n\nImproved agronomic management advisories including crop type and soil fertility management to farmers via agricultural extension staff or directly.​\n\n\n\nLand users and their intermediaries can use the system to obtain information on the soil fertility and alternatives to improve soil fertility. It is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and models (WOFOST, DSSAT etc) accessible in the LSC-hub. These will include risk assessment of weather and other external factors.​\n\n\n\n\nField/farm,\nSub-national (county/district/woreda)\nNational levels​\n\n\n\n\n\nnational: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer.​\n​\n\n\n\n\n\nHub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​\n\n\n\n\n\nFarmers.​\n\n\n\n\nThe intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent/ lead farmer/ agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​\n​"
-  },
-  {
-    "objectID": "cases/isfm.html#setting",
-    "href": "cases/isfm.html#setting",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks. Integrated Soil Fertility Management (ISFM) has the potential to improve effectivity and efficiency of agronomic practices including both fertilizer recommendations and organic matter management and thereby boost crop production and farm income. Also, ISFM has the potential to deliver multiple co-benefits including climate adaptation (through improved water holding capacity and soil cover) as well as climate mitigation (through carbon sequestration).​"
-  },
-  {
-    "objectID": "cases/isfm.html#goal",
-    "href": "cases/isfm.html#goal",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "Improved agronomic management advisories including crop type and soil fertility management to farmers via agricultural extension staff or directly.​"
-  },
-  {
-    "objectID": "cases/isfm.html#scope",
-    "href": "cases/isfm.html#scope",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "Land users and their intermediaries can use the system to obtain information on the soil fertility and alternatives to improve soil fertility. It is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and models (WOFOST, DSSAT etc) accessible in the LSC-hub. These will include risk assessment of weather and other external factors.​"
-  },
-  {
-    "objectID": "cases/isfm.html#scale",
-    "href": "cases/isfm.html#scale",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "Field/farm,\nSub-national (county/district/woreda)\nNational levels​"
-  },
-  {
-    "objectID": "cases/isfm.html#primary-actors",
-    "href": "cases/isfm.html#primary-actors",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "national: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer.​\n​"
-  },
-  {
-    "objectID": "cases/isfm.html#secondary-actors",
-    "href": "cases/isfm.html#secondary-actors",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "Hub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​"
-  },
-  {
-    "objectID": "cases/isfm.html#beneficiary",
-    "href": "cases/isfm.html#beneficiary",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "Farmers.​"
-  },
-  {
-    "objectID": "cases/isfm.html#scenario",
-    "href": "cases/isfm.html#scenario",
-    "title": "Kenya Integrated Soil Fertility Management description​",
-    "section": "",
-    "text": "The intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent/ lead farmer/ agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​\n​"
-  },
-  {
-    "objectID": "cases/models.html",
-    "href": "cases/models.html",
-    "title": "models",
-    "section": "",
-    "text": "Models"
+    "text": "Tutorial data management"
   },
   {
     "objectID": "cases/swc.html",
@@ -567,25 +511,137 @@
     "text": "The intermediary actor accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor converts this information into land use and land management recommendations and advise to ultimate end users, in particular farmers.​"
   },
   {
-    "objectID": "docs/developer/index.html",
-    "href": "docs/developer/index.html",
-    "title": "Developer documentation",
+    "objectID": "cases/models.html",
+    "href": "cases/models.html",
+    "title": "models",
     "section": "",
-    "text": "Content management with Quarto\npycsw catalogue\nterriajs"
+    "text": "Models"
   },
   {
-    "objectID": "docs/developer/index.html#contents",
-    "href": "docs/developer/index.html#contents",
-    "title": "Developer documentation",
+    "objectID": "cases/isfm.html",
+    "href": "cases/isfm.html",
+    "title": "Kenya Integrated Soil Fertility Management description​",
     "section": "",
-    "text": "Content management with Quarto\npycsw catalogue\nterriajs"
+    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks. Integrated Soil Fertility Management (ISFM) has the potential to improve effectivity and efficiency of agronomic practices including both fertilizer recommendations and organic matter management and thereby boost crop production and farm income. Also, ISFM has the potential to deliver multiple co-benefits including climate adaptation (through improved water holding capacity and soil cover) as well as climate mitigation (through carbon sequestration).​\n\n\n\nImproved agronomic management advisories including crop type and soil fertility management to farmers via agricultural extension staff or directly.​\n\n\n\nLand users and their intermediaries can use the system to obtain information on the soil fertility and alternatives to improve soil fertility. It is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and models (WOFOST, DSSAT etc) accessible in the LSC-hub. These will include risk assessment of weather and other external factors.​\n\n\n\n\nField/farm,\nSub-national (county/district/woreda)\nNational levels​\n\n\n\n\n\nnational: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer.​\n​\n\n\n\n\n\nHub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​\n\n\n\n\n\nFarmers.​\n\n\n\n\nThe intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent/ lead farmer/ agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​\n​"
   },
   {
-    "objectID": "docs/developer/index.html#alternative-relevant-content",
-    "href": "docs/developer/index.html#alternative-relevant-content",
-    "title": "Developer documentation",
-    "section": "Alternative relevant content",
-    "text": "Alternative relevant content\n\nEJP Soil Date Assimilaton Cookbook\nTutorial data management"
+    "objectID": "cases/isfm.html#setting",
+    "href": "cases/isfm.html#setting",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks. Integrated Soil Fertility Management (ISFM) has the potential to improve effectivity and efficiency of agronomic practices including both fertilizer recommendations and organic matter management and thereby boost crop production and farm income. Also, ISFM has the potential to deliver multiple co-benefits including climate adaptation (through improved water holding capacity and soil cover) as well as climate mitigation (through carbon sequestration).​"
+  },
+  {
+    "objectID": "cases/isfm.html#goal",
+    "href": "cases/isfm.html#goal",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Improved agronomic management advisories including crop type and soil fertility management to farmers via agricultural extension staff or directly.​"
+  },
+  {
+    "objectID": "cases/isfm.html#scope",
+    "href": "cases/isfm.html#scope",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Land users and their intermediaries can use the system to obtain information on the soil fertility and alternatives to improve soil fertility. It is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and models (WOFOST, DSSAT etc) accessible in the LSC-hub. These will include risk assessment of weather and other external factors.​"
+  },
+  {
+    "objectID": "cases/isfm.html#scale",
+    "href": "cases/isfm.html#scale",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Field/farm,\nSub-national (county/district/woreda)\nNational levels​"
+  },
+  {
+    "objectID": "cases/isfm.html#primary-actors",
+    "href": "cases/isfm.html#primary-actors",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "national: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer.​\n​"
+  },
+  {
+    "objectID": "cases/isfm.html#secondary-actors",
+    "href": "cases/isfm.html#secondary-actors",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Hub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​"
+  },
+  {
+    "objectID": "cases/isfm.html#beneficiary",
+    "href": "cases/isfm.html#beneficiary",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "Farmers.​"
+  },
+  {
+    "objectID": "cases/isfm.html#scenario",
+    "href": "cases/isfm.html#scenario",
+    "title": "Kenya Integrated Soil Fertility Management description​",
+    "section": "",
+    "text": "The intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent/ lead farmer/ agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​\n​"
+  },
+  {
+    "objectID": "cases/services.html",
+    "href": "cases/services.html",
+    "title": "Services",
+    "section": "",
+    "text": "Services"
+  },
+  {
+    "objectID": "docs/admin/index.html",
+    "href": "docs/admin/index.html",
+    "title": "Administration",
+    "section": "",
+    "text": "The current hub is published via Github. Github is a commercial service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers could be considered, such as gitlab, bitbucket. Notice that it is also possible to install gitlab on premise.\nAs an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate you on the use of Git, such as Github desktop, smartgit and git kraken. Some prefer the Github plugin of Visual Studio.\n\n\n\nA number of content pages is made available to guide the user within the hub. These pages are maintained in github as markdown. Notice the edit link in the footer of each page. The pages are rendered to html using the quarto tool. Editing of quarto documents is facilitated by a quarto plugin in visual studio.\nThe quarto tool is configured as a ci-cd action in github. You can follow the progress of an action in the actions tab. In some cases an action may fail and human interaction is needed to fix the problem and/or restart the action.\n\n\n\nDiscussions are managed within github. A widget is added to every resource page, so users can provide feedback or ask questions about the resource. These questions are stored as github discussion. Discussions can be answered from the resource page (a github login is required) or from github discussions. Users should be invited to the github project to be able to administer github discussions.\n\n\n\nThe TerriaJS framework enables users to share maps and map stories with stakeholders (share button top-right). Notice that you can also use this functionality to link from a description of a resource to a map, which displays some data in a certain context.\n[A nice map](https://maps.lsc-hubs.org/#start=%7B%22version%22%...)\nAnother option is to store the map definition (urldecoded) on a folder of TerriaJS. The map is then available by its filename. You can now add a link to this map for example in the related maps section of TerriaJS (config.json).\n\n\n\nThe catalogue can be linked to various information sources, without the data being stored on the LSC hub. Therefore, if you know existing information sources that are missing and should be added. Proving metadata is essential for findability and to avoid ambiguity.\nSource of catalogue records is maintained at github. Records are organised in Global, Continental, and country. Within country they are organised by portal/initiative.\nMetadata records are stored in the mcf format, a subset of iso19115 in a conveniant yaml encoding. But you can also add them as iso19115 xml format.\nA number of mechanisms is available to load records into the catalogue.\n\nImport records from external sources, such as data portals (zenodo, dataverse, CSW, STAC, OSF)\nMcf records can be created using mdme\nA Excel template is available, on which resources can be described. A single resource per record.\nAn ODK form is available on which users can describe resources\n\n\n\n\nODK"
+  },
+  {
+    "objectID": "docs/admin/index.html#github",
+    "href": "docs/admin/index.html#github",
+    "title": "Administration",
+    "section": "",
+    "text": "The current hub is published via Github. Github is a commercial service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers could be considered, such as gitlab, bitbucket. Notice that it is also possible to install gitlab on premise.\nAs an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate you on the use of Git, such as Github desktop, smartgit and git kraken. Some prefer the Github plugin of Visual Studio."
+  },
+  {
+    "objectID": "docs/admin/index.html#lsc-hub",
+    "href": "docs/admin/index.html#lsc-hub",
+    "title": "Administration",
+    "section": "",
+    "text": "A number of content pages is made available to guide the user within the hub. These pages are maintained in github as markdown. Notice the edit link in the footer of each page. The pages are rendered to html using the quarto tool. Editing of quarto documents is facilitated by a quarto plugin in visual studio.\nThe quarto tool is configured as a ci-cd action in github. You can follow the progress of an action in the actions tab. In some cases an action may fail and human interaction is needed to fix the problem and/or restart the action."
+  },
+  {
+    "objectID": "docs/admin/index.html#discussions",
+    "href": "docs/admin/index.html#discussions",
+    "title": "Administration",
+    "section": "",
+    "text": "Discussions are managed within github. A widget is added to every resource page, so users can provide feedback or ask questions about the resource. These questions are stored as github discussion. Discussions can be answered from the resource page (a github login is required) or from github discussions. Users should be invited to the github project to be able to administer github discussions."
+  },
+  {
+    "objectID": "docs/admin/index.html#maps",
+    "href": "docs/admin/index.html#maps",
+    "title": "Administration",
+    "section": "",
+    "text": "The TerriaJS framework enables users to share maps and map stories with stakeholders (share button top-right). Notice that you can also use this functionality to link from a description of a resource to a map, which displays some data in a certain context.\n[A nice map](https://maps.lsc-hubs.org/#start=%7B%22version%22%...)\nAnother option is to store the map definition (urldecoded) on a folder of TerriaJS. The map is then available by its filename. You can now add a link to this map for example in the related maps section of TerriaJS (config.json)."
+  },
+  {
+    "objectID": "docs/admin/index.html#catalogue",
+    "href": "docs/admin/index.html#catalogue",
+    "title": "Administration",
+    "section": "",
+    "text": "The catalogue can be linked to various information sources, without the data being stored on the LSC hub. Therefore, if you know existing information sources that are missing and should be added. Proving metadata is essential for findability and to avoid ambiguity.\nSource of catalogue records is maintained at github. Records are organised in Global, Continental, and country. Within country they are organised by portal/initiative.\nMetadata records are stored in the mcf format, a subset of iso19115 in a conveniant yaml encoding. But you can also add them as iso19115 xml format.\nA number of mechanisms is available to load records into the catalogue.\n\nImport records from external sources, such as data portals (zenodo, dataverse, CSW, STAC, OSF)\nMcf records can be created using mdme\nA Excel template is available, on which resources can be described. A single resource per record.\nAn ODK form is available on which users can describe resources\n\n\n\n\nODK"
+  },
+  {
+    "objectID": "docs/developer/mapserver.html",
+    "href": "docs/developer/mapserver.html",
+    "title": "Mapserver",
+    "section": "",
+    "text": "MapServer is a platform for publishing spatial data to the web. Originally developed in the mid-1990’s at the University of Minnesota, MapServer is released under an MIT-style license, and runs on all major platforms (Windows, Linux, Mac OS X). MapServer is not a full-featured GIS system, nor does it aspire to be.\n\nWebsite: https://mapserver.org\nGithub: https://github.com/mapserver/mapserver\nDocker: https://github.com/camptocamp/docker-mapserver\n\n\n\nMapserver is used to create map services on data which is stored on the LSC hub. This makes the data better available, for example within TerriaJS."
+  },
+  {
+    "objectID": "docs/developer/mapserver.html#mapserver-in-lsc-hubs",
+    "href": "docs/developer/mapserver.html#mapserver-in-lsc-hubs",
+    "title": "Mapserver",
+    "section": "",
+    "text": "Mapserver is used to create map services on data which is stored on the LSC hub. This makes the data better available, for example within TerriaJS."
   },
   {
     "objectID": "docs/developer/quarto.html",
@@ -760,35 +816,35 @@
     "href": "docs/user/index.html",
     "title": "User Guideline LSC Hubs",
     "section": "",
-    "text": "This document is a guideline for usage of the Land Soil Crop hub.\n\n\nDecision support tools in agronomy heavily depend on acurate environmental and crop data. Many data are available, but often disperse and hard to locate. Land Soil Crop hubs aim to faciliate findability and accessibility of relevant data. Hubs facilitate data and knowledge to be stored, described, processed and visualized.\nThe hubs describe a number of different resources relevant to the Land Soil Cop community.\n\n\nDatasets are either a source for predictions, as well as can be the result of a prediction.\n\n\n\nServices are offered by organizations to facilitate access to data and knowlegde. Services can vary from web services (API’s), SMS services, brochures, up to on site visits.\n\n\n\nPredictions on distribution of environmental parameters in time and space, as well as yield predictions based on these distribution, are calculated using statistical, rule based, or machine learning models. Commonly available models are described as resources in the hub.\n\n\n\nIn the hub various software components can be described which either enable you or your stakeholders to visualise and analyse relevant data and knowledge sources\n\n\n\nApproaches descrive commonly known mechanisms to improve agronomy to overcome challenges such as erosion, limited fertility, salinisation, and climate change.\n\n\n\nThe hub describes relevant policies to the Land Soil Crop community. Policy drives the collection of data, but data can also support policy development.\n\n\n\n\nYou can search for data and knowledge in the hub in various ways.\n\nSearch by keyword\nOn a search result, further limit the results by filters in the sidebar\n\n\n\n\nHub catalogue\n\n\nWhen you click on submit, the available records will appear.\n\n\n\nHub catalogue overview\n\n\nThe catalogue allows the filtering of keywords. The 3 main keywords are: 1. category ( such as soil, crop, etc.), 2. spatial scope (such as Global, National, district, etc. ), 3. the type (such as dataset, software, etc).\nSecond, any other keyword linked to the resource can be used to search in the catalogue, for example, land use or crop yield. This depends on which keywords are given to the resources.\n\n\n\n\n\n\nTip\n\n\n\nTry the keywords. Type in the search bar various keywords, such as soil or Land use or click on the keywords on the side.\n\n\n\n\n\nHub catalogue search\n\n\nFor each record, a number of metadata properties are provided, such as abstract, used datasets, keywords, usage constraints, and contact information.\nSome records link directly to the map viewer component. Under the image, it will say: Open record in the LSC map and you will be directed to the map viewer.\n\n\n\n\n\n\nTip\n\n\n\nExplore the records. Click, after searching on keywords, on one of the appeared records and explore the provided information. Click on the links in the records\n\n\n\n\n\nHub catalogue record\n\n\n\n\n\nSpatial data can be viewed and compared in a web-based map viewer. The map viewer can be accessed on the homepage of the LSC hub, under DATA and then click on Go the map viewer. The map viewer can also directly be accessed at https://maps.lsc-hubs.org/#lsc-rwanda\n\n\n\nHub map vizualisation\n\n\nThe map viewer can used for the visualisation of existing maps listed in the LSC catalogue, your data and web data. In this guideline, we will take you through the available functionalities of the map viewer.\n\n\n\n\n\nmapviewer top bar\n\n\n\nGet more information about the map viewer. The introduction, disclaimer and data attributes are described.\nthe related maps show other available maps, such as the LSC Ethiopia, LSC Keny and LSC Rwanda. If you click on one of these maps, it will zoom to those locations. \nMap settings allows you to select a different base map, such as natural earth maps or aerial maps. This depends on which base map you prefer to work with. \nHelp gives useful tips on how to use the map viewer. It provides a tour through the map viewer and a step-by-step guide. This is an interactive guideline and shows the main functionalities. \nA Story is a function that allows you to create and share interactive stories directly from your map. It contains a video with an explanation of how to create them. \nShare/Print generates a link to your created map, which you can share with colleagues. Anything you have added to the map viewer will be shown in the shareable link. You can also use this button to download your created map as an image.\n\n\n\n\n\nThe vertical toolbar allows you to zoom on the map or location, compare maps, measure distance and provide feedback. Each of the buttons will be explained below.\n\n\n\nmapviewer rightbar\n\n\n\nZoom in and out, and back to a full world zoom\nZoom to your current location\nCompare two map data side-by-side. In the next section on explore map data, we go into more detail on this function. \nMeasure the distance on the map between two locations. \nProvide feedback on the map viewer. Feedback is essential to improve the map viewer and to ensure that the map viewer fits the user’s needs. If you have any feedback on the map viewer, you can give it by this button. \n\n\n\n\n\n\n\nTip\n\n\n\nExplore the basic settings of the mapviewer. Change the map settings, take the tour at the help button, download your current map, measure distances and go to your location.\n\n\n\n\n\nThe sidebar is the main location for adding maps to the map viewer and visualising your data or any other web data.\n\nSearch for locations allows you to search for a specific location and go to your area of interest. \nExplore map data shows a listing of datasets that can be added to the map via a catalogue search or directly from available maps. If the panel is empty, select an alternative map from related maps. \nUnder the available maps, you can click on a property map to which you would like to add the viewer. It shows, for example, for the property pH, 4 maps: the 5% prediction value, the 95% prediction value, the median of predictions and the pH map. The values are given for pH*10 for better visualisation. Under the data preview, the metadata of the map is given. You can add the map to the map viewer by clicking on Add to the map. \nYou can add as many maps to the Mapviewer as you want. For example, you add another map of Organic Carbon. \nIf you now click on the compare button as described in the previous section, and put one layer to the left and the other to the right, you can compare the layers side-by-side. \nAbout data brings you back to the Explore map Data, and shows you the metadata describing the map. The description gives in addition which datasets are used to generate the maps.\nUpload provides the option to open a dataset from the local computer. Note that this data is not uploaded to a server, so this data is not shared with anyone else. You can also add web data from this panel to the map viewer. \nFor local files, you first need to select a file type. The file should have a spatial component and/or coordinates to add it to the map viewer. In step 2, you browse your file on your local computer. \nFor web data, you first need to select the file or web service type. In step 2, you will add the URL to add the web data. For example, you can add the ESA land cover map as a WMS layer. The URL is: https://worldcover2020.esa.int/geoserver/gwc/service/wms?SERVICE=WMS&VERSION=1.1.1 \nYou can compare these maps with other added maps, through the compare button. \nAs soon as layers are loaded on the map, you can set the order of the layers, view a legend of the layer, zoom to its extent, set its opacity and view the metadata of the data.\n\n\n\n\n\n\n\nTip\n\n\n\nThe steps of this exercise are written down under the help button. By clicking on Take the tour, it will guide you through the steps.\n\n\n\nSearch for a location to quickly find an area of interest\nUse ‘Explore map data’ to view the catalogue of available data sets and add at least two to the map\nInteract with the data layer, including opacity and toggling on and off on the left in your workbench, compare the maps by using the compare button\nClick on the data on the map to view more detailed data, including the raw data\nChange your base map using options in ‘Map Settings’ to help make some data sets more visible\nZoom and change your view, including tilting the view angle using the controls on the right-hand side of the screen\n\n\n\n\n\nYou are very much invited to contribute to the development of the hub. The contents of the hub is maintained via a co-creation platform called github.com. You can either directly contribute via the github platform, but a feed back mechanism is also provided on each of the hub resources.\nProviding your feedback is crucial for several reasons:\n\nFirstly, incorporating diverse perspectives from stakeholders involved in working with and benefiting from land, soil, and crop information ensures that the LSC hub caters to the actual needs and demands of its users (Data providers/Users). This feedback allows for the fine-tuning of the hub’s functionalities, making it more user-friendly and effective in serving the specific requirements of different user groups.\nSecondly, gathering feedback facilitates continuous improvement. It provides an opportunity to identify potential shortcomings or areas needing enhancement within the LSC hubs. Insights from stakeholders enable the developers and administrators of the hub to address any challenges faced by users, thereby refining the system to better align with the expectations and requirements of its intended beneficiaries.\nMoreover, involving stakeholders in providing feedback fosters a sense of ownership and collaboration. When users feel heard and their inputs valued, it encourages their active participation and engagement with the LSC hub. This collaborative approach promotes a sense of ownership among stakeholders, leading to increased utilization and sustained support for the system in the long term.\nUltimately, the feedback obtained from diverse stakeholders during the Rwanda WP4 workshop plays a pivotal role in ensuring that the LSC hub evolves as a valuable, user-centric platform, effectively supporting decision-making processes related to land, soil, and crop information in Rwanda’s agricultural landscape.\n\nEvery page or resource on the hub provides an option to provide feedback and/or ask a question related to the content. In these sections, you can provide feedback about the page and what you would like to be adjusted.\n\n\n\nfeedback page\n\n\nContributions to the hub require a Github login. A GIThub account is easily made by pressing on sign in with GIThub, then click on New to GIThub? Create an account.\nYou only need to decide on a username, and password and enter your email address.\n\n\n\nfeedback github\n\n\nOnce logged in, you can now comment below the pages. If you have an account, You can provide feedback by contributing to hub discussions at the github repository. To get started, you can create a new discussion.\n\n\n\nfeedback discussion\n\n\nExercise 5: Create a GIThub account and start a discussion at the GIThub repository."
+    "text": "This document is a guideline for usage of the Land Soil Crop hub.\n\n\nDecision support tools in agronomy heavily depend on acurate environmental and crop data. Many data are available, but often disperse and hard to locate. Land Soil Crop hubs aim to faciliate findability and accessibility of relevant data. Hubs facilitate data and knowledge to be stored, described, processed and visualized.\nThe hubs describe a number of different resources relevant to the Land Soil Cop community.\n\n\nDatasets are either a source for predictions, as well as can be the result of a prediction.\n\n\n\nServices are offered by organizations to facilitate access to data and knowlegde. Services can vary from web services (API’s), SMS services, brochures, up to on site visits.\n\n\n\nPredictions on distribution of environmental parameters in time and space, as well as yield predictions, are calculated using statistical, rule based, and/or machine learning models. Commonly available models are described as resources in the hub.\n\n\n\nIn the hub various software components are described which enable visualisation and/or analysis of relevant data and knowledge sources\n\n\n\nApproaches descrive commonly known mechanisms to improve land management to overcome challenges such as erosion, limited fertility, salinisation, and climate change.\n\n\n\nThe hub describes relevant policies to the Land Soil Crop community. Policy drives the collection of data, but data can also support policy development.\n\n\n\n\n\nSearch for data and knowledge in the hub in various ways:\n\nSearch by keyword or organisation\nOn a search result, further limit the results by filters in the sidebar\n\n\n\n\nHub catalogue\n\n\nWhen you click on submit, the available records will appear.\n\n\n\nHub catalogue overview\n\n\nThe catalogue allows the filtering of keywords. The 3 main keywords are: 1. category ( such as soil, crop, etc.), 2. spatial scope (such as Global, National, district, etc. ), 3. the type (such as dataset, software, etc).\nSecond, any other keyword linked to the resource can be used to search in the catalogue, for example, land use or crop yield. This depends on which keywords are given to the resources.\n\n\n\n\n\n\nTip\n\n\n\nTry the keywords. Type in the search bar various keywords, such as soil or Land use or click on the keywords on the side.\n\n\n\n\n\nHub catalogue search\n\n\nFor each record, a number of metadata properties are provided, such as abstract, used datasets, keywords, usage constraints, and contact information.\nSome records link directly to the map viewer component. Under the image, it will say: Open record in the LSC map and you will be directed to the map viewer.\n\n\n\n\n\n\nTip\n\n\n\nExplore the records. Click, after searching on keywords, on one of the appeared records and explore the provided information. Click on the links in the records\n\n\n\n\n\nHub catalogue record\n\n\n\n\n\n\nSpatial data can be viewed and compared in a web-based map viewer. The map viewer can be accessed on the homepage of the LSC hub, under DATA and then click on Go the map viewer. The map viewer can also directly be accessed at https://maps.lsc-hubs.org/#lsc-rwanda\n\n\n\nHub map vizualisation\n\n\nThe map viewer can used for the visualisation of existing maps listed in the LSC catalogue, your data and web data. In this guideline, we will take you through the available functionalities of the map viewer.\n\n\n\n\n\nmapviewer top bar\n\n\n\nGet more information about the map viewer. The introduction, disclaimer and data attributes are described.\nthe related maps show other available maps, such as the LSC Ethiopia, LSC Keny and LSC Rwanda. If you click on one of these maps, it will zoom to those locations.\n\n\n\n\nmapviewer related maps\n\n\n\nMap settings allows you to select a different base map, such as natural earth maps or aerial maps. This depends on which base map you prefer to work with.\n\n\n\n\nmapviewer map settings\n\n\n\nHelp gives useful tips on how to use the map viewer. It provides a tour through the map viewer and a step-by-step guide. This is an interactive guideline and shows the main functionalities.\n\n\n\n\nmapviewer help\n\n\n\nA Story is a function that allows you to create and share interactive stories directly from your map. It contains a video with an explanation of how to create them.\n\n\n\n\nmapviewer story\n\n\n\nShare/Print generates a link to your created map, which you can share with colleagues. Anything you have added to the map viewer will be shown in the shareable link. You can also use this button to download your created map as an image.\n\n\n\n\nmapviewer share\n\n\n\n\n\nThe vertical toolbar allows you to zoom on the map or location, compare maps, measure distance and provide feedback. Each of the buttons will be explained below.\n\n\n\nmapviewer rightbar\n\n\n\nZoom in and out, and back to a full world zoom\nZoom to your current location\nCompare two map data side-by-side. In the next section on explore map data, we go into more detail on this function.\n\n\n\n\nmapviewer compare\n\n\n\nMeasure the distance on the map between two locations.\n\n\n\n\nmapviewer measure\n\n\n\nProvide feedback on the map viewer. Feedback is essential to improve the map viewer and to ensure that the map viewer fits the user’s needs. If you have any feedback on the map viewer, you can give it by this button.\n\n\n\n\nmapviewer feedback\n\n\n\n\n\n\n\n\nTip\n\n\n\nExplore the basic settings of the mapviewer. Change the map settings, take the tour at the help button, download your current map, measure distances and go to your location.\n\n\n\n\n\nThe sidebar is the main location for adding maps to the map viewer and visualising your data or any other web data.\n\nSearch for locations allows you to search for a specific location and go to your area of interest.\n\n\n\n\nmapviewer location\n\n\n\nExplore map data shows a listing of datasets that can be added to the map via a catalogue search or directly from available maps. If the panel is empty, select an alternative map from related maps.\n\n\n\n\nmapviewer explore\n\n\nUnder the available maps, you can click on a property map to which you would like to add the viewer. It shows, for example, for the property pH, 4 maps: the 5% prediction value, the 95% prediction value, the median of predictions and the pH map.\nThe values are given for pH*10 for better visualisation. Under the data preview, the metadata of the map is given. You can add the map to the map viewer by clicking on Add to the map.\n\n\n\nmapviewer add\n\n\nYou can add as many maps to the Mapviewer as you want. For example, you add another map of Organic Carbon.\n\n\n\nmapviewer add2\n\n\nIf you now click on the compare button as described in the previous section, and put one layer to the left and the other to the right, you can compare the layers side-by-side.\n\n\n\nmapviewer compare2\n\n\nAbout data brings you back to the Explore map Data, and shows you the metadata describing the map. The description gives in addition which datasets are used to generate the maps.\n\nUpload provides the option to open a dataset from the local computer. Note that this data is not uploaded to a server, so this data is not shared with anyone else. You can also add web data from this panel to the map viewer.\n\n\n\n\nmapviewer localweb\n\n\nFor local files, you first need to select a file type. The file should have a spatial component and/or coordinates to add it to the map viewer. In step 2, you browse your file on your local computer.\n\n\n\nmapviewer local\n\n\nFor web data, you first need to select the file or web service type. In step 2, you will add the URL to add the web data. For example, you can add the ESA land cover map as a WMS layer. The URL is: https://worldcover2020.esa.int/geoserver/gwc/service/wms?SERVICE=WMS&VERSION=1.1.1\n\n\n\nmapviewer web\n\n\nYou can compare these maps with other added maps, through the compare button.\n\n\n\nmapviewer compare2\n\n\n\nAs soon as layers are loaded on the map, you can set the order of the layers, view a legend of the layer, zoom to its extent, set its opacity and view the metadata of the data.\n\n\n\n\n\n\n\nTip\n\n\n\nThe steps of this exercise are written down under the help button. By clicking on Take the tour, it will guide you through the steps.\n\n\n\nSearch for a location to quickly find an area of interest\nUse ‘Explore map data’ to view the catalogue of available data sets and add at least two to the map\nInteract with the data layer, including opacity and toggling on and off on the left in your workbench, compare the maps by using the compare button\nClick on the data on the map to view more detailed data, including the raw data\nChange your base map using options in ‘Map Settings’ to help make some data sets more visible\nZoom and change your view, including tilting the view angle using the controls on the right-hand side of the screen\n\n\n\n\n\n\nYou are very much invited to contribute to the development of the hub. The contents of the hub is maintained via a co-creation platform called github.com. You can either directly contribute via the github platform, but a feed back mechanism is also provided on each of the hub resources.\nProviding your feedback is crucial for several reasons:\n\nFirstly, incorporating diverse perspectives from stakeholders involved in working with and benefiting from land, soil, and crop information ensures that the LSC hub caters to the actual needs and demands of its users (Data providers/Users). This feedback allows for the fine-tuning of the hub’s functionalities, making it more user-friendly and effective in serving the specific requirements of different user groups.\nSecondly, gathering feedback facilitates continuous improvement. It provides an opportunity to identify potential shortcomings or areas needing enhancement within the LSC hubs. Insights from stakeholders enable the developers and administrators of the hub to address any challenges faced by users, thereby refining the system to better align with the expectations and requirements of its intended beneficiaries.\nMoreover, involving stakeholders in providing feedback fosters a sense of ownership and collaboration. When users feel heard and their inputs valued, it encourages their active participation and engagement with the LSC hub. This collaborative approach promotes a sense of ownership among stakeholders, leading to increased utilization and sustained support for the system in the long term.\nUltimately, the feedback obtained from diverse stakeholders during the Rwanda WP4 workshop plays a pivotal role in ensuring that the LSC hub evolves as a valuable, user-centric platform, effectively supporting decision-making processes related to land, soil, and crop information in Rwanda’s agricultural landscape.\n\nEvery page or resource on the hub provides an option to provide feedback and/or ask a question related to the content. In these sections, you can provide feedback about the page and what you would like to be adjusted.\n\n\n\nfeedback page\n\n\nContributions to the hub require a Github login. A GIThub account is easily made by pressing on sign in with GIThub, then click on New to GIThub? Create an account.\nYou only need to decide on a username, and password and enter your email address.\n\n\n\nfeedback github\n\n\nOnce logged in, you can now comment below the pages. If you have an account, You can provide feedback by contributing to hub discussions at the github repository. To get started, you can create a new discussion.\n\n\n\nfeedback discussion\n\n\n\n\n\n\n\n\nTip\n\n\n\nLogin to Github or create a Github account and start a discussion about an aspect of the LSC-hub you are surprised about."
   },
   {
     "objectID": "docs/user/index.html#what-is-a-land-soil-crop-hub",
     "href": "docs/user/index.html#what-is-a-land-soil-crop-hub",
     "title": "User Guideline LSC Hubs",
     "section": "",
-    "text": "Decision support tools in agronomy heavily depend on acurate environmental and crop data. Many data are available, but often disperse and hard to locate. Land Soil Crop hubs aim to faciliate findability and accessibility of relevant data. Hubs facilitate data and knowledge to be stored, described, processed and visualized.\nThe hubs describe a number of different resources relevant to the Land Soil Cop community.\n\n\nDatasets are either a source for predictions, as well as can be the result of a prediction.\n\n\n\nServices are offered by organizations to facilitate access to data and knowlegde. Services can vary from web services (API’s), SMS services, brochures, up to on site visits.\n\n\n\nPredictions on distribution of environmental parameters in time and space, as well as yield predictions based on these distribution, are calculated using statistical, rule based, or machine learning models. Commonly available models are described as resources in the hub.\n\n\n\nIn the hub various software components can be described which either enable you or your stakeholders to visualise and analyse relevant data and knowledge sources\n\n\n\nApproaches descrive commonly known mechanisms to improve agronomy to overcome challenges such as erosion, limited fertility, salinisation, and climate change.\n\n\n\nThe hub describes relevant policies to the Land Soil Crop community. Policy drives the collection of data, but data can also support policy development."
+    "text": "Decision support tools in agronomy heavily depend on acurate environmental and crop data. Many data are available, but often disperse and hard to locate. Land Soil Crop hubs aim to faciliate findability and accessibility of relevant data. Hubs facilitate data and knowledge to be stored, described, processed and visualized.\nThe hubs describe a number of different resources relevant to the Land Soil Cop community.\n\n\nDatasets are either a source for predictions, as well as can be the result of a prediction.\n\n\n\nServices are offered by organizations to facilitate access to data and knowlegde. Services can vary from web services (API’s), SMS services, brochures, up to on site visits.\n\n\n\nPredictions on distribution of environmental parameters in time and space, as well as yield predictions, are calculated using statistical, rule based, and/or machine learning models. Commonly available models are described as resources in the hub.\n\n\n\nIn the hub various software components are described which enable visualisation and/or analysis of relevant data and knowledge sources\n\n\n\nApproaches descrive commonly known mechanisms to improve land management to overcome challenges such as erosion, limited fertility, salinisation, and climate change.\n\n\n\nThe hub describes relevant policies to the Land Soil Crop community. Policy drives the collection of data, but data can also support policy development."
   },
   {
     "objectID": "docs/user/index.html#find-data",
     "href": "docs/user/index.html#find-data",
     "title": "User Guideline LSC Hubs",
     "section": "",
-    "text": "You can search for data and knowledge in the hub in various ways.\n\nSearch by keyword\nOn a search result, further limit the results by filters in the sidebar\n\n\n\n\nHub catalogue\n\n\nWhen you click on submit, the available records will appear.\n\n\n\nHub catalogue overview\n\n\nThe catalogue allows the filtering of keywords. The 3 main keywords are: 1. category ( such as soil, crop, etc.), 2. spatial scope (such as Global, National, district, etc. ), 3. the type (such as dataset, software, etc).\nSecond, any other keyword linked to the resource can be used to search in the catalogue, for example, land use or crop yield. This depends on which keywords are given to the resources.\n\n\n\n\n\n\nTip\n\n\n\nTry the keywords. Type in the search bar various keywords, such as soil or Land use or click on the keywords on the side.\n\n\n\n\n\nHub catalogue search\n\n\nFor each record, a number of metadata properties are provided, such as abstract, used datasets, keywords, usage constraints, and contact information.\nSome records link directly to the map viewer component. Under the image, it will say: Open record in the LSC map and you will be directed to the map viewer.\n\n\n\n\n\n\nTip\n\n\n\nExplore the records. Click, after searching on keywords, on one of the appeared records and explore the provided information. Click on the links in the records\n\n\n\n\n\nHub catalogue record"
+    "text": "Search for data and knowledge in the hub in various ways:\n\nSearch by keyword or organisation\nOn a search result, further limit the results by filters in the sidebar\n\n\n\n\nHub catalogue\n\n\nWhen you click on submit, the available records will appear.\n\n\n\nHub catalogue overview\n\n\nThe catalogue allows the filtering of keywords. The 3 main keywords are: 1. category ( such as soil, crop, etc.), 2. spatial scope (such as Global, National, district, etc. ), 3. the type (such as dataset, software, etc).\nSecond, any other keyword linked to the resource can be used to search in the catalogue, for example, land use or crop yield. This depends on which keywords are given to the resources.\n\n\n\n\n\n\nTip\n\n\n\nTry the keywords. Type in the search bar various keywords, such as soil or Land use or click on the keywords on the side.\n\n\n\n\n\nHub catalogue search\n\n\nFor each record, a number of metadata properties are provided, such as abstract, used datasets, keywords, usage constraints, and contact information.\nSome records link directly to the map viewer component. Under the image, it will say: Open record in the LSC map and you will be directed to the map viewer.\n\n\n\n\n\n\nTip\n\n\n\nExplore the records. Click, after searching on keywords, on one of the appeared records and explore the provided information. Click on the links in the records\n\n\n\n\n\nHub catalogue record"
   },
   {
     "objectID": "docs/user/index.html#map-viewer",
     "href": "docs/user/index.html#map-viewer",
     "title": "User Guideline LSC Hubs",
     "section": "",
-    "text": "Spatial data can be viewed and compared in a web-based map viewer. The map viewer can be accessed on the homepage of the LSC hub, under DATA and then click on Go the map viewer. The map viewer can also directly be accessed at https://maps.lsc-hubs.org/#lsc-rwanda\n\n\n\nHub map vizualisation\n\n\nThe map viewer can used for the visualisation of existing maps listed in the LSC catalogue, your data and web data. In this guideline, we will take you through the available functionalities of the map viewer.\n\n\n\n\n\nmapviewer top bar\n\n\n\nGet more information about the map viewer. The introduction, disclaimer and data attributes are described.\nthe related maps show other available maps, such as the LSC Ethiopia, LSC Keny and LSC Rwanda. If you click on one of these maps, it will zoom to those locations. \nMap settings allows you to select a different base map, such as natural earth maps or aerial maps. This depends on which base map you prefer to work with. \nHelp gives useful tips on how to use the map viewer. It provides a tour through the map viewer and a step-by-step guide. This is an interactive guideline and shows the main functionalities. \nA Story is a function that allows you to create and share interactive stories directly from your map. It contains a video with an explanation of how to create them. \nShare/Print generates a link to your created map, which you can share with colleagues. Anything you have added to the map viewer will be shown in the shareable link. You can also use this button to download your created map as an image.\n\n\n\n\n\nThe vertical toolbar allows you to zoom on the map or location, compare maps, measure distance and provide feedback. Each of the buttons will be explained below.\n\n\n\nmapviewer rightbar\n\n\n\nZoom in and out, and back to a full world zoom\nZoom to your current location\nCompare two map data side-by-side. In the next section on explore map data, we go into more detail on this function. \nMeasure the distance on the map between two locations. \nProvide feedback on the map viewer. Feedback is essential to improve the map viewer and to ensure that the map viewer fits the user’s needs. If you have any feedback on the map viewer, you can give it by this button. \n\n\n\n\n\n\n\nTip\n\n\n\nExplore the basic settings of the mapviewer. Change the map settings, take the tour at the help button, download your current map, measure distances and go to your location.\n\n\n\n\n\nThe sidebar is the main location for adding maps to the map viewer and visualising your data or any other web data.\n\nSearch for locations allows you to search for a specific location and go to your area of interest. \nExplore map data shows a listing of datasets that can be added to the map via a catalogue search or directly from available maps. If the panel is empty, select an alternative map from related maps. \nUnder the available maps, you can click on a property map to which you would like to add the viewer. It shows, for example, for the property pH, 4 maps: the 5% prediction value, the 95% prediction value, the median of predictions and the pH map. The values are given for pH*10 for better visualisation. Under the data preview, the metadata of the map is given. You can add the map to the map viewer by clicking on Add to the map. \nYou can add as many maps to the Mapviewer as you want. For example, you add another map of Organic Carbon. \nIf you now click on the compare button as described in the previous section, and put one layer to the left and the other to the right, you can compare the layers side-by-side. \nAbout data brings you back to the Explore map Data, and shows you the metadata describing the map. The description gives in addition which datasets are used to generate the maps.\nUpload provides the option to open a dataset from the local computer. Note that this data is not uploaded to a server, so this data is not shared with anyone else. You can also add web data from this panel to the map viewer. \nFor local files, you first need to select a file type. The file should have a spatial component and/or coordinates to add it to the map viewer. In step 2, you browse your file on your local computer. \nFor web data, you first need to select the file or web service type. In step 2, you will add the URL to add the web data. For example, you can add the ESA land cover map as a WMS layer. The URL is: https://worldcover2020.esa.int/geoserver/gwc/service/wms?SERVICE=WMS&VERSION=1.1.1 \nYou can compare these maps with other added maps, through the compare button. \nAs soon as layers are loaded on the map, you can set the order of the layers, view a legend of the layer, zoom to its extent, set its opacity and view the metadata of the data.\n\n\n\n\n\n\n\nTip\n\n\n\nThe steps of this exercise are written down under the help button. By clicking on Take the tour, it will guide you through the steps.\n\n\n\nSearch for a location to quickly find an area of interest\nUse ‘Explore map data’ to view the catalogue of available data sets and add at least two to the map\nInteract with the data layer, including opacity and toggling on and off on the left in your workbench, compare the maps by using the compare button\nClick on the data on the map to view more detailed data, including the raw data\nChange your base map using options in ‘Map Settings’ to help make some data sets more visible\nZoom and change your view, including tilting the view angle using the controls on the right-hand side of the screen"
+    "text": "Spatial data can be viewed and compared in a web-based map viewer. The map viewer can be accessed on the homepage of the LSC hub, under DATA and then click on Go the map viewer. The map viewer can also directly be accessed at https://maps.lsc-hubs.org/#lsc-rwanda\n\n\n\nHub map vizualisation\n\n\nThe map viewer can used for the visualisation of existing maps listed in the LSC catalogue, your data and web data. In this guideline, we will take you through the available functionalities of the map viewer.\n\n\n\n\n\nmapviewer top bar\n\n\n\nGet more information about the map viewer. The introduction, disclaimer and data attributes are described.\nthe related maps show other available maps, such as the LSC Ethiopia, LSC Keny and LSC Rwanda. If you click on one of these maps, it will zoom to those locations.\n\n\n\n\nmapviewer related maps\n\n\n\nMap settings allows you to select a different base map, such as natural earth maps or aerial maps. This depends on which base map you prefer to work with.\n\n\n\n\nmapviewer map settings\n\n\n\nHelp gives useful tips on how to use the map viewer. It provides a tour through the map viewer and a step-by-step guide. This is an interactive guideline and shows the main functionalities.\n\n\n\n\nmapviewer help\n\n\n\nA Story is a function that allows you to create and share interactive stories directly from your map. It contains a video with an explanation of how to create them.\n\n\n\n\nmapviewer story\n\n\n\nShare/Print generates a link to your created map, which you can share with colleagues. Anything you have added to the map viewer will be shown in the shareable link. You can also use this button to download your created map as an image.\n\n\n\n\nmapviewer share\n\n\n\n\n\nThe vertical toolbar allows you to zoom on the map or location, compare maps, measure distance and provide feedback. Each of the buttons will be explained below.\n\n\n\nmapviewer rightbar\n\n\n\nZoom in and out, and back to a full world zoom\nZoom to your current location\nCompare two map data side-by-side. In the next section on explore map data, we go into more detail on this function.\n\n\n\n\nmapviewer compare\n\n\n\nMeasure the distance on the map between two locations.\n\n\n\n\nmapviewer measure\n\n\n\nProvide feedback on the map viewer. Feedback is essential to improve the map viewer and to ensure that the map viewer fits the user’s needs. If you have any feedback on the map viewer, you can give it by this button.\n\n\n\n\nmapviewer feedback\n\n\n\n\n\n\n\n\nTip\n\n\n\nExplore the basic settings of the mapviewer. Change the map settings, take the tour at the help button, download your current map, measure distances and go to your location.\n\n\n\n\n\nThe sidebar is the main location for adding maps to the map viewer and visualising your data or any other web data.\n\nSearch for locations allows you to search for a specific location and go to your area of interest.\n\n\n\n\nmapviewer location\n\n\n\nExplore map data shows a listing of datasets that can be added to the map via a catalogue search or directly from available maps. If the panel is empty, select an alternative map from related maps.\n\n\n\n\nmapviewer explore\n\n\nUnder the available maps, you can click on a property map to which you would like to add the viewer. It shows, for example, for the property pH, 4 maps: the 5% prediction value, the 95% prediction value, the median of predictions and the pH map.\nThe values are given for pH*10 for better visualisation. Under the data preview, the metadata of the map is given. You can add the map to the map viewer by clicking on Add to the map.\n\n\n\nmapviewer add\n\n\nYou can add as many maps to the Mapviewer as you want. For example, you add another map of Organic Carbon.\n\n\n\nmapviewer add2\n\n\nIf you now click on the compare button as described in the previous section, and put one layer to the left and the other to the right, you can compare the layers side-by-side.\n\n\n\nmapviewer compare2\n\n\nAbout data brings you back to the Explore map Data, and shows you the metadata describing the map. The description gives in addition which datasets are used to generate the maps.\n\nUpload provides the option to open a dataset from the local computer. Note that this data is not uploaded to a server, so this data is not shared with anyone else. You can also add web data from this panel to the map viewer.\n\n\n\n\nmapviewer localweb\n\n\nFor local files, you first need to select a file type. The file should have a spatial component and/or coordinates to add it to the map viewer. In step 2, you browse your file on your local computer.\n\n\n\nmapviewer local\n\n\nFor web data, you first need to select the file or web service type. In step 2, you will add the URL to add the web data. For example, you can add the ESA land cover map as a WMS layer. The URL is: https://worldcover2020.esa.int/geoserver/gwc/service/wms?SERVICE=WMS&VERSION=1.1.1\n\n\n\nmapviewer web\n\n\nYou can compare these maps with other added maps, through the compare button.\n\n\n\nmapviewer compare2\n\n\n\nAs soon as layers are loaded on the map, you can set the order of the layers, view a legend of the layer, zoom to its extent, set its opacity and view the metadata of the data.\n\n\n\n\n\n\n\nTip\n\n\n\nThe steps of this exercise are written down under the help button. By clicking on Take the tour, it will guide you through the steps.\n\n\n\nSearch for a location to quickly find an area of interest\nUse ‘Explore map data’ to view the catalogue of available data sets and add at least two to the map\nInteract with the data layer, including opacity and toggling on and off on the left in your workbench, compare the maps by using the compare button\nClick on the data on the map to view more detailed data, including the raw data\nChange your base map using options in ‘Map Settings’ to help make some data sets more visible\nZoom and change your view, including tilting the view angle using the controls on the right-hand side of the screen"
   },
   {
     "objectID": "docs/user/index.html#hub-community",
     "href": "docs/user/index.html#hub-community",
     "title": "User Guideline LSC Hubs",
     "section": "",
-    "text": "You are very much invited to contribute to the development of the hub. The contents of the hub is maintained via a co-creation platform called github.com. You can either directly contribute via the github platform, but a feed back mechanism is also provided on each of the hub resources.\nProviding your feedback is crucial for several reasons:\n\nFirstly, incorporating diverse perspectives from stakeholders involved in working with and benefiting from land, soil, and crop information ensures that the LSC hub caters to the actual needs and demands of its users (Data providers/Users). This feedback allows for the fine-tuning of the hub’s functionalities, making it more user-friendly and effective in serving the specific requirements of different user groups.\nSecondly, gathering feedback facilitates continuous improvement. It provides an opportunity to identify potential shortcomings or areas needing enhancement within the LSC hubs. Insights from stakeholders enable the developers and administrators of the hub to address any challenges faced by users, thereby refining the system to better align with the expectations and requirements of its intended beneficiaries.\nMoreover, involving stakeholders in providing feedback fosters a sense of ownership and collaboration. When users feel heard and their inputs valued, it encourages their active participation and engagement with the LSC hub. This collaborative approach promotes a sense of ownership among stakeholders, leading to increased utilization and sustained support for the system in the long term.\nUltimately, the feedback obtained from diverse stakeholders during the Rwanda WP4 workshop plays a pivotal role in ensuring that the LSC hub evolves as a valuable, user-centric platform, effectively supporting decision-making processes related to land, soil, and crop information in Rwanda’s agricultural landscape.\n\nEvery page or resource on the hub provides an option to provide feedback and/or ask a question related to the content. In these sections, you can provide feedback about the page and what you would like to be adjusted.\n\n\n\nfeedback page\n\n\nContributions to the hub require a Github login. A GIThub account is easily made by pressing on sign in with GIThub, then click on New to GIThub? Create an account.\nYou only need to decide on a username, and password and enter your email address.\n\n\n\nfeedback github\n\n\nOnce logged in, you can now comment below the pages. If you have an account, You can provide feedback by contributing to hub discussions at the github repository. To get started, you can create a new discussion.\n\n\n\nfeedback discussion\n\n\nExercise 5: Create a GIThub account and start a discussion at the GIThub repository."
+    "text": "You are very much invited to contribute to the development of the hub. The contents of the hub is maintained via a co-creation platform called github.com. You can either directly contribute via the github platform, but a feed back mechanism is also provided on each of the hub resources.\nProviding your feedback is crucial for several reasons:\n\nFirstly, incorporating diverse perspectives from stakeholders involved in working with and benefiting from land, soil, and crop information ensures that the LSC hub caters to the actual needs and demands of its users (Data providers/Users). This feedback allows for the fine-tuning of the hub’s functionalities, making it more user-friendly and effective in serving the specific requirements of different user groups.\nSecondly, gathering feedback facilitates continuous improvement. It provides an opportunity to identify potential shortcomings or areas needing enhancement within the LSC hubs. Insights from stakeholders enable the developers and administrators of the hub to address any challenges faced by users, thereby refining the system to better align with the expectations and requirements of its intended beneficiaries.\nMoreover, involving stakeholders in providing feedback fosters a sense of ownership and collaboration. When users feel heard and their inputs valued, it encourages their active participation and engagement with the LSC hub. This collaborative approach promotes a sense of ownership among stakeholders, leading to increased utilization and sustained support for the system in the long term.\nUltimately, the feedback obtained from diverse stakeholders during the Rwanda WP4 workshop plays a pivotal role in ensuring that the LSC hub evolves as a valuable, user-centric platform, effectively supporting decision-making processes related to land, soil, and crop information in Rwanda’s agricultural landscape.\n\nEvery page or resource on the hub provides an option to provide feedback and/or ask a question related to the content. In these sections, you can provide feedback about the page and what you would like to be adjusted.\n\n\n\nfeedback page\n\n\nContributions to the hub require a Github login. A GIThub account is easily made by pressing on sign in with GIThub, then click on New to GIThub? Create an account.\nYou only need to decide on a username, and password and enter your email address.\n\n\n\nfeedback github\n\n\nOnce logged in, you can now comment below the pages. If you have an account, You can provide feedback by contributing to hub discussions at the github repository. To get started, you can create a new discussion.\n\n\n\nfeedback discussion\n\n\n\n\n\n\n\n\nTip\n\n\n\nLogin to Github or create a Github account and start a discussion about an aspect of the LSC-hub you are surprised about."
   },
   {
     "objectID": "docs/developer/tutorial-data-management/slides/1.1-overview.html#agenda",
@@ -812,6 +868,13 @@
     "text": "Quarto\nA content management system to create websites, documentation, slides, etc.\nRelated software; Hugo, mkdocs, Jekyll, Wordpress, Drupal"
   },
   {
+    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#pygeometa-geodatacrawler",
+    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#pygeometa-geodatacrawler",
+    "title": "1.3 Tools",
+    "section": "pygeometa / geodatacrawler",
+    "text": "pygeometa / geodatacrawler\nScripting libraries which support data management of a file repository\n\nGenerate metadata from existing data\nImport remote metadata\nIngest metadata from a file repository\nCreate mapservices (API’s) for existing data"
+  },
+  {
     "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#pycsw",
     "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#pycsw",
     "title": "1.3 Tools",
@@ -826,39 +889,74 @@
     "text": "Mapserver\nA server application providing OGC services (WMS, WFS, WCS) on various data formats\nRelated products; Geoserver, ArcGIS server, deegree, pygeoapi, QGIS server"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#leaflet",
-    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#leaflet",
-    "title": "1.3 Tools",
-    "section": "Leaflet",
-    "text": "Leaflet\nA javascript library to load interactive maps on a webpage.\n\nL = require('leaflet@1.9.4')\nhtml`&lt;link href='${resolve('leaflet@1.9.4/dist/leaflet.css')}' rel='stylesheet' /&gt;`\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmap = {\n  let container = DOM.element('div', { style: `width:${width}px;height:${width/1.6}px` });\n  yield container;\n  let map = L.map(container).setView([-1.940278,29.873888], 13);\n  let osmLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png', {\n      attribution: '&copy; &lt;a href=\"http://osm.org/copyright\"&gt;OpenStreetMap&lt;/a&gt; contributors'\n  }).addTo(map);\n  let nexrad = L.tileLayer.wms(\"https://maps.lsc-hubs.org/ows/clay\", {\n    layers: 'Clay_mean_0-20cm',\n    format: 'image/png',\n    opacity: 0.5,\n    transparent: 'true'\n}).addTo(map);;\n}\n\n\n\n\n\n\n\n\nRelated products; Openlayers, Cesium, Google Maps API, MapLibre"
-  },
-  {
     "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#terriajs",
     "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#terriajs",
     "title": "1.3 Tools",
     "section": "TerriaJS",
-    "text": "TerriaJS\nA WebGIS application including Leaflet library\ndemo\nRelated products; GeoNode, GeoMoose, MapBender, Oskari, GisQuick"
-  },
-  {
-    "objectID": "docs/developer/tutorial-data-management/slides/1.3-tools.html#hale-desktop",
-    "href": "docs/developer/tutorial-data-management/slides/1.3-tools.html#hale-desktop",
-    "title": "1.3 Tools",
-    "section": "Hale Desktop",
-    "text": "Hale Desktop\nSoftware to run Extract Transform and Load (ETL)\nRelated Software; FME, GDAL, Apache Hive,\n\n\n\nWorkshop on spatial data flows"
+    "text": "TerriaJS\nA WebGIS application including Leaflet library\ndemo\nRelated products; GeoNode, GeoMoose, MapBender, Oskari, GisQuick\n\n\n\nWorkshop on spatial data flows"
   },
   {
     "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#what-is-ogc",
     "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#what-is-ogc",
     "title": "3.1 OGC data services",
-    "section": "What is OGC",
-    "text": "What is OGC\n\nOpen Geospatial Consortium defines standards for the geospatial industry\nMembers are software companies, universities and govenment\nSuch as WMS, GML, OGCAPI, EPSG, GeoSPARQL\nRead more at https://opengeospatial.org"
+    "section": "What is OGC?",
+    "text": "What is OGC?\n\nOpen Geospatial Consortium defines standards for the geospatial industry\nMembers are software companies, universities and government\nSuch as WMS, GML, OGCAPI, EPSG, GeoSPARQL\nRead more at https://opengeospatial.org"
   },
   {
     "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#ows-vs-ogc-api",
     "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#ows-vs-ogc-api",
     "title": "3.1 OGC data services",
     "section": "OWS vs OGC API",
-    "text": "OWS vs OGC API\n\nThe GML and OWS standards are defined on 20**\nSince then the internet moved away from xml\nin 2017 started spatial data on the web experiment with W3C, leading to OGC API\nCurrently under development\nBasic support in new and existing products\nThe browser as a tool to browse spatial data\n\n\n\n\nWorkshop on spatial data flows"
+    "text": "OWS vs OGC API\n\nThe GML and OWS standards are defined on 20**\nSince then the internet moved away from xml\nin 2017 started spatial data on the web experiment with W3C, leading to OGC API\nCurrently under development\nBasic support in new and existing products\nThe browser as a tool to browse spatial data"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#ows-vs-ogc-api-1",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#ows-vs-ogc-api-1",
+    "title": "3.1 OGC data services",
+    "section": "OWS vs OGC API",
+    "text": "OWS vs OGC API\n\nGML - GeoJSON (json-fg) & HTML\nLong querystrings - Rest api (path parameters)\nGetCapabilities - Open API Specification\nFormat=xxx - Content negotiation (accept:text/html)\nFull featured - Minimal standard with extensions"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wfs-and-ogc-api---features",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wfs-and-ogc-api---features",
+    "title": "3.1 OGC data services",
+    "section": "WFS and OGC API - Features",
+    "text": "WFS and OGC API - Features\n\nProvides access to vector features.\nFilter, sorting and pagination options\n\n\nwms"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wms-and-ogc-api---maps",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wms-and-ogc-api---maps",
+    "title": "3.1 OGC data services",
+    "section": "WMS and OGC API - Maps",
+    "text": "WMS and OGC API - Maps\n\nImage rendering of subsets of the data using some styling rules\n\n\nwms"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wmts-tms-and-ogc-api---tiles",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wmts-tms-and-ogc-api---tiles",
+    "title": "3.1 OGC data services",
+    "section": "WMTS, TMS and OGC API - Tiles",
+    "text": "WMTS, TMS and OGC API - Tiles\n\nwms"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wcs-and-ogc-api---coverages",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#wcs-and-ogc-api---coverages",
+    "title": "3.1 OGC data services",
+    "section": "WCS and OGC API - Coverages",
+    "text": "WCS and OGC API - Coverages\n\nwms"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#csw-ogc-api---records-and-stac",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#csw-ogc-api---records-and-stac",
+    "title": "3.1 OGC data services",
+    "section": "CSW, OGC API - Records and STAC",
+    "text": "CSW, OGC API - Records and STAC"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#mapserver",
+    "href": "docs/developer/tutorial-data-management/slides/3.1-ogc-data-services.html#mapserver",
+    "title": "3.1 OGC data services",
+    "section": "Mapserver",
+    "text": "Mapserver\n\nRecent versions of Mapserver support the old and new standards\nFeatures and Maps\nNo tiles (mapproxy), No coverages yet\nNo records/stac, by design\n\n\n\n\nWorkshop on spatial data flows"
   },
   {
     "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#history",
