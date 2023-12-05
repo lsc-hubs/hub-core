@@ -327,7 +327,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">4.1 Soil Profile Datamanagement</h1>
-  <p class="subtitle">Data management of soil profiles</p>
+  <p class="subtitle">Standards and approaches in data management on observations on land and soil</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -343,12 +343,19 @@ Paul van Genuchten
 <h2>History</h2>
 <p>Various efforts have been made to harmonise Soil Profile data</p>
 <ul>
-<li class="fragment">eSOTER</li>
 <li class="fragment">GlobalSoilMap</li>
+<li class="fragment">eSOTER</li>
 <li class="fragment">ISO28258</li>
-<li class="fragment">OGC Interoperability experiment</li>
 <li class="fragment">GLOSIS Web ontology</li>
-<li class="fragment">AnzSoil</li>
+</ul>
+</section>
+<section id="esoter" class="slide level2">
+<h2>eSOTER</h2>
+<ul>
+<li class="fragment"><p>Relational database model, usually in Microsoft Access</p></li>
+<li class="fragment"><p><a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/73e27136-9efe-49e4-af35-fd98b841d467">Kenya</a></p></li>
+<li class="fragment"><p><a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/3571c1f3-159d-442c-b324-0af53d03f12e">Southern Africa</a></p></li>
+<li class="fragment"><p><a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/a6320590-0899-4b60-bf4d-f80282bbb72c">Senegal and Gambia</a></p></li>
 </ul>
 </section>
 <section id="iso28258" class="slide level2">
@@ -369,6 +376,25 @@ Paul van Genuchten
 </div>
 </div>
 </section>
+<section id="iso28258-in-gml" class="slide level2">
+<h2>ISO28258 in GML</h2>
+<ul>
+<li class="fragment"><p>Serialisation of ISO28258 in GML (app schema)</p></li>
+<li class="fragment"><p>Quite complex implementation and low support in tooling</p></li>
+<li class="fragment"><p><a href="https://inspire.ec.europa.eu/Themes/127/2892">INSPIRE Soil</a> (Europe)<br>
+</p></li>
+<li class="fragment"><p><a href="https://github.com/ANZSoilData/ANZSoilML">ANZSoilML</a> (Australia)</p></li>
+<li class="fragment"><p>Alternative is a serialisation in JSON using Sensorthings API.</p></li>
+</ul>
+</section>
+<section id="iso28258-as-relational-database" class="slide level2">
+<h2>ISO28258 as relational database</h2>
+<ul>
+<li class="fragment">A relational model is available according to ISO28258</li>
+<li class="fragment">Either as PostGreSQL or GeoPackage (SQLite)</li>
+<li class="fragment">Read more at <a href="https://iso28258.isric.org" class="uri">https://iso28258.isric.org</a></li>
+</ul>
+</section>
 <section id="glosis-web-ontology" class="slide level2">
 <h2>GLOSIS Web Ontology</h2>
 <ul>
@@ -376,12 +402,13 @@ Paul van Genuchten
 <li class="fragment">Includes codelists for soil properties and procedures</li>
 </ul>
 </section>
-<section id="iso28258-1" class="slide level2">
-<h2>ISO28258</h2>
+<section id="harmonisation-of-field-lab-and-archived-data" class="slide level2">
+<h2>Harmonisation of field, lab and archived data</h2>
 <ul>
-<li class="fragment">A relational model is available according to ISO28258</li>
-<li class="fragment">Either as PostGreSQL or geopackage (sqlite)</li>
-<li class="fragment">Read more at <a href="https://iso28258.isric.org" class="uri">https://iso28258.isric.org</a></li>
+<li class="fragment">Use common codelists to identify properties, methods, units</li>
+<li class="fragment">Hale Studio and FME are tools for data harmonisation</li>
+<li class="fragment">Also SQL scripts are often used to harmonise data</li>
+<li class="fragment">Semantic web community offers harmonisation tools (rml.io, tarql, csv-ld)</li>
 </ul>
 
 

@@ -386,14 +386,24 @@ Paul van Genuchten
 <img data-src="../img/wms.jpg" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
 <section id="wmts-tms-and-ogc-api---tiles" class="slide level2">
 <h2>WMTS, TMS and OGC API - Tiles</h2>
+<ul>
+<li class="fragment">Image or vector representation in tiles on a grid</li>
+</ul>
 
 <img data-src="../img/tiles.png" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
 <section id="wcs-and-ogc-api---coverages" class="slide level2">
 <h2>WCS and OGC API - Coverages</h2>
+<ul>
+<li class="fragment">Grid extracts and calculations</li>
+</ul>
 
 <img data-src="../img/wcs.jpg" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
 <section id="csw-ogc-api---records-and-stac" class="slide level2">
 <h2>CSW, OGC API - Records and STAC</h2>
+<ul>
+<li class="fragment">Catalogue records</li>
+<li class="fragment">STAC and OGC API - Records both based on OGC API - Features</li>
+</ul>
 </section>
 <section id="mapserver" class="slide level2">
 <h2>Mapserver</h2>
@@ -402,6 +412,43 @@ Paul van Genuchten
 <li class="fragment">Features and Maps</li>
 <li class="fragment">No tiles (mapproxy), No coverages yet</li>
 <li class="fragment">No records/stac, by design</li>
+</ul>
+</section>
+<section id="mapfile" class="slide level2">
+<h2>Mapfile</h2>
+<ul>
+<li class="fragment">Configuration via a <a href="https://mapserver.org/mapfile/">mapfile</a></li>
+<li class="fragment">All <a href="https://gdal.org/drivers/vector">gdal formats</a> supported</li>
+<li class="fragment">Create mapfiles using QGIS with <a href="https://plugins.qgis.org/plugins/geocatbridge/">geocat bridge</a></li>
+</ul>
+
+<img data-src="../img/mapfile.jpg" class="r-stretch quarto-figure-center"><p class="caption">wms</p></section>
+<section id="sensorthings-api" class="slide level2">
+<h2>Sensorthings API</h2>
+<ul>
+<li class="fragment">Soil profile data is observation oriented (iso28258)</li>
+<li class="fragment"><a href="https://www.ogc.org/standard/sensorthings/">Sensorthings API</a> (STA) is an OGC specification for sensor data exchange</li>
+<li class="fragment"><a href="https://fraunhoferiosb.github.io/FROST-Server/">Frost server</a> is an implementation of STA</li>
+<li class="fragment">Limited availability of clients for STA, Qgis has a <a href="https://plugins.qgis.org/plugins/SensorThingsAPI/">STA plugin</a></li>
+</ul>
+</section>
+<section id="cloud-optimised" class="slide level2">
+<h2>Cloud optimised</h2>
+<ul>
+<li class="fragment">Recent interest in cloud optimised and cloud native formats</li>
+<li class="fragment">Large data files are places in a cloud bucket, users request subsets of the file using <a href="https://en.wikipedia.org/wiki/Byte_serving">range requests</a></li>
+<li class="fragment">For grids, <a href="https://www.cogeo.org/">Cloud Optimised GeoTiff</a> (COG) and <a href="https://github.com/zarr-developers/geozarr-spec">GeoZarr</a> (cloud native)</li>
+<li class="fragment">For vector, <a href="https://geoparquet.org/">GeoParquet</a></li>
+</ul>
+</section>
+<section id="sematic-web" class="slide level2">
+<h2>Sematic web</h2>
+<ul>
+<li class="fragment">To integrate spatial data in the web of knowledge, semantic web standards are relevant</li>
+<li class="fragment">DCAT for metadata</li>
+<li class="fragment">GeoSPARQL to define geometries</li>
+<li class="fragment">SOSA for sensor data</li>
+<li class="fragment"><a href="https://github.com/glosis-ld/glosis">GLOSIS Web Ontology</a> is a soil ontology based on SOSA and GeoSPARQL</li>
 </ul>
 
 
