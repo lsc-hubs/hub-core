@@ -1043,11 +1043,18 @@
     "text": "History\nVarious efforts have been made to harmonise Soil Profile data\n\nGlobalSoilMap\neSOTER\nISO28258\nGLOSIS Web ontology"
   },
   {
-    "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#esoter",
-    "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#esoter",
+    "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#e-soter",
+    "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#e-soter",
     "title": "4.1 Soil Profile Datamanagement",
-    "section": "eSOTER",
-    "text": "eSOTER\n\nRelational database model, usually in Microsoft Access\nKenya\nSouthern Africa\nSenegal and Gambia"
+    "section": "e-SOTER",
+    "text": "e-SOTER\n\nRelational database model, usually in Microsoft Access\nKenya\nSouthern Africa\nSenegal and Gambia"
+  },
+  {
+    "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#ken-soter",
+    "href": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#ken-soter",
+    "title": "4.1 Soil Profile Datamanagement",
+    "section": "KEN-SOTER",
+    "text": "KEN-SOTER\n\n\n\n\n\nO&M model\n\n\n\n\n\n\nO&M model"
   },
   {
     "objectID": "docs/developer/tutorial-data-management/slides/4.1-soil-profile-data-management.html#iso28258",
