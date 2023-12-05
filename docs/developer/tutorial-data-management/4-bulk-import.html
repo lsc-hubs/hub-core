@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing conveniance API’s</span></a>
+ <span class="menu-text">Providing conveniance APIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -294,10 +294,10 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <section id="bulk-import-from-spreadsheet" class="level2">
 <h2 class="anchored" data-anchor-id="bulk-import-from-spreadsheet">Bulk import from spreadsheet</h2>
-<p>Many metadata initiatives tend to start from a spreadsheet. Each of the columns representa a metadata property and the rows are the individual records describing a resource. Spreadsheets have proven to be an effective medium to populate a catalogue with records. To facilitate this use case the GeoDataCrawler software provides an import spreadsheet method. The spreadsheet is parsed and a <a href="./2-describing-resources.md">MCF</a> document is generated for every row.</p>
+<p>Many metadata initiatives tend to start from a spreadsheet. Each of the columns representa a metadata property and the rows are the individual records describing a resource. Spreadsheets have proven to be an effective medium to populate a catalogue with records initially. To facilitate this use case the GeoDataCrawler software provides an <code>import spreadsheet</code> method. The spreadsheet is parsed and a MCF document is generated for every row.</p>
 <p>Since every metadata initiative tends to have dedicated columns. A templating approach is used to convert from row to MCF. A default template is available, matching a default spreadsheet layout. If your spreadsheet layout is different, you need to adjust the template accordingly.</p>
 <ul>
-<li>For this exercise we’ll use the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/blob/kenya/portals/KE/LSC/data.csv">LSC-hubs spreadsheet</a> in combination with the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/blob/kenya/portals/KE/LSC/data.j2">LSC-hubs template</a>. Notice that the template share the filename, but with extension <code>.j2</code>. Download both files to a new folder, called <code>csv</code>, in your working directory.</li>
+<li>For this exercise we’ll use the <a href="https://github.com/lsc-hubs/kenya-catalogue/blob/main/portals/KE/LSC/index.csv">LSC-hubs spreadsheet</a> in combination with the <a href="https://github.com/lsc-hubs/kenya-catalogue/blob/main/portals/KE/LSC/index.j2">LSC-hubs template</a>. Notice that the template has the same filename, but with extension <code>.j2</code>. Download both files to a new folder, called <code>csv</code>, in your working directory.</li>
 <li>From your shell environment run this command:</li>
 </ul>
 <pre><code>crawl-metadata --mode=import-csv --dir="./csv"</code></pre>
@@ -311,7 +311,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="bulk-import-from-an-online-location" class="level2">
 <h2 class="anchored" data-anchor-id="bulk-import-from-an-online-location">Bulk import from an online location</h2>
-<p>Many resources are already described elsewhere which may be of interest to add to our catalogue. For this use case some options exist to import remote metadata. In many cases you want to import a selected subset of a remote catalogue. In this scenario we prepare a csv with the identifiers of the records to be imported. These identifiers are used to create a very minimal MCF file. GeoDataCrawler subsequently extends the local record with remote content. Currently supported are metadata from CSW, WMS and DOI.</p>
+<p>Many resources are already described elsewhere which may be of interest to add to our catalogue. For this use case some options exist to import remote metadata.</p>
+<section id="by-id" class="level3">
+<h3 class="anchored" data-anchor-id="by-id">By ID</h3>
+<p>In many cases you want to import a selected subset of a remote catalogue. In this scenario we prepare a csv with the identifiers of the records to be imported. These identifiers are used to create a very minimal MCF file. GeoDataCrawler subsequently extends the local record with remote content. Currently supported are metadata from CSW, WMS and DOI.</p>
 <ul>
 <li>For this exercise download a <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/raw/kenya/portals/Global/data.isric.org/datasets.csv?inline=false">spreadsheet with a subset of the isric.org data repository</a> and the <a href="https://git.wur.nl/isric/lsc-hubs/kenya-hub/-/raw/kenya/portals/Global/data.isric.org/datasets.j2?inline=false">relevant template</a> to a folder <code>isric</code>.</li>
 <li>Import the CSV</li>
@@ -320,11 +323,27 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The synchronisation with remote content is implemented in GeoDataCrawler as part of the update metadata method. The update process will evaluate the dataseturi-property. If the uri refers to remote content in a supported format, the MCF will be updated against that content (remote takes preference).</li>
 </ul>
-<pre><code>crawl-metadata --mode=update --dir="./isric"</code></pre>
+<pre><code>crawl-metadata --mode=update --dir="./isric" --resolve=true</code></pre>
 <ul>
 <li>Notice the changes before and after running the script. If needed, you can remove all the MCF files and run import-csv again to restore the originals.</li>
 </ul>
+</section>
+<section id="harvest-full-set" class="level3">
+<h3 class="anchored" data-anchor-id="harvest-full-set">Harvest full set</h3>
+<p>In case you want to harvest the full set of a remote catalogue, you can create a basic MCF in a new folder <code>undrr</code> and add a distribution of a CSW endpoint.</p>
+<pre><code>metadata:
+    hierarchylevel: service
+    identifier: riskprofilesundrr
+distribution:
+  csw:
+    name: csw
+    url: http://riskprofilesundrr.org/catalogue/csw
+    type: OGC:CSW</code></pre>
+<p>Now use the crawler to fetch the remote records of the catalogue.</p>
+<pre><code>crawl-metadata --mode=update --dir="./undrr" --resolve=true</code></pre>
+<p>You can repeat this harvest at intervals to keep your catalogue up to date with the remote.</p>
 <hr>
+</section>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>

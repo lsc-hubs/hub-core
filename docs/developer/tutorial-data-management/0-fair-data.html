@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing conveniance API’s</span></a>
+ <span class="menu-text">Providing conveniance APIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -294,6 +294,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="border p-2 mb-3 bg-light border-rounded">
 <p>Outside academia there have been similar initiatives to improve data management, which may be more relevant for dedicated communities or scenarios:</p>
 <ul>
+<li><a href="https://5stardata.info">5 star open data</a></li>
 <li><a href="https://www.w3.org/TR/dwbp/">W3C Data on the web best practices</a></li>
 <li><a href="https://public.resource.org/8_principles.html">Open government data principles</a></li>
 <li><a href="https://inspire.ec.europa.eu/inspire-directive/2">European INSPIRE Directive</a></li>
@@ -313,9 +314,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="data-and-metadata-have-a-unique-persistent-identifier" class="level3">
 <h3 class="anchored" data-anchor-id="data-and-metadata-have-a-unique-persistent-identifier">Data and metadata have a unique persistent identifier</h3>
 <ul>
-<li>A local identifier is usually combined with a namespace, to create a globally unique identifier (URI).</li>
-<li>Do not use product names, project names, group names in uri’s, it is difficult to maintain persistence.</li>
-<li>Frameworks such as <a href="https://doi.org">DOI</a> and <a href="https://w3id.org/">W3ID</a> offer a persistent identification layer for online resources.</li>
+<li>A minimal approach to create a unique identifier (<a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URI</a>) is to combine a local identifier with a domain. For example: <a href="https://data.kalro.org/profiles/aa1-49bc-d11e" class="uri">https://data.kalro.org/profiles/aa1-49bc-d11e</a></li>
+<li>In theory, uri’s do not need to <code>resolve</code> to an actual website, but it is a good practice to provide meaningfull content at each uri.</li>
+<li>Do not use product names and project names in uri’s, it is difficult to maintain persistence.</li>
+<li>Frameworks such as <a href="https://doi.org">DOI</a> and <a href="http://www.pidconsortium.net">ePIC</a> offer a identification layer for online resources.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -327,27 +329,14 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For the following 2 types of datasets, review the uniqueness and persistence of their identifier as well as of their metadata.</p>
+<p>For the following datasets, review the uniqueness and persistence of their identifier and the identifier of the data.</p>
 <ul>
-<li>Locate some datasets on your local machine or organisation network.</li>
-<li>Locate some datasets on the web. If you don’t know where to start your search, consider to read the <a href="#metadata-are-searchable-in-a-catalogue">catalogue</a> section first.</li>
+<li><a href="https://www.geoportal.org/community/guest/geoss-resources?p_p_id=geossresources_WAR_geossportlet&amp;p_p_lifecycle=2&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;controlPanelCategory=current_site.configuration&amp;p_p_resource_id=META_DATA&amp;_geossresources_WAR_geossportlet_targetId=05b1e57a-8e31-4cdb-aca4-61ae3f21559d">05b1e57a-8e31-4cdb-aca4-61ae3f21559d</a></li>
+<li><a href="https://doi.org/10.1016/j.rse.2019.111260">10.1016/j.rse.2019.111260</a></li>
+<li><a href="https://explorer.digitalearth.africa/stac/collections/rainfall_chirps_daily/items/d5bb6b02-0979-5112-8dd6-9aef6638fb73">d5bb6b02-0979-5112-8dd6-9aef6638fb73</a></li>
+<li><a href="https://kenya.opendataforafrica.org/lrysdue/select-nutrition-indicators-data-for-kenya-2022">select-nutrition-indicators-data-for-kenya-2022</a></li>
 </ul>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Dataset</th>
-<th>Identifier</th>
-<th>Your review</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Sample</td>
-<td>a432-bcd-4ab55</td>
-<td>No namespace</td>
-</tr>
-</tbody>
-</table>
+<p>Perform the same analyses for some datasets on your local machine or organisation network.</p>
 </div>
 </div>
 </section>
@@ -407,33 +396,33 @@ Tip
 <tr class="header">
 <th>Community</th>
 <th>Standard</th>
-<th>Protocol</th>
+<th>Format/Protocol</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Open data/Sematic web</td>
-<td>DCAT</td>
+<td><a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT</a></td>
 <td>SPARQL</td>
 </tr>
 <tr class="even">
 <td>Science</td>
 <td>Datacite</td>
-<td>OAI-PMH</td>
+<td><a href="http://www.openarchives.org/OAI/openarchivesprotocol.html">OAI-PMH</a></td>
 </tr>
 <tr class="odd">
 <td>Geospatial</td>
 <td>iso19115</td>
-<td>CSW/OGC API - Records</td>
+<td><a href="https://www.ogc.org/standard/cat/">CSW</a>/OGC API - Records</td>
 </tr>
 <tr class="even">
 <td>Earth observation</td>
-<td>STAC</td>
-<td>STAC</td>
+<td><a href="https://stacspec.org/">STAC Catalog</a></td>
+<td>STAC API</td>
 </tr>
 <tr class="odd">
 <td>Search engines</td>
-<td>Schema.org</td>
+<td><a href="https://schema.org/Dataset">Schema.org</a></td>
 <td>json-ld/microdata</td>
 </tr>
 <tr class="even">
@@ -466,7 +455,7 @@ Tip
 </section>
 <section id="data" class="level4">
 <h4 class="anchored" data-anchor-id="data">Data</h4>
-<p>Most common in data science is to provide a packaged version of a dataset and deploy it on a repository like Zenodo or Dataverse where it can be downloaded. However in the spatial and earth observation domain we tend to work with large files and the use of data api’s which allow to request subsets of the data are very common. The Open Geospatial Consortium has defined a number of standards for these API’s, so the API’s itself are interoperable. The table below shows some of the common API’s. In the first column the older API’s, developed in the 90’s, in the second column their updated representative, recently adopted or still in development.</p>
+<p>Most common in data science is to provide a packaged version of a dataset and deploy it on a repository like Zenodo or Dataverse where it can be downloaded. However in the spatial and earth observation domain we tend to work with large files and the use of data APIs which allow to request subsets of the data are very common. The Open Geospatial Consortium has defined a number of standards for these APIs, so the APIs themselves are interoperable. The table below shows some of the common APIs. In the first column the older APIs, developed in the 90’s, in the second column their updated representative, recently adopted or still in development.</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -498,7 +487,7 @@ Tip
 </tr>
 </tbody>
 </table>
-<p>From the Earth Observation domain, an alternative mechanism is increasingly getting adopted. Complete files are stored on a public file repository, but by creating an index on the file and enabling range requests, users are able to fetch subsets from the file directly.</p>
+<p>From the Earth Observation domain, an alternative mechanism is increasingly getting adopted. Complete files are stored on a public file repository, by creating an index on the file and enabling range requests, users are able to fetch subsets from the file directly (for which previously, you would have needed a WFS or WCS service).</p>
 <p>This mechanism is enabled by new formats such as <a href="https://www.cogeo.org/">Cloud Optimised GeoTiff</a>, <a href="https://github.com/zarr-developers/geozarr-spec">GeoZarr</a>, and <a href="https://geoparquet.org/">GeoParquet</a>.</p>
 </section>
 </section>
@@ -535,7 +524,7 @@ Tip
 </section>
 <section id="iso282582013" class="level4">
 <h4 class="anchored" data-anchor-id="iso282582013">iso28258:2013</h4>
-<p>In 2012 various experts in the soil domain grouped around the development of the first formally standardised domain model on soil data, published as <a href="https://www.iso.org/standard/44595.html">ISO28258</a>. ISO28258 adopted the <a href="https://www.ogc.org/standard/om/">Observations &amp; Measurements</a> conventions of OGC. Each observation on a site, profile, horizon or soil sample is considered as an observation. For each observation on a specimen, the measured property and the procedure are captured.</p>
+<p>In 2012 various experts in the soil domain grouped around the development of the first formally standardised domain model on soil data, published as <a href="https://www.iso.org/standard/44595.html">ISO28258</a>. ISO28258 adopted the <a href="https://www.ogc.org/standard/om/">Observations &amp; Measurements</a> conventions of OGC. Each observation on a site, profile, horizon or soil sample is considered an observation. For each observation on a specimen, the measured property and the procedure are captured.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="./img/om2.png" class="w-50 img-fluid figure-img"></p>
@@ -572,7 +561,7 @@ Tip
 <section id="metadata-use-vocabularies-that-follow-fair-principles" class="level3">
 <h3 class="anchored" data-anchor-id="metadata-use-vocabularies-that-follow-fair-principles">(Meta)data use vocabularies that follow FAIR principles</h3>
 <p>A number of common vocabularies are relevant to the soil domain.</p>
-<p>The <a href="https://github.com/iuss-wrb/wrb/releases/download/v4.0-2022/WRB_fourth_edition_2022-12-18.pdf">World Reference Base for soil resources</a> provides a framework of soil vocabularies. These lists are partially published in <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/?clang=nb&amp;uri=c_89f35c33">Agrovoc</a> and partially in the <a href="https://vocab.isric.org/glosis_cl">Glosis web ontology</a>.</p>
+<p>The <a href="https://github.com/iuss-wrb/wrb/releases/download/v4.0-2022/WRB_fourth_edition_2022-12-18.pdf">World Reference Base for soil resources</a> provides a framework of code lists on soil and soil classification. These lists are partially published in <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/?clang=nb&amp;uri=c_89f35c33">Agrovoc</a> and partially in <a href="https://vocab.isric.org/glosis_cl">Glosis web ontology</a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -585,7 +574,7 @@ Tip
 <div class="callout-body-container callout-body">
 <p>Examine the concept <a href="http://aims.fao.org/aos/agrovoc/c_51ec138f">Durisols</a> in agrovoc.</p>
 <ul>
-<li>Notice that the agrovoc page on <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/c_51ec138f?clang=nb">Durisols</a> looks much nicer, still it is important to use the persistent identifier when linking to the concept, why?</li>
+<li>Notice that the agrovoc page on <a href="https://agrovoc.fao.org/browse/agrovoc/en/page/c_51ec138f?clang=nb">Durisols</a> looks nicer then the <a href="http://aims.fao.org/aos/agrovoc/c_51ec138f">representation linked to its uri</a>. Still it is important to use the persistent identifier when linking to the concept, why?</li>
 <li>Notice that Agrovoc contains many translations for each concept and linkage to wider and narrower terms. These are some of the benefits of linking to a keyword from a common thesaurus.</li>
 </ul>
 </div>
@@ -621,7 +610,7 @@ Tip
 <h3 class="anchored" data-anchor-id="data-are-associated-with-detailed-provenance">Data are associated with detailed provenance</h3>
 <p>Provenance is the process of creation and curation of a data source. Which data sources or procedures were used to create the data source. Which processing steps have been applied to the data. What is the lifecycle of the dataset (when will it be archived).</p>
 <p>This information is very relevant to potential users of the data, because they can understand if the data has been produced according to their expectations.</p>
-<p>In academia provenance is usually described in scientific articles, but note that you can also capture it (with much more detail) in a metadata record of a data source. Some tools (for example ArcGIS and SPSS) create a processing log automatically.</p>
+<p>In academia provenance and processing are usually described in scientific articles. One can also capture these aspects in a linked metadata record. Some tools (for example ArcGIS and SPSS) create a processing log automatically.</p>
 <hr>
 </section>
 </section>

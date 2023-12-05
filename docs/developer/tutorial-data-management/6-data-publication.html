@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing conveniance API’s</span></a>
+ <span class="menu-text">Providing conveniance APIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -294,15 +294,15 @@ ul.task-list li input[type="checkbox"] {
 <p>The following options exist:</p>
 <ul>
 <li>A shared folder on a central server on the local intranet. Notice that this location is usually not available by remote partners. Make sure a backup is made of the network folder, in case of incidents.</li>
-<li>A cloud service such as Google Drive, Mirosoft Sharepoint, Dropbox, Amazon Webservices. Such a service can also be setup locally. A minimal solution would be to set up a Webdav service.</li>
-<li>A data repository such as Zenodo, Dataverse, Open Science Foundation. With this option metadata of the resource is automatically collected and made searchable. Some catalogue software, such as CKAN, GeoNode, GeoNetwork offers the capability to publish data files as part of the metadata registration.</li>
+<li>A cloud service such as Google Drive, Mirosoft Sharepoint, Dropbox, Amazon Webservices, Github. Such a service can also be setup locally. A minimal solution would be to set up a Webdav service.</li>
+<li>A data repository such as <a href="https://zenodo.org/">Zenodo</a>, <a href="https://dataverse.org">Dataverse</a>, <a href="https://osf.io">Open Science Foundation</a>. With this option metadata of the resource is automatically collected and made searchable. Some catalogue software, such as CKAN, GeoNode, GeoNetwork offer the capability to publish data files as part of the metadata registration.</li>
 </ul>
 <hr>
 <section id="persistent-identification" class="level2">
 <h2 class="anchored" data-anchor-id="persistent-identification">Persistent identification</h2>
 <p>Select the location carefully, prevent to regularly move a file to a new location. Because with every move, users need to be notified of the new location and documentation needs to be updated. When moving is relevant, consider to set up a <a href="https://en.wikipedia.org/forward-rule">forward-rule</a> on the server which redirects users to the new location.</p>
 <p>An interesting aspect of persistent identification is the choice of a domain and path name. A domain should represent enough credibility/authority (is this a trusted resource), and should be persistent for a longer period. A project name, for example, is not a good choice for a domain to publish a resource.</p>
-<p>A mechanism exists which facilitates file moves, without breaking their identification. Identifier providers such as <a href="https://doi.org">DOI</a> and <a href="https://w3id.org">W3ID</a> enable to create a identifier for any resource. In documentation use the provided identifier, in case the location of the resource changes, you can update the link behind the identifier. Some organisations install a identification service themselves, so they have full ownership on the domain and the contents of the service. An example of such a service is the <a href="https://www.gdi-de.org/en/SDI/components/GDI-DE%20Registry">identification service of the German Federal Government</a>.</p>
+<p>A mechanism exists which facilitates file moves, without breaking their identification. Identifier providers such as <a href="https://doi.org">DOI</a> and <a href="http://www.pidconsortium.net">ePIC</a> enable creation of a identifier for any resource. In documentation use the provided identifier, in case the location of the resource changes, you can update the link behind the identifier. Some organisations install a identification service themselves, so they have full ownership on the domain and the contents of the service. An example of such a service is the <a href="https://www.gdi-de.org/en/SDI/components/GDI-DE%20Registry">identification service of the German Federal Government</a>.</p>
 <hr>
 </section>
 <section id="include-metadata" class="level2">
@@ -313,7 +313,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Various technologies exist to share data on a network. When selecting a mechanism, evaluate if you can facilitate identifier persistence and share metadata along with the files. In the next section we’ll setup <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html">conveniance API’s</a> on data to facilitate reuse of the data.</p>
+<p>Various technologies exist to share data on a network. When selecting a mechanism, evaluate if you can facilitate identifier persistence and share metadata along with the files. In the next section we’ll setup <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html">conveniance APIs</a> on data to facilitate reuse of the data.</p>
 
 
 </section>
