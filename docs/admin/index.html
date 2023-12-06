@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/developer/terria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">terria js</span></a>
+ <span class="menu-text">Terria JS</span></a>
   </div>
 </li>
       </ul>
@@ -322,12 +322,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="administration" class="level1">
-<h1>Administration</h1>
 <section id="github" class="level2">
 <h2 class="anchored" data-anchor-id="github">Github</h2>
-<p>The current hub is published via <a href="https://github.com/lsc-hubs">Github</a>. Github is a commercial service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers could be considered, such as gitlab, bitbucket. Notice that it is also possible to install gitlab on premise.</p>
-<p>As an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate you on the use of Git, such as <a href="https://desktop.github.com/">Github desktop</a>, <a href="https://www.syntevo.com/smartgit/">smartgit</a> and <a href="https://www.gitkraken.com/">git kraken</a>. Some prefer the <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio">Github plugin</a> of <a href="https://visualstudio.microsoft.com/">Visual Studio</a>.</p>
+<p>The current hub is published via <a href="https://github.com/lsc-hubs">Github</a>. Github is a commercial service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers can be considered, such as <a href="https://gitlab.com">gitlab</a>, <a href="https://bitbucket.org/">bitbucket</a>. Notice that it is also possible to install gitlab on premise.</p>
+<p>As an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate the use of Git, such as <a href="https://desktop.github.com/">Github desktop</a>, <a href="https://www.syntevo.com/smartgit/">Smartgit</a> and <a href="https://www.gitkraken.com/">Git Kraken</a>. Some prefer the <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio">Github plugin</a> of <a href="https://visualstudio.microsoft.com/">Visual Studio</a>.</p>
 </section>
 <section id="lsc-hub" class="level2">
 <h2 class="anchored" data-anchor-id="lsc-hub">LSC Hub</h2>
@@ -336,13 +334,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="discussions" class="level2">
 <h2 class="anchored" data-anchor-id="discussions">Discussions</h2>
-<p>Discussions are managed within <a href="https://github.com/lsc-hubs/kenya-hub/discussions">github</a>. A widget is added to every resource page, so users can provide feedback or ask questions about the resource. These questions are stored as github discussion. Discussions can be answered from the resource page (a github login is required) or from github discussions. Users should be invited to the github project to be able to administer github discussions.</p>
+<p>Discussions are managed within <a href="https://github.com/lsc-hubs/kenya-hub/discussions">github</a>. A <a href="https://giscus.app/">giscus widget</a> is added to every resource page, so users can provide feedback or ask questions about the resource. These questions are stored as github discussions. Discussions can be answered from the resource page (a github login is required) or from github discussions. Users should be invited to the github project to be able to administer github discussions.</p>
 </section>
 <section id="maps" class="level2">
 <h2 class="anchored" data-anchor-id="maps">Maps</h2>
 <p>The TerriaJS framework enables users to share maps and map stories with stakeholders (share button top-right). Notice that you can also use this functionality to link from a description of a resource to a map, which displays some data in a certain context.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">A nice map</span><span class="co">](https://maps.lsc-hubs.org/#start=%7B%22version%22%...)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Another option is to store the map definition (urldecoded) on a folder of TerriaJS. The map is then available by its filename. You can now add a link to this map for example in the <code>related maps</code> section of TerriaJS (config.json).</p>
+</section>
+<section id="map-services" class="level2">
+<h2 class="anchored" data-anchor-id="map-services">Map services</h2>
+<p>Map services on source data are configured using <a href="https://mapserver.org/mapfile/">mapserver mapfiles</a>. The configuration is generated from the metadata of the source data using the <a href="https://pypi.org/project/geodatacrawler/">geodatacrawler</a> tool. Mapfiles are stored on a NFS (accessible via webdav) or in the mapserver (docker) container. Source of the mapfiles is preferably stored on Git.</p>
+<p>Every new mapfile is registered in the mapserver config file as an <a href="https://mapserver.org/mapfile/config.html">alias</a></p>
 </section>
 <section id="catalogue" class="level2">
 <h2 class="anchored" data-anchor-id="catalogue">Catalogue</h2>
@@ -364,7 +367,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
