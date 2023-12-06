@@ -453,7 +453,8 @@ Tip
 </section>
 <section id="data" class="level4">
 <h4 class="anchored" data-anchor-id="data">Data</h4>
-<p>Most common in data science is to provide a packaged version of a dataset and deploy it on a repository like Zenodo or Dataverse where it can be downloaded. However in the spatial and earth observation domain we tend to work with large files and the use of data APIs which allow to request subsets of the data are very common. The Open Geospatial Consortium has defined a number of standards for these APIs, so the APIs themselves are interoperable. The table below shows some of the common APIs. In the first column the older APIs, developed in the 90’s, in the second column their updated representative, recently adopted or still in development.</p>
+<p>Most common in data science is to provide a packaged version of a dataset and deploy it on a repository like Zenodo or Dataverse where it can be downloaded. Zenodo supports Findability and Accessibility of FAIR.</p>
+<p>In the spatial and earth observation domain we tend to work with large files and the use of data APIs which allow to request subsets of the data are very common. The Open Geospatial Consortium has defined a number of standards for these APIs, so the APIs themselves are interoperable. The table below shows some of the common APIs. In the first column the older APIs, developed in the 90’s, in the second column their updated representative, recently adopted or still in development.</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -529,13 +530,35 @@ Tip
 <figcaption class="figure-caption">Observations and measurements overview</figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For this exercise we are considering a dataset on observations on soil properties (either field or lab). If you are aware of such a dataset in your oranisation or region, use that one, else you can use the <a href="https://data.isric.org/geonetwork/srv/eng/catalog.search#/metadata/73e27136-9efe-49e4-af35-fd98b841d467">KENSOTER</a> dataset. Then answer the following questions:</p>
+<ul>
+<li>Describe the dataset; by region, format, organisation, date, …</li>
+<li>In which column/property are the observed result values stored?</li>
+<li>How is the observation linked to the location and depth of the sample?</li>
+<li>Where is documented the unit used for the value?</li>
+<li>How is documented which soil property is measured</li>
+<li>Where is described which procedure/method has been used for this observation?</li>
+<li>Are metadata about the measurement available, when was the sample analysed, who made the sample, which lab?</li>
+</ul>
+</div>
+</div>
 <p>Various initiatives adopted ISO28258, and serialised and specialised the model for their community:</p>
 <ul>
-<li><a href="https://inspire.ec.europa.eu/Themes/127/2892">INSPIRE Soil</a> (Europe) and <a href="https://github.com/ANZSoilData/ANZSoilML">ANZSoilML</a> (Australia) are implementations of iso28258 serialised as GML.</li>
+<li><a href="https://inspire.ec.europa.eu/Themes/127/2892">INSPIRE Soil</a> (Europe) and <a href="https://github.com/ANZSoilData/ANZSoilML">ANZSoilML</a> (Australia) are domain models based on Observations and Measurements, inspired by ISO28258, serialised in GML.</li>
 <li><a href="https://git.wur.nl/isric/databases/iso28258-public">ISO28258-relational</a> is an implementation of ISO28258 modelled as a relational database.</li>
-<li><a href="https://github.com/glosis-ld/glosis">Glosis Web Ontology</a> is an iso28258 implementation, using common ontologies from the web, such as <a href="https://www.w3.org/TR/vocab-ssn/">semantic sensor network</a>.</li>
+<li><a href="https://github.com/glosis-ld/glosis">Glosis Web Ontology</a> is an evolution of iso28258, using common ontologies from the web, such as <a href="https://www.w3.org/TR/vocab-ssn/">semantic sensor network</a>.</li>
 </ul>
-<p>Some examples of iso28258 implementations:</p>
+<p>Some examples of datasets modelled as INSPIRE Soil:</p>
 <ul>
 <li><a href="https://fbinter.stadt-berlin.de/fb/atom/SO/SO_BoKw2015.zip">Soil Berlin</a></li>
 <li><a href="https://www.dov.vlaanderen.be/geoserver-inspire/wfs?typeNames=so:chemicalParameter&amp;service=wfs&amp;version=2.0.1&amp;request=getfeature&amp;count=10">Soil chemistry Flanders</a></li>
