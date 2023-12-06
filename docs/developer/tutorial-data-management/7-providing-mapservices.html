@@ -9,7 +9,7 @@
 <meta name="author" content="Paul van Genuchten">
 <meta name="dcterms.date" content="2023-05-09">
 
-<title>Land Soil Crop Hub - Providing conveniance APIs</title>
+<title>Land Soil Crop Hub - Providing convenience APIs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html">Providing conveniance APIs</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html">Providing convenience APIs</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Providing conveniance APIs</span></a>
+ <span class="menu-text">Providing convenience APIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -295,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Providing conveniance APIs</h1>
+<h1 class="title">Providing convenience APIs</h1>
 </div>
 
 
@@ -322,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>For spatial datasets it is of interest to share them via conveniance APIs, so the datasets can be downloaded in parts or easily be visualised in common tools such as <a href="https://qgis.org">QGIS</a>, <a href="https://openlayers.org">OpenLayers</a> &amp; <a href="https://leaflet.org">Leaflet</a>. The standards of the <a href="https://www.ogc.org/">Open Geospatial Consortium</a> are most relevant. These APIs can give direct access to subsets or map vizualisations of a dataset.</p>
+<p>For spatial datasets it is of interest to share them via convenience APIs, so the datasets can be downloaded in parts or easily be visualised in common tools such as <a href="https://qgis.org">QGIS</a>, <a href="https://openlayers.org">OpenLayers</a> &amp; <a href="https://leaflet.org">Leaflet</a>. The standards of the <a href="https://www.ogc.org/">Open Geospatial Consortium</a> are most relevant. These APIs can give direct access to subsets or map visualisations of a dataset.</p>
 <p>In this paragraph you are introduced to various standardised APIs, after which we introduce you to an approach to publish your datasets, which builds on the data management approach introduced in the previous paragraphs.</p>
 <hr>
 <section id="standardised-data-apis" class="level2">
@@ -381,9 +381,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setting-up-an-api" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-an-api">Setting up an API</h2>
 <p><a href="https://mapserver.org">Mapserver</a> is server software which is able to expose datasets through various APIs. Examples of similar software are <a href="https://docs.qgis.org/3.28/en/docs/server_manual/introduction.html">QGIS server</a>, <a href="https://enterprise.arcgis.com/en/server/">ArcGIS Server</a>, <a href="https://geoserver.org">Geoserver</a> and <a href="https://pygeoapi.io">pygeoapi</a>.</p>
-<p>We’ve selected mapserver for this training, because of its robustness and low resource consumption. Mapserver is configured using a configuration file, a <a href="https://www.mapserver.org/mapfile/">mapfile</a>. The mapfile defines metadata for the dataset and how users interact with the dataset, mainly the color scheme (legend) to draw a map of the dataset.</p>
+<p>We’ve selected mapserver for this training, because of its robustness and low resource consumption. Mapserver is configured using a configuration file, a <a href="https://www.mapserver.org/mapfile/">mapfile</a>. The mapfile defines metadata for the dataset and how users interact with the dataset, mainly the colour scheme (legend) to draw a map of the dataset.</p>
 <p>Various tools exist to write these configuration files, such as <a href="https://mapserverstudio.net/">Mapserver studio</a>, <a href="https://www.osgeo.org/projects/geostyler/">GeoStyler</a>, <a href="https://www.geocat.net/docs/bridge/qgis/latest">QGIS Bridge</a>, up to a <a href="https://marketplace.visualstudio.com/items?itemName=chicoff.mapfile">visual studio plugin to edit mapfiles</a>.</p>
-<p>The <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>, introduced in a <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html#discovering-an-existing-data-repository">previous paragraph</a>, also has an option to generate mapfiles. A big advantage of this approach is the integration with existing metadata. Many publication workflows require to add similar metadata at various locations, a risk for disambiguity. GeoDataCrawler will, during mapfile generation, use the existing metaddata, but also update the metadata so it includes a link to the mapserver service endpoint. This step enables a typical workflow of:</p>
+<p>The <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>, introduced in a <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html#discovering-an-existing-data-repository">previous paragraph</a>, also has an option to generate mapfiles. A big advantage of this approach is the integration with existing metadata. Many publication workflows require to add similar metadata at various locations, a risk for disambiguity. GeoDataCrawler will, during mapfile generation, use the existing metadata , but also update the metadata so it includes a link to the mapserver service endpoint. This step enables a typical workflow of:</p>
 <ul>
 <li>User finds a dataset in a catalogue</li>
 <li>Then opens the dataset via the linked service</li>
@@ -391,8 +391,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>As well as vice versa; from a mapping application, access the metadata describing a dataset.</p>
 <hr>
 </section>
-<section id="mapfile-creation-exersize" class="level2">
-<h2 class="anchored" data-anchor-id="mapfile-creation-exersize">Mapfile creation exersize</h2>
+<section id="mapfile-creation-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="mapfile-creation-exercise">Mapfile creation exercise</h2>
 <ul>
 <li>Navigate with shell to a folder with data files.</li>
 <li>Verify if mcf’s are available for the files, if not, create initial metadata with <code>crawl-metadata --mode=init --dir=.</code></li>
@@ -425,9 +425,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">map2img</span> <span class="at">-m</span><span class="op">=</span>./mymap.map <span class="at">-o</span><span class="op">=</span>test.png</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
-<section id="setup-mapserver-via-docker-exersize" class="level2">
-<h2 class="anchored" data-anchor-id="setup-mapserver-via-docker-exersize">Setup mapserver via Docker Exersize</h2>
-<p>For this exersize we’re using a <a href="https://hub.docker.com/r/camptocamp/mapserver">mapserver image</a> available from Docker hub (we’re using master awaiting the 8.2 release).</p>
+<section id="setup-mapserver-via-docker-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="setup-mapserver-via-docker-exercise">Setup mapserver via Docker exercise</h2>
+<p>For this exercise we’re using a <a href="https://hub.docker.com/r/camptocamp/mapserver">mapserver image</a> available from Docker hub (we’re using master awaiting the 8.2 release).</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull camptocamp/mapserver:master  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>First create a config file, which we’ll <a href="https://docs.docker.com/storage/volumes/">mount as a volume</a> into the container. On this config file we list all the mapfiles we aim to publish on our service. Download <a href="https://github.com/camptocamp/docker-mapserver/blob/master/runtime/etc/mapserver.conf">the default config file</a>. Open the file and unescape and populate the maps section:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="at">MAPS</span></span>
@@ -444,7 +444,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    camptocamp/mapserver:master </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Check http://localhost/data/ogcapi in your browser. If all has been set up fine it should show the OGCAPI homepage of the service. If not, check the container logs to evaluate any errors.</p>
 <p>You can also try the url in QGIS. Add a WMS layer, of service http://localhost/data?request=GetCapabilities&amp;service=WMS. Notice the links to metadata when you open GetCapabilities in a browser.</p>
-<p>[!NOTE] In recent years browsers have become more strict, to prevent abuse. For that reason it is important to carefully consider common connectivity aspects, when setting up a new service. Websites running at https can only embed content from other https services, so using https is relevant. <a href="https://en.wikipedia.org/cors">CORS</a> and <a href="https://en.wikipedia.org/corb">CORB</a> can limit access to embedded resources from remote servers. Using proper CORS headers and Content type identification is relevant to prevent CORS and CORB errors.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In recent years browsers have become more strict, to prevent abuse. For that reason it is important to carefully consider common connectivity aspects, when setting up a new service. Websites running at https can only embed content from other https services, so using https is relevant. <a href="https://en.wikipedia.org/cors">CORS</a> and <a href="https://en.wikipedia.org/corb">CORB</a> can limit access to embedded resources from remote servers. Using proper CORS headers and Content type identification is relevant to prevent CORS and CORB errors.</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="summary" class="level2">

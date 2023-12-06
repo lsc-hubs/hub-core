@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing conveniance APIs</span></a>
+ <span class="menu-text">Providing convenience APIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -322,8 +322,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>The FAIR principles are designed with the academic community in mind. Researchers sharing information. However the FAIR principles can also be applied within an origanisation to improve data management, even on your personal computer. If you return for example to an archived project 2 years later to recover some data sources.</p>
-<p>Many organisations organise their documents and datasets on a central network storage or database. These resources are usually clustered in organisational units, projects and/or years. Some files and database tables in that central storage contain embedded metadata, such as the name, size, date, author, location etc. This information supports users in understanding the context of the data source. Especcially if that data at some point is migrated from its original context.</p>
+<p>The FAIR principles are designed with the academic community in mind. Researchers sharing information. However the FAIR principles can also be applied within an organisation to improve data management, even on your personal computer. If you return for example to an archived project 2 years later to recover some data sources.</p>
+<p>Many organisations organise their documents and datasets on a central network storage or database. These resources are usually clustered in organisational units, projects and/or years. Some files and database tables in that central storage contain embedded metadata, such as the name, size, date, author, location etc. This information supports users in understanding the context of the data source. Especially if that data at some point is migrated from its original context.</p>
 <p>For those formats which do not have embedded metadata, or in order to capture additional metadata aspects. We endorse the creation of a <code>sidecar</code> metadata file for every resource, a dedicated metadata file sharing the name of the datasource. This approach is for example common in the ESRI community, where a <code>.shp.xml</code> is created alongside any <code>.shp</code> file, which captures some metadata elements.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -359,7 +359,7 @@ Tip
 </section>
 <section id="the-mcf-format" class="level2">
 <h2 class="anchored" data-anchor-id="the-mcf-format">The MCF format</h2>
-<p>Within the geopython community a metadata format is used called the <a href="https://geopython.github.io/pygeometa/reference/mcf/">metadata control file</a> (MCF). Aim of the format is ease of use, while providing export options to various metadata models. Many metadate models are based on XML, which makes them quite hard to read by humans. MCF is based on <a href="https://www.yaml.io/spec/">YAML</a>, a textbased format using indents to cluster elements. In this workshop we are using the MCF format due to its simplicity and natural fit with the use cases. A minimal sample of MCF is:</p>
+<p>Within the geopython community a metadata format is used called the <a href="https://geopython.github.io/pygeometa/reference/mcf/">metadata control file</a> (MCF). Aim of the format is ease of use, while providing export options to various metadata models. Many metadate models are based on XML, which makes them quite hard to read by humans. MCF is based on <a href="https://www.yaml.io/spec/">YAML</a>, a text based format using indents to cluster elements. In this workshop we are using the MCF format due to its simplicity and natural fit with the use cases. A minimal sample of MCF is:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mcf</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="fl">1.0</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -382,7 +382,7 @@ Tip
 <section id="mcf-editing" class="level2">
 <h2 class="anchored" data-anchor-id="mcf-editing">MCF editing</h2>
 <p>MCF documents can best be written in a text editor like <a href="https://code.visualstudio.com">Visual Studio Code</a>. Consider to install the <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml">YAML plugin</a> for instant YAML validation.</p>
-<p>Another option to create and update mcf files is via <a href="https://github.com/osgeo/mdme">MDME</a>. MDME is a webbased software package providing a dynamic metadata edit form. An operational package is available at <a href="https://osgeo.github.io/mdme">osgeo.github.io</a>. Notice that if you install the package locally, you can customize the application to your organisational needs.</p>
+<p>Another option to create and update mcf files is via <a href="https://github.com/osgeo/mdme">MDME</a>. MDME is a web based software package providing a dynamic metadata edit form. An operational package is available at <a href="https://osgeo.github.io/mdme">osgeo.github.io</a>. Notice that if you install the package locally, you can customize the application to your organisational needs.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

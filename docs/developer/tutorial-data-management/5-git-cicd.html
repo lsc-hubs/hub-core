@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing conveniance APIs</span></a>
+ <span class="menu-text">Providing convenience APIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -332,12 +332,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="cicd" class="level2">
 <h2 class="anchored" data-anchor-id="cicd">CI/CD</h2>
-<p><a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> &amp; <a href="https://en.wikipedia.org/wiki/Continuous_deployment">Deployment</a> describes a proces in which changes in software or configuration are automatically tested and deployed to a relevant environment. These processes are commonly facilited by GIT environments. With every commit to the Git repository an action is triggered which runs some tasks.</p>
+<p><a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> &amp; <a href="https://en.wikipedia.org/wiki/Continuous_deployment">Deployment</a> describes a process in which changes in software or configuration are automatically tested and deployed to a relevant environment. These processes are commonly facilitated by GIT environments. With every commit to the Git repository an action is triggered which runs some tasks.</p>
 <hr>
 </section>
-<section id="github-pages-exersize" class="level2">
-<h2 class="anchored" data-anchor-id="github-pages-exersize">Github Pages Exersize</h2>
-<p>This exersize introduces the CI-CD topic by setting up a basic markdown website in <a href="https://pages.github.com/">Github Pages</a>, maintained through Git. <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is a popular format to store text with annotations on Git.The site will be based on <a href="https://quarto.org">Quarto</a>. Quarto is one of many platforms to generate a website from a markdown repository.</p>
+<section id="github-pages-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="github-pages-exercise">Github Pages exercise</h2>
+<p>This exercise introduces the CI-CD topic by setting up a basic markdown website in <a href="https://pages.github.com/">Github Pages</a>, maintained through Git. <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is a popular format to store text with annotations on Git.The site will be based on <a href="https://quarto.org">Quarto</a>. Quarto is one of many platforms to generate a website from a markdown repository.</p>
 <ul>
 <li>Create a <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo">new repository</a> in your github account, for example ‘My first CMS’. Tick the ’’</li>
 <li>Before we add any content <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">create a branch</a> ‘gh-pages’ on the repository, this branch will later contain the generated html sources of the website.</li>
@@ -406,7 +406,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Save the file, via <code>actions</code> you can follow the progress of the workflow at every push to the repository.</li>
-<li>On the logs notice how a container is initialised, the source code is checked out, the mkdocs dependency is installed, the build is made and pushed to the gh-pages branch.</li>
+<li>On the logs notice how a container is initialised, the source code is checked out, the quarto dependency is installed, the build is made and pushed to the gh-pages branch.</li>
 </ul>
 <p>Notice that the syntax to define workflows is different for every CI-CD platform, however they generally follow a similar pattern. For Github identify in the file above:</p>
 <ul>

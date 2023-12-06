@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing conveniance APIs</span></a>
+ <span class="menu-text">Providing convenience APIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -328,12 +328,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Performance and capacity</li>
 <li>Usage (how much are the services used)</li>
 </ul>
-<p>Quality of service monitoring is a standard activity in IT. Therefore consult your IT department or hosting company if they have tools available to assess these aspects. Confirm with them on how to extend and/or share with you these measurements for the requested parameters. Combine these reports into monthly or quarterly reports to facilitate policy development. Below exersizes</p>
+<p>Quality of service monitoring is a standard activity in IT. Therefore consult your IT department or hosting company if they have tools available to assess these aspects. Confirm with them on how to extend and/or share with you these measurements for the requested parameters. Combine these reports into monthly or quarterly reports to facilitate policy development. Below exercises</p>
 <hr>
 <section id="availability-monitoring-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="availability-monitoring-exercise">Availability Monitoring Exercise</h2>
 <p>To assess the availability of a service, it requires to monitor the availability of the service at intervals. A basic availability-test every 5 minutes is usually sufficient. Many software exists for availability monitoring, such as <a href="https://zabbix.com/">Zabbix</a>, <a href="https://nagios.org/">Nagios</a>, <a href="https://checkmk.com/">CheckMK</a>, <a href="https://www.pingdom.com/">pingdom</a>. A special mention for the Python based <a href="https://geohealthcheck.org/">GeoHealthCheck</a> package, which includes the capability on WMS/WFS services to drill down to the data level starting from the GetCapabilities operation.</p>
-<p>This exersize assumes docker desktop to be installed. Alternatively you can create a personal account at https://demo.geohealthcheck.org (click register in the login page).</p>
+<p>This exercise assumes docker desktop to be installed. Alternatively you can create a personal account at https://demo.geohealthcheck.org (click register in the login page).</p>
 <ul>
 <li>Start by setting up a local GeoHealthCheck container:</li>
 </ul>
@@ -353,8 +353,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="performance-capacity-testing" class="level2">
 <h2 class="anchored" data-anchor-id="performance-capacity-testing">Performance &amp; Capacity testing</h2>
 <p>To know the capacity and performance of a service you can perform some load tests prior to moving to production. An alternative approach to evaluate performance is to extract the access logs of the service into an aggregation tool like <a href="https://www.elastic.co/kibana">Kibana</a> and evaluate the number of requests exceeding the limits.</p>
-<p>[!NOTE]<br>
-A common challenge to service performance is the provision of a WMS service on a big dataset. When requesting that dataset on a continental or national level, the server runs into problems drawing all the data at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators may be a solution also.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A common challenge to service performance is the provision of a WMS service on a big dataset. When requesting that dataset on a continental or national level, the server runs into problems drawing all the data at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators may be a solution also.</p>
+</div>
+</div>
 <p><a href="https://jmeter.apache.org/">jmeter</a> is a utility which can run a series of performance and capacity tests on a webservice. Jmeter is a java program, which can run on most platforms.</p>
 <ul>
 <li>Download the latest version from the <a href="https://jmeter.apache.org/download_jmeter.cgi">apache website</a>.</li>
@@ -362,8 +373,19 @@ A common challenge to service performance is the provision of a WMS service on a
 <li>Follow the <a href="https://jmeter.apache.org/usermanual/build-web-test-plan.html">build web test plan</a> tutorial.</li>
 <li>Customise the web test plan for your mapserver service</li>
 </ul>
-<p>[!NOTE]<br>
-Do not perform a load test against a production url, it wil severely impact the performance of that service.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not perform a load test against a production url, it wil severely impact the performance of that service.</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="usage-monitoring" class="level2">
