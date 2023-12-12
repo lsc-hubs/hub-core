@@ -322,73 +322,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>For spatial datasets it is of interest to share them via convenience APIs, so the datasets can be downloaded in parts or easily be visualised in common tools such as <a href="https://qgis.org">QGIS</a>, <a href="https://openlayers.org">OpenLayers</a> &amp; <a href="https://leaflet.org">Leaflet</a>. The standards of the <a href="https://www.ogc.org/">Open Geospatial Consortium</a> are most relevant. These APIs can give direct access to subsets or map visualisations of a dataset.</p>
+<p>For spatial datasets it is of interest to share them via convenience APIs, so the datasets can be downloaded in parts or easily be visualised in common tools such as <a href="https://qgis.org">QGIS</a>, <a href="https://openlayers.org">OpenLayers</a> &amp; <a href="https://leaflet.org">Leaflet</a>. The standards on data services of the <a href="https://www.ogc.org/">Open Geospatial Consortium</a> are designed with this purpose. These APIs give direct access to subsets or map visualisations of a dataset.</p>
 <p>In this paragraph you are introduced to various standardised APIs, after which we introduce you to an approach to publish your datasets, which builds on the data management approach introduced in the previous paragraphs.</p>
 <hr>
 <section id="standardised-data-apis" class="level2">
 <h2 class="anchored" data-anchor-id="standardised-data-apis">Standardised data APIs</h2>
-<p>Open Geospatial Consortium has a long history of standardisation efforts. Standardised mapping APIs, such as Web Map Service (WMS), Web Feature service (WFS) and Web Coverage Service (WCS), originate from the beginning of this century. In recent years several challenges have been identified around these standards, which led to a series of <a href="https://www.w3.org/TR/sdw-bp/">Spatial data on the web best practices</a>. OGC then initiated a new generation of standards based on these best practices.</p>
+<p>Standardised mapping APIs, such as Web Map Service (WMS), Web Feature service (WFS) and Web Coverage Service (WCS), originate from the beginning of this century. In recent years several challenges have been identified around these standards, which led to a series of <a href="https://www.w3.org/TR/sdw-bp/">Spatial data on the web best practices</a>. OGC then initiated a new generation of standards based on these best practices.</p>
 <p>An overview of both generations:</p>
 <table class="table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Type</th>
 <th>OWS</th>
 <th>OGC-API</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Map visualisation</td>
-<td>Web Map service (WMS), Web Maps Tile Service (WMTS)</td>
-<td>OGCAPI:Maps, OGCAPI:Tiles</td>
+<td>Web Map Service (<a href="https://www.ogc.org/standard/wms/">WMS</a>)</td>
+<td><a href="https://ogcapi.ogc.org/maps/">Maps</a></td>
+<td>Provides a visualisation of a subset of the data</td>
 </tr>
 <tr class="even">
-<td>Vector access</td>
-<td>Web Feature Service (WFS)</td>
-<td>OGCAPI:Features</td>
+<td>Web Feature Service (<a href="https://www.ogc.org/standard/wfs/">WFS</a>)</td>
+<td><a href="https://ogcapi.ogc.org/features/">Features</a></td>
+<td>API to request a subset of the vector features</td>
 </tr>
 <tr class="odd">
-<td>Grid access</td>
-<td>Web Coverage Service (WCS)</td>
-<td>OGCAPI:Coverages</td>
+<td>Web Coverage Service (<a href="https://www.ogc.org/standard/wcs/">WCS</a>)</td>
+<td><a href="https://ogcapi.ogc.org/coverages/">Coverages</a></td>
+<td>API to interact with grid sources</td>
 </tr>
 <tr class="even">
-<td>Sensor Observations</td>
-<td>Sensor Observation Service (SOS)</td>
-<td>Sensortthings</td>
+<td>Sensor Observation Service (<a href="https://www.ogc.org/standard/sos">SOS</a>)</td>
+<td><a href="https://www.ogc.org/standard/sensorthings/">Sensorthings</a></td>
+<td>Retrieve subsets of sensor observations</td>
 </tr>
 <tr class="odd">
-<td>Processes</td>
-<td>Web Processing Service (WPS)</td>
-<td>OGCAPI:Processes</td>
+<td><a href="https://www.ogc.org/standard/wps">Web Processing Service</a> (WPS)</td>
+<td><a href="https://ogcapi.ogc.org/processes">OGCAPI:Processes</a></td>
+<td>Run processes on data ]</td>
 </tr>
 <tr class="even">
-<td>Catalogues</td>
-<td>Catalogue Service for the web (CSW)</td>
-<td>OGCAPI:Records</td>
+<td><a href="https://www.ogc.org/standard/cat">Catalogue Service for the web</a> (CSW)</td>
+<td><a href="https://ogcapi.ogc.org/records">OGCAPI:Records</a></td>
+<td>Retrieve and filter catalogue records</td>
 </tr>
 </tbody>
 </table>
-<p>Notice that most of the mapping software supports the standards of both generations. However, due to the recent introduction, expect incidental glitches in the implementations of recent OGC APIs.</p>
+<p>Notice that most of the mapping software supports the standards of both generations. However, due to their recent introduction, expect incidental challenges in the implementations of OGC APIs.</p>
 <hr>
 </section>
 <section id="setting-up-an-api" class="level2">
 <h2 class="anchored" data-anchor-id="setting-up-an-api">Setting up an API</h2>
 <p><a href="https://mapserver.org">Mapserver</a> is server software which is able to expose datasets through various APIs. Examples of similar software are <a href="https://docs.qgis.org/3.28/en/docs/server_manual/introduction.html">QGIS server</a>, <a href="https://enterprise.arcgis.com/en/server/">ArcGIS Server</a>, <a href="https://geoserver.org">Geoserver</a> and <a href="https://pygeoapi.io">pygeoapi</a>.</p>
-<p>We’ve selected mapserver for this training, because of its robustness and low resource consumption. Mapserver is configured using a configuration file, a <a href="https://www.mapserver.org/mapfile/">mapfile</a>. The mapfile defines metadata for the dataset and how users interact with the dataset, mainly the colour scheme (legend) to draw a map of the dataset.</p>
+<p>We’ve selected mapserver for this training, because of its robustness and low resource consumption. Mapserver is configured using a configuration file: called the <a href="https://www.mapserver.org/mapfile/">mapfile</a>. The mapfile defines metadata for the dataset and how users interact with the dataset, mainly the colour scheme (legend) to draw a map of the dataset.</p>
 <p>Various tools exist to write these configuration files, such as <a href="https://mapserverstudio.net/">Mapserver studio</a>, <a href="https://www.osgeo.org/projects/geostyler/">GeoStyler</a>, <a href="https://www.geocat.net/docs/bridge/qgis/latest">QGIS Bridge</a>, up to a <a href="https://marketplace.visualstudio.com/items?itemName=chicoff.mapfile">visual studio plugin to edit mapfiles</a>.</p>
-<p>The <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>, introduced in a <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html#discovering-an-existing-data-repository">previous paragraph</a>, also has an option to generate mapfiles. A big advantage of this approach is the integration with existing metadata. Many publication workflows require to add similar metadata at various locations, a risk for disambiguity. GeoDataCrawler will, during mapfile generation, use the existing metadata , but also update the metadata so it includes a link to the mapserver service endpoint. This step enables a typical workflow of:</p>
+<p>The <a href="https://pypi.org/project/geodatacrawler/">GeoDataCrawler</a>, introduced in a <a href="../../../docs/developer/tutorial-data-management/2-interact-with-data-repositories.html">previous paragraph</a>, also has an option to generate mapfiles. A big advantage of this approach is the integration with existing metadata. GeoDataCrawler will, during mapfile generation, use the existing metadata, but also update the metadata so it includes a link to the mapserver service endpoint. This step enables a typical workflow of:</p>
 <ul>
-<li>User finds a dataset in a catalogue</li>
-<li>Then opens the dataset via the linked service</li>
+<li>Users find a dataset in a catalogue</li>
+<li>Then open the dataset via the linked service</li>
 </ul>
-<p>As well as vice versa; from a mapping application, access the metadata describing a dataset.</p>
+<p>But also vice versa; from a mapping application, access the metadata describing a dataset.</p>
 <hr>
 </section>
 <section id="mapfile-creation-exercise" class="level2">
@@ -427,23 +422,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="setup-mapserver-via-docker-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="setup-mapserver-via-docker-exercise">Setup mapserver via Docker exercise</h2>
-<p>For this exercise we’re using a <a href="https://hub.docker.com/r/camptocamp/mapserver">mapserver image</a> available from Docker hub (we’re using master awaiting the 8.2 release).</p>
+<p>For this exercise we’re using a <a href="https://hub.docker.com/r/camptocamp/mapserver">mapserver image</a> available from Docker hub.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> pull camptocamp/mapserver:master  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>First create a config file, which we’ll <a href="https://docs.docker.com/storage/volumes/">mount as a volume</a> into the container. On this config file we list all the mapfiles we aim to publish on our service. Download <a href="https://github.com/camptocamp/docker-mapserver/blob/master/runtime/etc/mapserver.conf">the default config file</a>. Open the file and unescape and populate the maps section:</p>
+<p>First create a config file, which we’ll <a href="https://docs.docker.com/storage/volumes/">mount as a volume</a> into the container. On this config file we list all the mapfiles we aim to publish on our container. Download <a href="https://github.com/camptocamp/docker-mapserver/blob/master/runtime/etc/mapserver.conf">the default config file</a>. Open the file and unescape and populate the maps section:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="at">MAPS</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">     </span><span class="st">"data"</span><span class="at"> "/srv/data/data.map"</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">END</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Also unescape the OGCAPI templates section</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">OGCAPI_HTML_TEMPLATE_DIRECTORY "/usr/local/share/mapserver/ogcapi/templates/html-bootstrap4/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Notice the path <code>/srv/data</code> replacing the local path, /srv/data is the folder we use within the container (mounted).</p>
 <p>In the next statement we mount the data folder, including the config file and indicate on which port and with which config file the container will run:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="dt">\</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">-p</span> 80:80 <span class="dt">\</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">-e</span> MAPSERVER_CONFIG_FILE=/srv/data/mapserver.conf <span class="dt">\</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">-v</span> <span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span>:/srv/data  <span class="dt">\</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    camptocamp/mapserver:master </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice the current path, $(pwd), being mounted as <code>/srv/data</code>, /srv/data is the folder we use within the container (mounted).</p>
 <p>Check http://localhost/data/ogcapi in your browser. If all has been set up fine it should show the OGCAPI homepage of the service. If not, check the container logs to evaluate any errors.</p>
-<p>You can also try the url in QGIS. Add a WMS layer, of service http://localhost/data?request=GetCapabilities&amp;service=WMS. Notice the links to metadata when you open GetCapabilities in a browser.</p>
+<p>You can also try the url in QGIS. Add a WMS layer, of service http://localhost/data?request=GetCapabilities&amp;service=WMS.</p>
+<p>Notice the links to metadata when you open GetCapabilities in a browser.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -454,9 +450,10 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In recent years browsers have become more strict, to prevent abuse. For that reason it is important to carefully consider common connectivity aspects, when setting up a new service. Websites running at https can only embed content from other https services, so using https is relevant. <a href="https://en.wikipedia.org/cors">CORS</a> and <a href="https://en.wikipedia.org/corb">CORB</a> can limit access to embedded resources from remote servers. Using proper CORS headers and Content type identification is relevant to prevent CORS and CORB errors.</p>
+<p>In recent years browsers have become more strict, to prevent abuse. For that reason it is important to carefully consider common connectivity aspects, when setting up a new service. Websites running at https can only embed content from other https services, so using https is relevant. <a href="https://en.wikipedia.org/cors">CORS</a> and <a href="https://en.wikipedia.org/corb">CORB</a> can limit access to embedded resources from remote servers. Using proper CORS headers and Content type identification, is relevant to prevent CORS and CORB errors.</p>
 </div>
 </div>
+<p>GeoDataCrawler uses default (gray) styling for vector and an average classification for grids. You can finetune the styling of layers through the <a href="https://github.com/pvgenuchten/pyGeoDataCrawler?tab=readme-ov-file#layer-styling">robot section in index.yml</a>.</p>
 <hr>
 </section>
 <section id="summary" class="level2">

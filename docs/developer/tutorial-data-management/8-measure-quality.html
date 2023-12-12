@@ -322,18 +322,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Quality of service monitoring practices support data providers to understand strengths and weaknesses of a system. Aspects which are monitored are:</p>
+<p>Quality of service monitoring supports data providers to understand strengths and weaknesses of a system. Aspects which are monitored are:</p>
 <ul>
-<li>Availability (% of the time that the service has been available)</li>
-<li>Performance and capacity</li>
-<li>Usage (how much are the services used)</li>
+<li><a href="#availability-monitoring">Availability</a> (% of the time that the service has been available)</li>
+<li><a href="#performance--capacity">Performance and capacity</a></li>
+<li><a href="#usage-monitoring">Usage</a> (how (much) are services used)</li>
+<li><a href="#search-engine-optimisation">Search engine optimisation</a> (SEO)</li>
 </ul>
-<p>Quality of service monitoring is a standard activity in IT. Therefore consult your IT department or hosting company if they have tools available to assess these aspects. Confirm with them on how to extend and/or share with you these measurements for the requested parameters. Combine these reports into monthly or quarterly reports to facilitate policy development. Below exercises</p>
+<p>Quality of service monitoring is a standard activity in IT. Therefore consult your IT department or hosting company if they have tools available to assess these aspects. Confirm with them on how to extend and/or share with you the registrations for the requested parameters. Combine these reports into monthly or quarterly reports to facilitate system maintenance and roadmap.</p>
 <hr>
-<section id="availability-monitoring-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="availability-monitoring-exercise">Availability Monitoring Exercise</h2>
-<p>To assess the availability of a service, it requires to monitor the availability of the service at intervals. A basic availability-test every 5 minutes is usually sufficient. Many software exists for availability monitoring, such as <a href="https://zabbix.com/">Zabbix</a>, <a href="https://nagios.org/">Nagios</a>, <a href="https://checkmk.com/">CheckMK</a>, <a href="https://www.pingdom.com/">pingdom</a>. A special mention for the Python based <a href="https://geohealthcheck.org/">GeoHealthCheck</a> package, which includes the capability on WMS/WFS services to drill down to the data level starting from the GetCapabilities operation.</p>
-<p>This exercise assumes docker desktop to be installed. Alternatively you can create a personal account at https://demo.geohealthcheck.org (click register in the login page).</p>
+<section id="availability-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="availability-monitoring">Availability Monitoring</h2>
+<p>To assess the availability of a service, it requires to monitor the availability of the service at intervals. A basic availability-test every 5 minutes is usually sufficient. Many software exists for availability monitoring, such as <a href="https://zabbix.com/">Zabbix</a>, <a href="https://nagios.org/">Nagios</a>, <a href="https://checkmk.com/">CheckMK</a>, <a href="https://www.pingdom.com/">pingdom</a>.</p>
+<p>In this workshop we’re introducting the a Python based monitoring solution, called <a href="https://geohealthcheck.org/">GeoHealthCheck</a>. Geohealthcheck is designed to monitor spatial data services specifically.</p>
+<p>The following exercise assumes docker desktop to be installed. Alternatively you can create a personal account at https://demo.geohealthcheck.org (click register in the login page).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li>Start by setting up a local GeoHealthCheck container:</li>
 </ul>
@@ -347,12 +359,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Click <code>Save and test</code></li>
 <li>When finished, click Details to see the test result</li>
 </ul>
-<p>This test is automatically repeated at intervals (as long the service is running). You can return to the test page to evaluate a diagram of availability over time.</p>
+</div>
+</div>
+<p>This test is automatically repeated at intervals (as long the service is running). You can return to the test page to view a diagram of the availability over time. You can also configure a e-mail address to recieve notifications if a service is not available.</p>
+<p>Read more at the <a href="https://docs.geohealthcheck.org/en/latest/">GeoHealthCheck website</a>,</p>
+<p>An advanced aspect of availability is identifying broken links on your content. Many tools exist which can monitor wensites on broken links at intervals, for example <a href="https://validator.w3.org/checklink">W3C linkcheck</a>. Also <a href="https://search.google.com/search-console/about">google search console</a> can be used to identify broken links. Another option is to verify in your website access logs if there are any requests which returned a 404 status, if such a request has a <a href="https://en.wikipedia.org/wiki/HTTP_referer">referer url</a>, you are able to identify which website incorrectly linked to one of your resources.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Visit <a href="https://validator.w3.org/checklink" class="uri">https://validator.w3.org/checklink</a> and fill in a website you maintain or frequently visit. The <code>check</code> button starts a process to evaluate broken links.</p>
+</div>
+</div>
+<p>Sometimes a machine is not able to identify if a link is broken, for example if the target does not return a typical <code>404 Not found</code> message.</p>
 <hr>
 </section>
-<section id="performance-capacity-testing" class="level2">
-<h2 class="anchored" data-anchor-id="performance-capacity-testing">Performance &amp; Capacity testing</h2>
-<p>To know the capacity and performance of a service you can perform some load tests prior to moving to production. An alternative approach to evaluate performance is to extract the access logs of the service into an aggregation tool like <a href="https://www.elastic.co/kibana">Kibana</a> and evaluate the number of requests exceeding the limits.</p>
+<section id="performance-capacity" class="level2">
+<h2 class="anchored" data-anchor-id="performance-capacity">Performance &amp; Capacity</h2>
+<p>To know the capacity and performance of a service you can perform some load tests prior to moving to production. An alternative approach to evaluate performance is to extract the access logs of the service into an aggregation tool like <a href="https://awstats.sourceforge.io">AWStats</a> or <a href="https://www.elastic.co/kibana">Kibana</a> and evaluate the number of requests exceeding the limits.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -363,7 +393,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A common challenge to service performance is the provision of a WMS service on a big dataset. When requesting that dataset on a continental or national level, the server runs into problems drawing all the data at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators may be a solution also.</p>
+<p>A common challenge to service performance in spatial data is the provision of a WMS service on a big dataset. When requesting that dataset on a continental or national level, the server runs into problems drawing all the data at once. In such case consider to set up some cache/aggregation mechanism for larger areas. Setting proper min/max scale denominators can be a solution also.</p>
 </div>
 </div>
 <p><a href="https://jmeter.apache.org/">jmeter</a> is a utility which can run a series of performance and capacity tests on a webservice. Jmeter is a java program, which can run on most platforms.</p>
