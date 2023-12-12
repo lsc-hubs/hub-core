@@ -339,40 +339,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="github-pages-exercise">Github Pages exercise</h2>
 <p>This exercise introduces the CI-CD topic by setting up a basic markdown website in <a href="https://pages.github.com/">Github Pages</a>, maintained through Git. <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is a popular format to store text with annotations on Git.The site will be based on <a href="https://quarto.org">Quarto</a>. Quarto is one of many platforms to generate a website from a markdown repository.</p>
 <ul>
-<li>Create a <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo">new repository</a> in your github account, for example ‘My first CMS’. Tick the ’’</li>
-<li>Before we add any content <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">create a branch</a> ‘gh-pages’ on the repository, this branch will later contain the generated html sources of the website.</li>
+<li><p>Create a <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo">new repository</a> in your github account, for example ‘My first CMS’. Tick the ’’</p></li>
+<li><p>Before we add any content <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository">create a branch</a> ‘gh-pages’ on the repository, this branch will later contain the generated html sources of the website.</p></li>
+<li><p>Create file docs/index.md and docs/about.md. Start each file with a header:</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Hello World</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Peter pan</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2023-11-11</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add some markdown content to each page (under the header), for example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Welcome</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Welcome to *my website*.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I hope you enjoy it.</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visit also my <span class="co">[</span><span class="ot">about</span><span class="co">](./about.md)</span> page.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Now click on <code>Actions</code> in the github menu. Notice that Github has already set up a workflow to publish our content using <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">jekyll</a>, it should already be available at https://user.github.io/repo.</li>
+</ul>
+</section>
+<section id="using-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="using-quarto">Using Quarto</h2>
+<p>In LSC-hubs we’ve selected an alternative to jekyll, called <a href="https://quarto.org">quarto</a>. In order to activate Quarto you need to set a number of items yourself.</p>
+<ul>
 <li>Create a file <code>_quarto.yml</code> into the new git repository, with this content:</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"hello world"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.md</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.md</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"hello world"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.md</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.md</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Create file docs/index.md and docs/about.md. Start each file with a header:</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Hello World</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Peter pan</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2023-11-11</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Add some markdown content to each page (under the header), for example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Welcome</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Welcome to *my website*.</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I hope you enjoy it.</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visit also my <span class="co">[</span><span class="ot">about</span><span class="co">](./about.md)</span> page.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Now click on <code>Actions</code> in the github menu. Notice that Github has already set up a workflow to publish our content using <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">jekyll</a>, it should already be available at https://user.github.io/repo. We will not use this approach for now.</li>
 <li>Remove the existing workflow, generated by Github in <code>Actions</code>, <code>Workflows</code>, <code>Remove</code></li>
 <li>First you need to allow the workflow-runner to make changes on the repository. For this, open <code>Settings</code>, <code>Actions</code>, <code>General</code>. Scroll down to <code>Workflow permissions</code>. Tick the <code>Read and write permissions</code> and click <code>Save</code>. If the option is grayed out, you first need to allow this feature in your organization.</li>
 <li>Then, from <code>Actions</code>, select <code>New workflow</code>, then <code>set up a workflow yourself</code>.</li>
@@ -425,25 +431,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Then create a new Instance of type <code>Tiny (free)</code>.</li>
 <li>Click on the instance and notice the relevant connection string (URL) and password</li>
 <li>Connect your instance of pycsw to this database instance, by updating <code>pycsw.cfg</code> and following the instructions at <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">Catalogue publication</a></li>
-<li>Verify in elephantsql dashboard if the records are correctly loaded (or install and configure <a href="https://www.pgadmin.org/">pgadmin</a>).</li>
+<li>Verify in elephantsql dashboard if the records are correctly loaded.</li>
 </ul>
 <p>We will now publish our records from Github to our database.</p>
 <ul>
 <li>Create a new repository on Github for the records</li>
-<li>Make sure git-scm (or a GUI tool like Git kraken, Gitlab) is intalled on your system (alternatively upload the files through the github web interface)</li>
+<li>Make sure <a href="https://git-scm.com/">git-scm</a> (or a GUI tool like Git kraken, <a href="https://www.syntevo.com/smartgit/">Smartgit</a>) is intalled on your system.</li>
 <li>Clone (download) the repository to a local folder.</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/username/records-repo.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Copy the mcf files, which have been generated in <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html">Catalogue publication</a>, to a <code>datasets</code> folder in the cloned repository.</li>
-<li>Commit the files</li>
+<li>Commit and the files</li>
 </ul>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span> <span class="kw">&amp;&amp;</span> <span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Your Message"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Before you can push your changes to Github, you need to set up authentication, generally 2 options are possible: - Using a <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">personal access token</a> - Or using <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#ssh">SSH public key</a></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We’ll now set up CI-CD to publish the records</p>
 <ul>
-<li>Place the pycsw.cfg file in the root of the repositry (including the postgres database connection)</li>
+<li>Place the pycsw.cfg file in the root of the repository (including the postgres database connection)</li>
 <li>Create a new custom workflow file with this content:</li>
 </ul>
 <div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Records Deploy</span></span>
@@ -488,7 +494,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Verify that the records are loaded on pycsw (through postgres)</li>
 <li>Change or add some records to GIT, and verify if the changes are published (may take some time)</li>
 </ul>
-<p>Normally, one would <strong>not</strong> add a connection string to a database in a config file posted on Github. Instead Github offers <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">secrets</a> to capture this type of information.</p>
+<p>Normally, we would <strong>not</strong> add a connection string to a database in a config file posted on Github. Instead Github offers <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">secrets</a> to capture this type of information.</p>
 <hr>
 </section>
 <section id="cross-linking-catalogue-and-git" class="level2">
