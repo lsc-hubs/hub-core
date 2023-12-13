@@ -390,7 +390,7 @@ dependencies:
 <li>Now navigate to the folder where you unzipped the data repository and use the docker image to run the crawler:</li>
 </ul>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../../{my-dummy-repository}</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-it</span> <span class="at">--rm</span> org/metatraining crawl-metadata <span class="at">--dir</span><span class="op">=</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-it</span> <span class="at">--rm</span> org/metatraining <span class="at">-v</span><span class="va">$(</span><span class="bu">pwd</span><span class="va">)</span><span class="at">:</span>/tmp crawl-metadata <span class="at">--dir</span><span class="op">=</span>/tmp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you use this approach, prepend <code>docker run -it --rm org/metatraining</code> to any of the statements below</p>
 </section>
 <section id="initial-mcf-files" class="level2">
