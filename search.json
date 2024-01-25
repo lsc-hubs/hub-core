@@ -667,14 +667,14 @@
     "href": "cases/swc.html",
     "title": "Kenya Soil Water Conservation",
     "section": "",
-    "text": "Soil erosion is a major threat to sustainability and productivity with knock-on effects on the climate crisis and food security. It decreases soil fertility negatively affecting crop yields on fields, while eroded sediments from upstream clog downstream, dams, rivers and canals causing sedimentation and flooding. This is particularly true for hilly areas in Ethiopia, Kenya and Rwanda with high erosion risk. Soil erosion can be prevented and arrested through soil and water conservation (SWC) or sustainable land management (SLM) practices. Current land use and land management practices including crop cultivation as well as grazing do not sufficiently consider local potential, limitations and climate and soil erosion risks. While general information on improved land management may exist, context-based information on land resources, and climate and information on feasible SLM alternatives is not widely available or applied by land managers. ​ ​ ::: {.special-section}"
+    "text": "Soil erosion is a major threat to sustainability and productivity with knock-on effects on the climate crisis and food security. It decreases soil fertility negatively affecting crop yields on fields, while eroded sediments from upstream clog downstream, dams, rivers and canals causing sedimentation and flooding."
   },
   {
-    "objectID": "cases/swc.html#setting",
-    "href": "cases/swc.html#setting",
+    "objectID": "cases/swc.html#problem",
+    "href": "cases/swc.html#problem",
     "title": "Kenya Soil Water Conservation",
-    "section": "",
-    "text": "Soil erosion is a major threat to sustainability and productivity with knock-on effects on the climate crisis and food security. It decreases soil fertility negatively affecting crop yields on fields, while eroded sediments from upstream clog downstream, dams, rivers and canals causing sedimentation and flooding. This is particularly true for hilly areas in Ethiopia, Kenya and Rwanda with high erosion risk. Soil erosion can be prevented and arrested through soil and water conservation (SWC) or sustainable land management (SLM) practices. Current land use and land management practices including crop cultivation as well as grazing do not sufficiently consider local potential, limitations and climate and soil erosion risks. While general information on improved land management may exist, context-based information on land resources, and climate and information on feasible SLM alternatives is not widely available or applied by land managers. ​ ​ ::: {.special-section}"
+    "section": "Problem",
+    "text": "Problem\nSoil erosion is a major threat to sustainability and productivity with knock-on effects on the climate crisis and food security. It decreases soil fertility negatively affecting crop yields on fields, while eroded sediments from upstream clog downstream, dams, rivers and canals causing sedimentation and flooding. This is particularly true for hilly areas in Ethiopia, Kenya and Rwanda with high erosion risk. Soil erosion can be prevented and arrested through soil and water conservation (SWC) or sustainable land management (SLM) practices. Current land use and land management practices including crop cultivation as well as grazing do not sufficiently consider local potential, limitations and climate and soil erosion risks. While general information on improved land management may exist, context-based information on land resources, and climate and information on feasible SLM alternatives is not widely available or applied by land managers. ​ ​ ::: {.special-section}"
   },
   {
     "objectID": "cases/swc.html#goal",
@@ -688,7 +688,7 @@
     "href": "cases/swc.html#scope",
     "title": "Kenya Soil Water Conservation",
     "section": "Scope",
-    "text": "Scope\nCatchment managers, authorities and farmer organisations can use the system to obtain information on the suitability of various sustainable land uses and land management practices for agricultural production and land restoration. These is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and GIS based land suitability and soil erosion models, accessible in the LSC-hub.​\n:::"
+    "text": "Scope\nCatchment managers, authorities and farmer organisations can use the system to obtain information on the suitability of various sustainable land uses and land management practices for agricultural production and land restoration. These is based on existing data (soil, terrain, crop, climate), apps (decision support tools, etc.) and GIS based land suitability and soil erosion models, accessible in the LSC-hub.​"
   },
   {
     "objectID": "cases/swc.html#system",
@@ -702,7 +702,14 @@
     "href": "cases/swc.html#scale",
     "title": "Kenya Soil Water Conservation",
     "section": "Scale:",
-    "text": "Scale:\n\nNational\nsub-national, landscape or catchment\nlocal level​ ​ ## Primary actors\nNational: national and regional agriculture and forestry/natural resource management authorities, planners and project managers, UNCCD focal points.​\nLocal: catchment management, agricultural extension staff, farmer’s and other community-based organisations and authorities.​"
+    "text": "Scale:\n\nNational\nsub-national, landscape or catchment\nlocal level​"
+  },
+  {
+    "objectID": "cases/swc.html#primary-actors",
+    "href": "cases/swc.html#primary-actors",
+    "title": "Kenya Soil Water Conservation",
+    "section": "Primary actors",
+    "text": "Primary actors\nNational: national and regional agriculture and forestry/natural resource management authorities, planners and project managers, UNCCD focal points.​\nLocal: catchment management, agricultural extension staff, farmer’s and other community-based organisations and authorities.​"
   },
   {
     "objectID": "cases/swc.html#secondary-actors",
