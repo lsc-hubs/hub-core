@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,7 +45,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -68,9 +75,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Land Soil Crop Hub</span>
     </a>
@@ -82,25 +89,25 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#data" rel="" target="">
- <span class="menu-text">Catalogue</span></a>
+    <a class="nav-link" href="./#data"> 
+<span class="menu-text">Catalogue</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#hub-community" rel="" target="">
- <span class="menu-text">Community</span></a>
+    <a class="nav-link" href="./#hub-community"> 
+<span class="menu-text">Community</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="././docs" rel="" target="">
- <span class="menu-text">Docs</span></a>
+    <a class="nav-link" href="././docs"> 
+<span class="menu-text">Docs</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -127,7 +134,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <div class="columns">
 <div class="column" style="width:55%;">
@@ -168,101 +177,108 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<div class="columns pt-3">
-<div class="column rounded bg-white border px-3 border-secondary shadow" style="width:48%;">
-<div class="columns">
-<div class="column" style="width:60%;">
-<section id="maps" class="level3">
+<div class="grid">
+<div class="g-col-md-6 g-col-12 rounded bg-white border px-3 border-secondary shadow mt-3">
+<div class="grid mx-3">
+<section id="maps" class="level3 g-col-8">
 <h3 class="anchored" data-anchor-id="maps">Maps</h3>
 <p>Annual cropland extent map for Central Africa produced by Digital Earth.</p>
 </section>
-</div><div class="column" style="width:40%;">
+<div class="g-col-4">
 <p><img src="./img/undraw_connected_world_wuay 1.svg" class="my-3 img-fluid"></p>
 </div>
 </div>
-<div class="text-center pt-2">
+<div class="text-center pt-3">
 <p><a href="https://maps.lsc-hubs.org" class="btn btn-warning rounded-pill">Open mapviewer</a></p>
 </div>
-</div><div class="column rounded bg-white mx-3 px-3 border border-secondary shadow" style="width:47%;">
-<div class="columns">
-<div class="column" style="width:60%;">
-<section id="documents" class="level3">
+</div>
+<div class="g-col-md-6 g-col-12 rounded bg-white mx-3 px-3 border border-secondary shadow mt-3">
+<div class="grid mx-3">
+<section id="documents" class="level3 g-col-8">
 <h3 class="anchored" data-anchor-id="documents">Documents</h3>
 <p>Read more about the various APIs which are available for this service.</p>
 </section>
-</div><div class="column" style="width:40%;">
+<div class="g-col-4">
 <p><img src="./img/Group 856.svg" class="my-3 img-fluid"></p>
 </div>
 </div>
-<div class="text-center pt-2">
+<div class="text-center pt-3">
 <p><a href="./docs" class="btn btn-warning rounded-pill">View documents</a></p>
 </div>
 </div>
 </div>
 </section>
-<div class="columns">
-<div class="column" style="width:50%;">
-<section id="information-services" class="level2">
+<div class="grid">
+<section id="information-services" class="level2 g-col-6 mt-3">
 <h2 class="anchored" data-anchor-id="information-services">Information services</h2>
 <p>Information services provide dedicated information derived from relevant data to a targeted audience.</p>
 <p>Processing raw data in many cases requires expert knowledge. To bring the value of the data to a wider audience, it is of interest to set up information services derived from that data to targeted audiences.</p>
-<p><a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;type=service" class="btn btn-warning rounded-pill">Browse services</a> <a href="./cases/services.html" class="btn btn-success rounded-pill">Read more</a></p>
+<p><a href="https://Kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;type=service" class="btn btn-warning rounded-pill">Browse services</a> <a href="./cases/services.html" class="btn btn-success rounded-pill">Read more</a></p>
 </section>
-</div><div class="column" style="width:50%;">
+<div class="g-col-6 mt-3">
 <p><img src="./img/Land soil crop information services 1mobile.svg" class="img-fluid"></p>
 </div>
 </div>
-<section id="popular-services" class="level3">
-<h3 class="anchored" data-anchor-id="popular-services">Popular services</h3>
-<div class="columns">
-<div class="column p-2 m-2 rounded text-light bg-dark" style="width:23%;">
+<section id="popular-services" class="level3 py-3">
+<h3 class="py-3 anchored" data-anchor-id="popular-services">Popular services</h3>
+<div class="grid text-left">
+<div class="g-col rounded text-light bg-dark">
 <p>Loading…</p>
 </div>
 </div>
-<div class="text-center pt-2">
-<p><a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;type=model" class="btn btn-success rounded-pill">View all popular services</a></p>
+<div class="text-center mt-5">
+<p>&lt;a href=“https://Kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;type=model” class=“btn btn-success rounded-pill”&gt;View all popular services</p>
 </div>
 </section>
 <div class="special-section">
-<div class="columns">
-<div class="column" style="width:50%;">
-<section id="predictive-modeling" class="level2">
+<div class="grid">
+<section id="predictive-modeling" class="level2 g-col-md-6 g-col-12 mt-3">
 <h2 class="anchored" data-anchor-id="predictive-modeling">Predictive modeling</h2>
 <p>Predictive modeling in the LSC hub focuses on Soil Fertility and Soil Water Conservation and is a data-driven analytical approach that involves the use of statistical or machine learning techniques to create models that can make predictions about future events or outcomes based on historical data.</p>
-<p><a href="https://kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;type=model" class="btn btn-warning rounded-pill">Browse models</a> <a href="./cases/models.html" class="btn btn-success rounded-pill">Read more</a></p>
+<p><a href="https://Kenya.lsc-hubs.org/collections/metadata:main/items?q=&amp;type=model" class="btn btn-warning rounded-pill">Browse models</a> <a href="./cases/models.html" class="btn btn-success rounded-pill">Read more</a></p>
 </section>
-</div><div class="column" style="width:50%;">
+<div class="g-col-md-6 g-col-12 mt-3">
 <p><img src="./img/undraw_detailed_examination_re_ieui 1modelling.svg" class="img-fluid"></p>
 </div>
 </div>
-<section id="popular-models" class="level3">
-<h3 class="anchored" data-anchor-id="popular-models">Popular Models</h3>
-<div class="columns">
-<div class="column p-2 bg-white rounded border" style="width:23%;">
+<section id="popular-models" class="level3 py-3">
+<h3 class="py-3 anchored" data-anchor-id="popular-models">Popular Models</h3>
+<div class="grid">
+<div class="g-col p-2 bg-white rounded border">
 <p>Loading…</p>
 </div>
 </div>
-<div class="text-center pt-2">
-<p><input type="submit" value="View all popular models" class="btn btn-success rounded-pill"></p>
+<div class="text-center mt-5">
+<p><a href="https://Kenya.lsc-hubs.org/collections/metadata:main/items?sortby=-recordUpdated&amp;type=model" class="btn btn-success rounded-pill">View all popular models</a></p>
 </div>
 </section>
 </div>
 <section id="user-stories" class="level2">
 <h2 class="anchored" data-anchor-id="user-stories">User stories</h2>
 <p>The two cases below are descriptions of key applications for which the LSC hub can be used, including the main stakeholders, the main issues and the models through which ‘LSC data’ is converted into information services that support informed decision making.</p>
-<div class="columns">
-<div class="column m-2 rounded text-light bg-dark" style="width:46%;">
-<p><img src="./img/adams-korir-5gzZo_nQBIM-unsplash 1.jpg" class="img-fluid"></p>
-<section id="soil-fertility-management" class="level3 px-3">
+<div class="grid">
+<div class="g-col-md-6 g-col-12 rounded text-light bg-dark mt-3">
+<p><img src="./img/adams-korir-5gzZo_nQBIM-unsplash 1.jpg" class="w-100 img-fluid"></p>
+<div class="px-3 text-light">
+<div class="border rounded w-25 text-light text-center">
+USE CASE
+</div>
+<section id="soil-fertility-management" class="level3">
 <h3 class="anchored" data-anchor-id="soil-fertility-management">Soil Fertility Management</h3>
 <p>Current fertilizer and soil recommendations lack local context, leading to soil health decline and lower productivity. Integrated Soil Fertility Management can improve practices, boost yields, and provide climate benefits. This case aims to deliver better agronomic advice to farmers via agricultural extension services or directly, using existing data and tools.</p>
 <div class="text-center pt-2">
 <p><a href="./cases/isfm.html" class="btn btn-success rounded-pill">Explore this use case</a></p>
 </div>
 </section>
-</div><div class="column m-2 rounded text-light bg-dark" style="width:46%;">
-<p><img src="./img/martin-yegon-Q8PAVNd36cQ-unsplash 1.jpg" class="img-fluid"></p>
-<section id="soil-water-conservation" class="level3 px-3">
+</div>
+</div>
+<div class="g-col-md-6 g-col-12 rounded text-light bg-dark mt-3">
+<p><img src="./img/martin-yegon-Q8PAVNd36cQ-unsplash 1.jpg" class="w-100 img-fluid"></p>
+<div class="px-3 text-light">
+<div class="border rounded w-25 text-light text-center">
+USE CASE
+</div>
+<section id="soil-water-conservation" class="level3">
 <h3 class="anchored" data-anchor-id="soil-water-conservation">Soil Water Conservation</h3>
 <p>Soil erosion threatens sustainability, climate, and food security in hilly regions of Ethiopia, Kenya, and Rwanda. Current land practices neglect local factors and erosion risks. The goal is to inform stakeholders and promote sustainable land practices for LDN, providing catchment managers and farmers with relevant information through the LSC-hub.</p>
 <div class="text-center pt-2">
@@ -271,33 +287,33 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </div>
+</div>
+<hr>
 </section>
-<div class="columns pt-3">
-<div class="column" style="width:50%;">
-<section id="hub-community" class="level2">
+<div class="grid">
+<section id="hub-community" class="level2 g-col-md-6 g-col-12 mt-3">
 <h2 class="anchored" data-anchor-id="hub-community">Hub community</h2>
 <p>The heart of the knowledge hub. Here, you’ll find like-minded participants who share a passion for learning and knowledge exchange.</p>
 <p>Join our diverse community of learners, experts, and enthusiasts to engage in discussions, share insights, and collaborate on soil fertility and soil water conservation topics. Explore, connect, contribute and make the hub grow.</p>
-<div class="text-center pt-2">
-<p><a href="https://github.com/lsc-hubs/kenya-hub&quot;" class="btn btn-success rounded-pill" target="_blank">Visit community</a></p>
+<div class="text-center mt-2">
+<p><a href="https://github.com/lsc-hubs/kenya-hub" class="btn btn-success rounded-pill">Visit community</a></p>
 </div>
 </section>
-</div><div class="column" style="width:50%;">
+<div class="g-col-md-6 g-col-12 mt-3">
 <p><img src="./img/land soil crop hub community 1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="special-section">
-<div class="text-light bg-dark px-3">
-<div class="columns">
-<div class="column px-3" style="width:50%;">
-<section id="join-our-newsletter" class="level2 text-light">
+<div class="text-light bg-dark px-3 rounded">
+<div class="grid">
+<section id="join-our-newsletter" class="level2 text-light g-col-md-6 g-col-12 px-3">
 <h2 class="text-light anchored" data-anchor-id="join-our-newsletter">Join our newsletter</h2>
 <p>Subscribe to our newsletter and be the first to receive the latest data updates and community news about the Kenya Land Soil and Crop hub.</p>
-<div class="text-center pt-2">
+<div class="text-center mt-2">
 <p><a href="https://capacity4dev.europa.eu/join-community_en" class="btn btn-success rounded-pill">Subscribe now</a></p>
 </div>
 </section>
-</div><div class="column px-3" style="width:50%;">
+<div class="g-col-md-6 g-col-12 mt-2">
 <p><img src="./img/undraw_content_creator_re_pt5b 1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -389,10 +405,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -402,8 +417,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -416,6 +440,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -459,6 +602,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -484,6 +628,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -549,18 +719,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://www.lsc-hubs.org"><br>LSC Hubs 2023</a>
+    <a class="nav-link" href="https://www.lsc-hubs.org">
+<p><br>LSC Hubs 2023</p>
+</a>
   </li>  
 </ul>
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lsc-hubs/hub-core/edit/main/index.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/lsc-hubs/hub-core/edit/main/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+
 
 
 
