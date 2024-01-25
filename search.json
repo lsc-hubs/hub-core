@@ -737,7 +737,7 @@
     "href": "cases/isfm.html",
     "title": "Kenya Integrated Soil Fertility Management description​",
     "section": "",
-    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks.\n:::: {.grid}\n::: {.rounded .text-light .bg-dark .g-col-6 .g-col-lg-3 .p-2}"
+    "text": "Current fertilizer and soil fertility recommendations are not linked to local context, conditions and climate risks. Too general information may lead to declining soil fertility and soil health, low and uncertain productivity, fertilizer wastage, loss of organic matter, and environmental risks."
   },
   {
     "objectID": "cases/isfm.html#problem",
@@ -772,28 +772,28 @@
     "href": "cases/isfm.html#primary-actors",
     "title": "Kenya Integrated Soil Fertility Management description​",
     "section": "Primary actors",
-    "text": "Primary actors\n\nnational: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer​\n\n​:::\n::: {.rounded .text-light .bg-dark .g-col-6 .g-col-lg-3 .p-2}"
+    "text": "Primary actors\nnational: Extension staff, agricultural planner, agro-input provider\ndistrict: District extension officer, District Agric & Livestock officers and planners\nlocal: Local extension officer, local agro-input provider, lead farmer​"
   },
   {
     "objectID": "cases/isfm.html#secondary-actors",
     "href": "cases/isfm.html#secondary-actors",
     "title": "Kenya Integrated Soil Fertility Management description​",
     "section": "Secondary actors",
-    "text": "Secondary actors\n\nHub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​\n\n​:::\n::: {.rounded .text-light .bg-dark .g-col-6 .g-col-lg-3 .p-2}"
+    "text": "Secondary actors\nHub-hosts and administrator: EIAR, KALRO, RAB; related data providers.​"
   },
   {
     "objectID": "cases/isfm.html#beneficiary",
     "href": "cases/isfm.html#beneficiary",
     "title": "Kenya Integrated Soil Fertility Management description​",
     "section": "Beneficiary",
-    "text": "Beneficiary\n\nFarmers.​\n\n​:::"
+    "text": "Beneficiary\nFarmers.​"
   },
   {
     "objectID": "cases/isfm.html#scenario",
     "href": "cases/isfm.html#scenario",
     "title": "Kenya Integrated Soil Fertility Management description​",
     "section": "Scenario ​",
-    "text": "Scenario ​\nThe intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent / lead farmer / agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​\n​:::"
+    "text": "Scenario ​\nThe intermediary user accesses the LSC-Hub’s web-based data system or portal, and finds existing information on Land, Soil and crops. The intermediary actor – extension agent / lead farmer / agricultural input provider - converts this information into an agronomic and fertilizer recommendation and provides advise to end users, in particular farmers.​"
   },
   {
     "objectID": "cases/services.html",
