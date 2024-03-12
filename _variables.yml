@@ -1,5 +1,5 @@
-country: Africa
-homepage: "https://lsc-hubs.github.io/hub-core"
-catalog: "https://demo.pycsw.org/cite"
-maps: https://maps.lsc-hubs.org
-github: https://github.com/lsc-hubs/hub-core
+country: Rwanda
+homepage: "https://rwanda.lsc-hubs.org"
+catalog: "https://rwanda.lsc-hubs.org/cat"
+maps: https://rwanda.lsc-hubs.org/map/
+github: https://github.com/lsc-hubs/rwanda-hub
