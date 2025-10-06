@@ -1,16 +1,19 @@
 ---
 title: Towards FAIR Data and Knowledge in Land Soil Crop hubs
-Authors: Tomas Pavelka  & Paul van Genuchten  
+Authors: 
+  - Tomas Pavelka 
+  - Paul van Genuchten  
 Date: June 2025   
-Version: 0.1   
+Version: 0.2   
 ---
  
 Land Soil Crop-related data and knowledge are essential for understanding and improving soil health, guiding sustainable land management, informing policy, and enabling scientific progress. Yet, these resources are often scattered, poorly documented, hard to access, or locked in incompatible formats. This fragmentation hampers their reuse, reduces their impact, and creates inefficiencies across projects and disciplines. 
 
-This strategy, developed within the Land Soil Cropa and SoilWise projects, provides guidance to data and knowledge providers to ensure that all data and knowledge generated, collected, or reused are managed according to the [FAIR principles](https://go-fair.org) – Findable, Accessible, Interoperable, and Reusable. Data and knowledge assets which are archived using the FAIR principles will automatically be integrated in Land Soil Crop hubs.
+This strategy, developed within the Land Soil Cropa and SoilWise projects, provides guidance to data and knowledge providers to ensure that all data and knowledge generated, collected, or reused are managed according to the [FAIR principles](https://go-fair.org) – Findable, Accessible, Interoperable, and Reusable. Data and knowledge assets which are archived using FAIR principles can be easily integrated in Land Soil Crop hubs, in many cases they will automatically be integrated.
 
 This document has two parts. The first part provides an overview of a stepwise approach to adopt FAIR practices in data and knowledge management. The second part introduces some specific use cases, and how FAIR strategy can be implemented in those cases.
 
+---
 
 #  Approach: How to FAIRify Data and Knowledge 
 
@@ -68,11 +71,7 @@ We recommend the following stepwise process for implementing FAIR principles in 
 * Choose the most open license possible, while respecting privacy, ethical and legal constraints.   
 * Provide machine-readable licensing information in metadata (e.g., [cc-by-4.0](https://creativecommons.org/licenses/), [cc0](https://creativecommons.org/public-domain/cc0/)).   
    
-
-## Further reading.
-
-For more information on FAIR principles, you can visit guides at e.g. [OpenAIRE](https://www.openaire.eu/how-to-make-your-data-fair) or  [go-fair.org](https://www.go-fair.org/fair-principles/), or you can test your resource FAIRness at [FAIR Data Self-Assessment](https://ardc.edu.au/resource/fair-data-self-assessment-tool/) or [FAIRsFAIR](https://www.fairsfair.eu/tools-software) tools. See also the related official Horizon 2020 documents, [Guidelines on FAIR Data Management in Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-data-mgt_en.pdf), and [Guidelines to the Rules on Open Access to Scientific Publications and Open Access to Research Data in Horizon 2020](https://ec.europa.eu/research/participants/data/ref/h2020/grants_manual/hi/oa_pilot/h2020-hi-oa-pilot-guide_en.pdf). 
-
+---
  
 # Use cases FAIR data and knowledge management
 
