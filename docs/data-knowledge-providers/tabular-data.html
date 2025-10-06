@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Paul van Genuchten">
-<meta name="dcterms.date" content="2023-05-09">
+<meta name="dcterms.date" content="2025-03-12">
 
-<title>Workshop on effective spatial data management – Land Soil Crop Hub Africa</title>
+<title>Sharing Soil Observation Data on the Web Using tabular formats – Land Soil Crop Hub Africa</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-126c675d2b188c6bcfeff3805c7b9d6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-126c675d2b188c6bcfeff3805c7b9d6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,16 +74,16 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Land Soil Crop Hub Africa</span>
     </a>
   </div>
@@ -94,23 +94,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../#data"> 
+    <a class="nav-link" href="../../#data"> 
 <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../#maps"> 
+    <a class="nav-link" href="../../#maps"> 
 <span class="menu-text">Maps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../#use-cases"> 
+    <a class="nav-link" href="../../#use-cases"> 
 <span class="menu-text">Use cases</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../#hub-community"> 
+    <a class="nav-link" href="../../#hub-community"> 
 <span class="menu-text">Community</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../#documentation"> 
+    <a class="nav-link" href="../../#documentation"> 
 <span class="menu-text">Docs</span></a>
   </li>  
 </ul>
@@ -119,173 +119,23 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/user" class="sidebar-item-text sidebar-link">
- <span class="menu-text">User</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/admin" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Administrator</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Developer</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../docs/developer/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hub components</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/mapserver.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mapserver</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/pycsw.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">pycsw</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/quarto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">quarto</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/terria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Terria JS</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../docs/developer/tutorial-data-management/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Workshop Data</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/0-fair-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FAIR principles</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/1-existing-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Metadata at the source</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/2-interact-with-data-repositories.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interact with data repositories</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/3-catalog-publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Catalogue publication</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/4-bulk-import.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bulk import</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/5-git-cicd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GIT and CI/CD</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/6-data-publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data publication</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/7-providing-mapservices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Providing convenience APIs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/8-measure-quality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quality of Service</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../docs/developer/tutorial-data-management/9-advanced-options.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Advanced options</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/developer/index.html">Developer</a></li><li class="breadcrumb-item"><a href="../../../docs/developer/tutorial-data-management/index.html">Workshop Data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Workshop on effective spatial data management</h1>
+<h1 class="title">Sharing Soil Observation Data on the Web Using tabular formats</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-page">
 
     <div>
     <div class="quarto-title-meta-heading">Author</div>
@@ -297,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 9, 2023</p>
+      <p class="date">March 12, 2025</p>
     </div>
   </div>
   
@@ -309,21 +159,97 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This tutorial presents a workshop on effective (spatial) data maintenance. The tutorial is under active development, we welcome you to leave <a href="https://github.com/lsc-hubs/hub-core">your feedback</a>.</p>
-<p>The first section introduces the <a href="../../../docs/developer/tutorial-data-management/0-fair-data.html">FAIR data principles</a>, focusing on the soil domain, which form a basis of the data management approach suggested in the next sections.</p>
-<p>On the tutorial some tools are introduced, which are selected considering:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Soil observation data is often shared in tabular formats, such as Excel, Access, CSV, Sqlite. This document provides a strategy on how to increase the interoperability of tabular datasets.</p>
+<p>Which phenomena are observed, using which procedure, in which unit? These aspects are often explained in a related report or readme.txt document. Unfortunately this information can not easily be read by machines. To increase findability and interoperability of tabular datasets this document provides a strategy on how to encode this information using a standardised approach. The document also provides more generic information about capturing data in tabular formats.</p>
+</section>
+<section id="excel-as-a-dataformat" class="level1">
+<h1>Excel as a dataformat</h1>
+<p>Excel is a popular format to share data in the academic soil domain. The Excel format is however not endorsed by the FAIR principles, because it is a proprietary format. Another challenge of Excel is that the format is semi-structured.</p>
+<p>In order to use the excel format as a data exchange format, consider the following aspects in order to facilitate data consumption in an automated way.</p>
 <ul>
-<li>Open source license</li>
-<li>Vivid community (persistence)</li>
-<li>Support of standards (prevent <a href="https://en.wikipedia.org/wiki/Vendor_lock-in">vendor lock-in</a>)</li>
+<li>An Excel document can have multiple sheets, each sheet is considered as a single table, a typical case is one sheet describing the sampling locations and next sheets providing observations made at those locations.</li>
+<li>The first line of the sheet is used to define the column headers of the table</li>
+<li>Column headers are machine readible (no spaces and special characters)</li>
+<li>Sheets do not use merged cells</li>
+<li>All values in a column (except the header) have a single common type (date, numeric, string)</li>
+<li>Cells with textual content do not contain ‘new line’ characters</li>
+<li>One of the sheets best contains metadata about the other sheets (description of column headers, unit of measure, etc)</li>
 </ul>
-<p>Incidentally alternative options are indicated, because other tools may fit better with existing practices in your organisation.</p>
-<p>Git has a central role in the training, it is for example suggested to facilitate software development and deployment, content co-creation and management as well as community feedback.</p>
-<p>You can also access the <a href="./slides/">slides</a> of the workshop.</p>
-<p>We hope you enjoy the materials,</p>
-<p>Thaïsa, Paul, Giulio and Luis.</p>
+<p>As alternative formats, consider MS Access, Sqlite, CSV, Parquet, JSON, XML. Various desktop and online tools exist to transform the data. Consider for example Python Pandas, R, GDAL, <a href="https://table.studio/convert">table.studio</a>.</p>
+</section>
+<section id="column-metadata-using-csvw" class="level1">
+<h1>Column metadata using CSVW</h1>
+<p>The W3C standard <a href="https://csvw.org/">CSV on the Web</a> enables interoperability of data via a sidecar file which is stored along side your tabular CSV. The csv-metadata file is a JSON encoded file which contains annotations for each of the columns in the dataset. Dedicated parsers are able to parse an annotated CSV to RDF. The CSV itself will not change, so in theory anyone can annotate an existing CSV to make it interoperable.</p>
+<p>Interoperability is increased if established ontologies are used, such as schema.org, dublin core, foaf and skos and common vocabularies such as agrovoc, eurovoc and gemet.</p>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<p>Step 1: Annotate a CSV using CSV on the Web (CSVW)</p>
+<ul>
+<li>Create a CSVW metadata JSON file, describing the CSV structure and semantics. Tools, such as <a href="http://cattle.datalegend.net">CoW</a> exist to create a minimal context file.</li>
+<li>Use the <a href="https://www.w3.org/TR/tabular-data-primer/">CSVW standard</a> to define:
+<ul>
+<li>Column datatypes<br>
+</li>
+<li>Column meanings using URIs from ontologies<br>
+</li>
+<li>Primary keys<br>
+</li>
+<li>Row-level subject generation pattern (e.g., http://example.org/soilobs/{Sample.ID})</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-2-use-standard-vocabulariesontologies" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-use-standard-vocabulariesontologies">Step 2: Use Standard Vocabularies/Ontologies</h2>
+<p>Align the properties and structure to well-known vocabularies:</p>
+<ul>
+<li>Geo (WKT, GeoSPARQL) for location<br>
+</li>
+<li>QUDT or OM (Ontology of Units of Measure) for measurement values<br>
+</li>
+<li>SOSA/SSN (Semantic Sensor Network Ontology) for observations<br>
+</li>
+<li>PROV for provenance (e.g., who collected the sample and when)</li>
+</ul>
+</section>
+<section id="step-3-convert-to-rdf-or-json-ld" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-convert-to-rdf-or-json-ld">Step 3: Convert to RDF or JSON-LD</h2>
+<p>Use tools like:</p>
+<ul>
+<li><a href="https://pypi.org/project/csvwlib">csvwlib</a> python</li>
+<li><a href="https://github.com/atomgraph/RDFTabular">RDFTabular</a> - java</li>
+<li><a href="https://www.w3.org/2012/pyRdfa/">csv2rdf</a> - r</li>
+</ul>
+<p>Convert annotated CSV to RDF Turtle or JSON-LD for publishing.</p>
+</section>
+<section id="step-4-validate-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-validate-the-data">Step 4: Validate the Data</h2>
+<p>You can use SHACL or schema.org validator to validate the generated RDF.</p>
+</section>
+<section id="step-5-publish-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-publish-the-data">Step 5: Publish the Data</h2>
+<ul>
+<li>Host the original CSV, the context file and the RDF/JSON-LD on a repository (zenodo/dataverse)</li>
+<li>As part of the publication, provide sensible metadata (keywords, authors, license, dates, references)</li>
+</ul>
+</section>
+</section>
+<section id="best-practices" class="level1">
+<h1>Best Practices</h1>
+<ul>
+<li>Use open and structured formats</li>
+<li>Use standardized ontologies and units<br>
+</li>
+<li>Include provenance and temporal information<br>
+</li>
+<li>Provide versioning and licensing information<br>
+</li>
+<li>Validate data with CSVW validators and RDF validators</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -740,7 +666,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/lsc-hubs/hub-core/edit/main/docs/developer/tutorial-data-management/index.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/lsc-hubs/hub-core/edit/main/docs/data-knowledge-providers/tabular-data.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lsc-hubs/hub-core/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
