@@ -5,12 +5,13 @@ author: Paul van Genuchten, Thaïsa van der Woude
 ---
 
 
-This document is a guideline for usage of the Land Soil Crop hub.
+This document is a guideline for usage of the Land Soil Crop hub. A [glossary](../glossary.md) is available in case terms are unclear.
 
 ## What is a Land Soil Crop hub?
 
 Decision support tools in agronomy heavily depend on acurate environmental and crop data. 
-Many data are available, but often disperse and hard to locate. Land Soil Crop hubs aim to faciliate findability and accessibility of relevant data. Hubs facilitate data and knowledge to be stored, described, processed and visualized.
+Many data are available, but often disperse and hard to locate. Land Soil Crop hubs aim to faciliate findability 
+and accessibility of relevant data. Hubs facilitate data and knowledge to be shared, processed and visualized.
 
 The hubs describe a number of different resources relevant to the Land Soil Cop community.
 
@@ -18,8 +19,18 @@ The hubs describe a number of different resources relevant to the Land Soil Cop 
 - **Services** are offered by organizations to facilitate access to data and knowlegde. Services can vary from web services (APIs), SMS services, brochures, up to on site visits.
 - Predictions on distribution of environmental parameters in time and space, as well as yield predictions, are calculated using statistical, rule based, and/or machine learning **models**. Commonly available models are described as resources in the hub. 
 - In the hub various **software** components are described which enable visualisation and/or analysis of relevant data and knowledge sources
-- **Approaches** descrive commonly known mechanisms to improve land management to overcome challenges such as erosion, limited fertility, salinisation, and climate change.
+- **Approaches** describe commonly known mechanisms to improve land management to overcome challenges such as erosion, limited fertility, salinisation, and climate change.
 - The hub describes relevant **policies** to the Land Soil Crop community. Policy drives the collection of data, but data can also support policy development. 
+
+The hub does not store data or documents directly, but acts as a facility to easily discover and access information. Following the FAIR principles, the hub encourages information providers to store their works in presistent repositories, such as the
+[Open Science Foundation](https://osf.io), [Datadryad](https://datadryad.org/) or [Zenodo](https://zenodo.org) and reference the publication from the hub. With every publication to a repository, the work can be identified using a persistent
+identifier (typically [doi](https://doi.org), [handle.net](https://handle.net) or [ePic](https://www.pidconsortium.net/)). These identifiers are added to the hub, after which the hub will be able to present the work.
+
+---
+
+## User stories
+
+The content in the hub is clustered around user stories. A user story aims to collect information and provide guidance about an actual agronomic operational challenge. Example use cases are **Soil fertility management** and **Soil water conservation**.
 
 ---
 
@@ -31,13 +42,14 @@ Search for data and knowledge in the hub in various ways:
 - When you click on submit, the available records will appear.
 - On a search result, further limit the results by filters in the sidebar
 
-![Hub catalogue overview](./img/cataloguerecords.PNG){.w-50}
-
+::: {layout-ncol=2}
+![Hub catalogue overview](./img/cataloguerecords.PNG){.shadow}
+:::
 
 The catalogue allows the filtering of keywords. The 3 main keywords are: 
 
 1. category ( _such as soil, crop, etc._),
-2. spatial scope (_such as Global, National, district, etc._ ),
+2. spatial scope (_such as Global, National, district, etc._),
 3. the type (_such as dataset, software, etc_).
 
 Second, any other keyword linked to the resource can be used to search in the catalogue, for example, _land use_ or _crop yield_. This depends on which keywords are given to the resources.
@@ -46,8 +58,9 @@ Second, any other keyword linked to the resource can be used to search in the ca
 Try the keywords. Type in the search bar various keywords, such as _soil or Land use_ or click on the keywords on the side.
 :::
 
-![Filter by keyword](./img/cataloguesearch.png){.w-50}
-
+::: {layout-ncol=2}
+![Filter by keyword](./img/cataloguesearch.png){.shadow}
+:::
 
 For each record, a number of metadata properties are provided, such as abstract, used datasets, keywords, usage constraints, and contact information.
 
@@ -57,16 +70,24 @@ Some records link directly to the [map viewer](#map-viewer) component. Under the
 Explore the records. Click, after searching on keywords, on one of the appeared records and explore the provided information. Click on the links in the records
 :::
 
-![Hub catalogue record](./img/cataloguepHrecord.PNG){.w-50 .border .shadow} 
+::: {layout-ncol=2}
+![Hub catalogue record](./img/cataloguepHrecord.PNG){.shadow} 
+:::
 
 If a mapping link is available on the record, a button will appear under the map to preview the data in a map viewer.
+
+### Contribute your data
+
+Contact the LSC-hub team in case you want to share data via the hub. Data can best be uploaded in a persistent repository, such as [Zenodo](https://zenodo.org), the [Open Science Foundation](https://osf.io), [Harvard dataverse](http://dataverse.harvard.edu) or others. A reference to the data can then easily be added to the hub.
 
 ---
 
 ## Map viewer
 
-Spatial data can be viewed and compared in a web-based map viewer. The map viewer can be accessed on the homepage of the LSC hub, under _DATA_ and then click on _Go the map viewer_.
-The map viewer can also directly be accessed at https://{{< var country >}}.lsc-hubs.org/map/ 
+Spatial data can be viewed and compared in a web-based map viewer. The map viewer can be
+accessed on the homepage of the LSC hub, under _DATA_ and then click on _Go the map viewer_.
+This manual provides an overview of the functionality, a full manual of the TerriaJS library
+is available at [https://userguide.terria.io](https://userguide.terria.io/).
 
 ![Hub map vizualisation](./img/map.png){.w-50 .border .shadow}
 
@@ -114,11 +135,6 @@ The vertical toolbar allows you to zoom on the map or location, compare maps, me
 
 ![mapviewer measure](./img/mapviewer_measure.png){.w-50 .border .shadow} 
   
-5. Provide feedback on the map viewer. Feedback is essential to improve the map viewer and to ensure that the map viewer fits the user's needs. If you have any feedback on the map viewer, you can give it by this button.
-
-![mapviewer feedback](./img/mapviewer_feedback.png){.w-50 .border .shadow} 
-
-
 ::: {.callout-tip}
 Explore the basic settings of the mapviewer. Change the map settings, take the tour at the help button, download your current map, measure distances and go to your location.
 :::
@@ -186,14 +202,11 @@ The steps of this exercise are written down under the `help` button. By clicking
 
 ### Download data as files or from web services
 
-Data is made available in various formats by the providers of the data. Common are file downloads in Excel, Shape or GeoTiff format. Some organisations provide data access via web services. Web services enable partial downloads of a dataset, filtered by attribute, temporal or spatial extent. Common web services are:
+Data is made available in various formats by the providers of the data. Common are file downloads in Excel, Esri Shape or GeoTiff format. Some organisations provide data access via web services. Web services enable partial downloads of a dataset, filtered by attribute, temporal or spatial extent. Common web service types are:
 
 - **OGC:WMS** visualizes spatial data in map viewers
 - **OGC:WFS** downloads a part of a vector dataset
 - **OGC:WCS** downloads a part of a grid dataset
-- **Sensorthings API** downloads a selection of observation data
-- **Open API** and **GraphQL** download a part of non geographical data
-- **SPARQL** downloads a part of a semantic web knowledge graph
 
 Various software is available to interect with these data formats and data services. In [this article](./ows-in-qgis.md) we explain how you can use [QGIS Desktop](https://www.qgis.org) to interact with web services for spatial data.
 
@@ -202,7 +215,6 @@ Various software is available to interect with these data formats and data servi
 ## Hub community
 
 We welcome you to contribute to the development of the hub. The contents of the hub is maintained via a co-creation platform called [github.com](https://github.com/lsc-hubs/hub-core/). You can either directly contribute via the github platform, but a feed back mechanism is also provided on each of the hub resources. 
-
 
 Providing your feedback is crucial for several reasons: 
 
@@ -216,18 +228,5 @@ Providing your feedback is crucial for several reasons:
 
 Every page or resource on the hub provides an option to provide feedback and/or ask a question related to the content. In these sections, you can provide feedback about the page and what you would like to be adjusted.
 
-![feedback discussion](./img/feedback_discussion.PNG){.w-50 .border .shadow} 
-
-Contributions to the hub require a [Github login](https://github.com/signup?ref_cta=Sign+up). A GIThub account is easily made by pressing on _sign in with GIThub_, then click on _New to GIThub? Create an account_. 
-
-You only need to decide on a username, and password and enter your email address. 
-
-![feedback github](./img/feedback_github.png){.w-50 .border .shadow}  
-
-Once logged in, you can now comment below the pages. If you have an account, You can provide feedback by contributing to hub discussions at the [github repository](https://github.com/lsc-hubs/{{< var country >}}-hub/discussions). To get started, you can create a new discussion. 
-
-::: {.callout-tip}  
-Login to Github or create a Github account and start a discussion about an aspect of the LSC-hub you are surprised about.
-:::
 
 
