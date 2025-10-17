@@ -38,13 +38,21 @@ The LSC Catalogue includes a range of information services.
 
 ::::
 
+![](../img/detailed-examination.svg)
+![](../img/logo-ministry-of-foreign-affairs.svg)
+![](../img/logo-eu.svg)
+![](../img/logo-desira.svg)
+![](../img/logo.svg)
+![](../img/logo-isric.svg)
+![](../img/favicon.svg)
+
 ---
 
 <script src="https://giscus.app/client.js"
       data-repo="{{< var giscus-repo >}}"
       data-repo-id="{{< var giscus-repo-id >}}"
-      data-category="{{< giscus-cat >}}"
-      data-category-id="{{< giscus-cat-id >}}"
+      data-category="{{< var giscus-cat >}}"
+      data-category-id="{{< var giscus-cat-id >}}"
       data-mapping="title"
       data-strict="0"
       data-reactions-enabled="0"

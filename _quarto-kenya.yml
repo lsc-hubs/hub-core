@@ -1,0 +1,8 @@
+# the file gets loaded with env param QUARTO_PROFILE=rwanda or quarto render --profile rwanda
+
+website:
+  repo-url: "https://github.com/kalrodevs/lschub-cms"
+  title: "Land Soil Crop Hub Kenya"
+  navbar:
+    logo: ./assets/images/logo-kenya.svg
+    logo-alt: "Logo of Land Soil Crop Hub Kenya"

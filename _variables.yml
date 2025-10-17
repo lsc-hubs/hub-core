@@ -1,9 +1,12 @@
-country: Africa
-homepage: "https://lsc-hubs.github.io/hub-core"
-catalog: "https://demo.pycsw.org/cite"
-maps: https://maps.lsc-hubs.org
-github: https://github.com/lsc-hubs/hub-core
-giscus-repo: 
-giscus-repo-id: 
-giscus-cat: 
-giscus-cat-id: 
+
+country: Kenya
+langs: "sw"
+langlabels: "Swahili"
+homepage: https://kenya.lsc-hubs.org/
+catalog: https://kenya.lsc-hubs.org/cat/
+maps: https://kenya.lsc-hubs.org/map/
+github: https://github.com/lsc-hubs/kenya-catalogue
+giscus-repo: lsc-hubs/kenya-catalogue
+giscus-repo-id: example
+giscus-cat: "Q&A"
+giscus-cat-id: example

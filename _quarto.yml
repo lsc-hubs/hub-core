@@ -1,69 +1,52 @@
 project:
   type: website
-  render: 
+  render:
     - "*.md"
     - "*.qmd"
 
 website:
-  repo-url: "https://github.com/lsc-hubs/hub-core"
-  repo-actions: 
+  favicon: /assets/images/favicon.svg
+  repo-url: "https://github.com/lsc-hubs/kenya-hub"
+  repo-actions:
     - edit
     - issue
   page-footer:
-    background: dark 
-    left: 
-    - text: <br/>LSC Hubs 2023
-      file: https://www.lsc-hubs.org
-  title: "Land Soil Crop Hub {{< var country >}}"
-  navbar:
-    background: white
-    search: true
     left:
-      - text: Data
-        file: "/#data" 
+    - text: LSC Hubs 2025
+      file: https://www.lsc-hubs.org
+  title: "Land Soil Crop Hub"
+  search: false
+  navbar:
+    pinned: true
+    logo: ./assets/images/logo.svg
+    logo-alt: "Logo of Land Soil Crop Hub"
+    right:
+      - text: Data and Information
+        file: "/#data-and-information"
       - text: Maps
-        file: "/#maps" 
-      - text: Use cases
-        file: "/#use-cases"
+        file: "/#maps"
+      - text: User stories
+        file: "/#user-stories"
       - text: Community
-        file: "/#hub-community" 
-      - text: "Docs"
-        file: "/#documentation"  
-  sidebar:
-    - title: "Docs"
-      style: "docked"
-      background: light
-      collapse-level: 2
-      contents: 
-        - text: User
-          file: docs/user
-        - text: Administrator
-          file: docs/admin
-        - section: Developer
-          contents: 
-            - section: Hub components
-              contents: docs/developer/*
-            - section: Workshop Data
-              contents: docs/developer/tutorial-data-management/*
+        file: "/#hub-community"
+      - text: Docs
+        file: "/#documents"
+      - text: Language
+        rel: lang
+        file: "#"
 
 format:
   html:
     page-layout: full
     theme:
-      - cosmo
-      - custom.scss
+      - ./assets/css/custom.scss
+    include-in-header:
+        - text: |
+            <script>const langs = "{{< var langs >}}";const langlables = "{{< var langlabels >}}";</script>
+            <script src="/assets/js/translateOption.js"></script>
     code-copy: true
     code-overflow: wrap
-    grid:
-      sidebar-width: 250px
-      body-width: 1100px
-      margin-width: 300px
-
-      
-  
-
-
-
-
-
-
+    filters:
+      - ./filters/page-section/_extensions/page-section/page-section.lua
+    shortcodes:
+      - ./shortcodes/icon-link/_extensions/icon-link/icon-link.lua
