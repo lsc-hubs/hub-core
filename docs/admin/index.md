@@ -1,19 +1,20 @@
 ---
-title: Administration
+title: Implementation Guidance
 date: 2023-11-13
 author: Paul van Genuchten
 ---
 
+This document describes a number of aspects to be considered when implementing or maintaining a Land Soil Crop system.
 
 ## Github
 
-The current hub is published via [Github](https://github.com/lsc-hubs). Github is a commercial service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers can be considered, such as [gitlab](https://gitlab.com), [bitbucket](https://bitbucket.org/). Notice that it is also possible to install gitlab on premise.
+The software and content of the LSC hub are maintained in a [Github](https://github.com/lsc-hubs). Github is a service provider offering GIT services plus a number of add-ons to facilitate co-creation. Alternative GIT providers can be considered, such as [gitlab](https://gitlab.com) or [bitbucket](https://bitbucket.org/). 
 
-As an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate the use of Git, such as [Github desktop](https://desktop.github.com/), [Smartgit](https://www.syntevo.com/smartgit/) and [Git Kraken](https://www.gitkraken.com/). Some prefer the [Github plugin](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio) of [Visual Studio](https://visualstudio.microsoft.com/).
+As an LSC hub administrator it is relevant to familiarise yourself with Github. Notice that some tools exist to facilitate the use of Git, such as [Github desktop](https://desktop.github.com/), [Smartgit](https://www.syntevo.com/smartgit/), [Git Kraken](https://www.gitkraken.com/), or the [Github plugin](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio) of [Visual Studio](https://visualstudio.microsoft.com/).
 
-## LSC Hub
+## LSC Hub content pages
 
-A number of content pages is made available to guide the user within the hub. These pages are maintained in [github](https://github.com/lsc-hubs/hub-core) as markdown. Notice the `edit link` in the footer of each page. The pages are rendered to html using the [quarto](https://quarto.org/docs/websites/) tool. Editing of quarto documents is facilitated by a [quarto plugin](https://quarto.org/docs/tools/vscode.html) in [visual studio](https://visualstudio.microsoft.com/).
+Content pages are maintained as markdown in github and rendered by [Quarto](https://quarto.org). These pages are maintained in [github](https://github.com/lsc-hubs/hub-core). Editing of quarto documents is further facilitated by a [quarto plugin](https://quarto.org/docs/tools/vscode.html) in [visual studio](https://visualstudio.microsoft.com/).
 
 The quarto tool is configured as a [ci-cd](https://en.wikipedia.org/wiki/CI/CD) action in github. You can follow the progress of an action in the actions tab. In some cases an action may fail and human interaction is needed to fix the problem and/or restart the action. 
 
@@ -50,7 +51,5 @@ A number of mechanisms is available to load records into the catalogue.
 - Import records from external sources, such as data portals (zenodo, dataverse, CSW, STAC, OSF)
 - Mcf records can be created using [mdme](https://osgeo.github.io/mdme)
 - A [Excel template](https://github.com/lsc-hubs/{{< var country >}}-catalogue/blob/main/portals/KE/LSC/index.csv) is available, on which resources can be described. A single resource per record.
-- An [ODK form](https://odk.isric.org/-/single/n2Sosp1gxbXLUcOelRBWsMru72DSLFb?st=pi9NCIyCBZIeYuVU0lb812NtQfOucM34dS04qF6GFaao2FB!c3DJDl10TTRTeOUJ) is available on which users can describe resources
 
-![ODK](./img/ODK.PNG){.w-50}  
 
