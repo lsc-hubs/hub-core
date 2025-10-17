@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<link href="../../../..//assets/images/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
@@ -11,7 +12,7 @@
 
   <meta name="author" content="Paul van Genuchten">
   <meta name="dcterms.date" content="2023-05-09">
-  <title>Land Soil Crop Hub {{&lt; var country &gt;}} – 3.1 Data services</title>
+  <title>Land Soil Crop Hub Kenya – 3.1 Data services</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -541,7 +542,7 @@ Paul van Genuchten
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/lsc-hubs\.github\.io\/hub-core\/");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
